@@ -1,11 +1,12 @@
 var pg = require('pg');
 const { Client } = require('pg');
+require('dotenv').config();
 const client = new Client({
-    user: 'tecmint',
-    host: 'localhost',
-    database: 'taskmanagement',
-    password: 'Ammar123',
-    port: 5432,
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
 });
 client.connect().then((result) => console.log('Database connection successful')).catch((err) => console.log(err));
 
