@@ -5,7 +5,10 @@ const validateSignup = async (req,res,next) => {
     if(email){
         next();
     } else {
-        return res.status(500).json('email required!')
+        res.status(500).json({
+            status : 0,
+            message : "Email required"
+        });
     }
 }
 const validateToken = async (req,res,next) => {
@@ -17,7 +20,7 @@ const validateToken = async (req,res,next) => {
             if(err){
                 return res.json({
                     status : 0,
-                    data : 'Invalid token'
+                    message : 'Invalid token'
                 })
             } else {
                 next();
