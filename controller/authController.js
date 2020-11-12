@@ -58,7 +58,6 @@ const login =  (req,res) => {
             }
 
             if(results){
-                console.log(results)
                 const jsonToken = sign({
                         username: results.name,
                         userID: results.id
@@ -98,7 +97,7 @@ const login =  (req,res) => {
 
 function getUserByEmail(email,password, callback){
     const getUserByEmail = {
-        text : 'SELECT id,name,password,status FROM users WHERE email = $1 AND password = $2',
+        text : 'SELECT id,name,email,password,status FROM users WHERE email = $1 AND password = $2',
         values : [email,md5(password)]
     }
     try {

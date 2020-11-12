@@ -2,6 +2,7 @@ const {database} = require('../config/database');
 const {ReasonPhrases,StatusCodes,getReasonPhrase,getStatusCode}=  require('http-status-codes');
 const md5 = require('md5');
 
+
 const getUser = async (req,res) => {
     const userId = req.params.userId;
     const getUserById = {
@@ -39,13 +40,20 @@ const activateUser = async (req,res,next) => {
         values : [userId]
     }
     try {
-        const query = database.query(activateUser).then(res => {
-            // res.redirect(process.env.HOST_URL+'/reset-password');
-        })
+        const query = await database.query(activateUser);
+        if(query.rowCount > 0){
+            res.redirect(process.env.HOST_URL)
+        } else {
+            res.status(500).json({
+                status: 0,
+                message: 'Unable to activate the user'
+            });
+        }
+
     } catch (err) {
         res.status(500).json({
             status: 0,
-            message: callback(err)
+            message: err
         });
     }
 }
