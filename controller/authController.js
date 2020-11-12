@@ -45,13 +45,13 @@ const login =  (req,res) => {
                 });
             }
             if(!results){
-                return res.json({
+                return res.status(400).json({
                     status : 0,
                     message : 'Invalid user or password'
                 })
             }
             if(results.status == 0){
-                return res.json({
+                return res.status(400).json({
                     status : 0,
                     message : 'User is not activated yet!'
                 })
@@ -67,12 +67,12 @@ const login =  (req,res) => {
                     },
                     function(err, token) {
                         if (err) {
-                            return res.json({
+                            return res.status(500).json({
                                 status : 0,
                                 message : err
                             })
                         } else {
-                            return res.json({
+                            return res.status(200).json({
                                 status : 1,
                                 message : 'login success',
                                 token : token
