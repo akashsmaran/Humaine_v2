@@ -9,7 +9,7 @@ const signUp = async (req,res,next) => {
     let encryptPassword = await md5(password);
 
     const text = 'INSERT INTO users(email, password, name, title, institution, level_of_training, gender, country, date_of_birth ) VALUES($1, $2, $3, $4, $5, $6, $7 ,$8 ,$9 ) RETURNING *'
-    const values = [email.trim(), encryptPassword, name.trim(), title.trim(), institution.trim(), levelOftraining.trim(), gender.trim(), country.trim(), dateOfBirth.trim()];
+    const values = [email.trim(), encryptPassword, name, title, institution, levelOftraining, gender, country, dateOfBirth];
     try {
         const query = await database.query(text, values).then((res) => {
             return {
