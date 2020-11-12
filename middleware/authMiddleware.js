@@ -13,24 +13,23 @@ const validateSignup = async (req,res,next) => {
 }
 const validateToken = async (req,res,next) => {
     let token = req.get('authorization');
-    console.log(token)
     if(token){
         token = token.slice(7);
         verify(token, process.env.ACCESS_TOKEN_SECRET,(err, decoded) =>{
             if(err){
-                return res.json({
-                    status : 0,
-                    message : 'Invalid token'
-                })
+                res.status(400).json({
+                    status: 0,
+                    message: 'Invalid token',
+                });
             } else {
                 next();
             }
         })
     } else {
-        res.json({
-            success : 0,
-            message : 'access denied! unauthorized user'
-        })
+        res.status(401).json({
+            status: 0,
+            message : 'Access denied! unauthorized user'
+        });
     }
 }
 

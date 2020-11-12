@@ -1,16 +1,14 @@
 const {jwt,sign} = require("jsonwebtoken");
-const bcrypt = require('bcrypt');
-const sendEmail = require('../middleware/sendEmail')
+const md5 = require('md5');
 const {database} = require('../config/database');
 const {ReasonPhrases,StatusCodes,getReasonPhrase,getStatusCode}=  require('http-status-codes');
 
 const signUp = async (req,res,next) => {
     const {email, password, name, title, institution, levelOftraining, gender, country, dateOfBirth} = req.body;
 
-    const saltRounds = 10;
-    let encryptPassword = await bcrypt.hash(password, saltRounds);
+    let encryptPassword = await md5(password);
 
-    const text = 'INSERT INTO users(email, password, name, title, institution, level_of_tranining, gender, country, date_of_birth ) VALUES($1, $2, $3, $4, $5, $6, $7 ,$8 ,$9 ) RETURNING *'
+    const text = 'INSERT INTO users(email, password, name, title, institution, level_of_training, gender, country, date_of_birth ) VALUES($1, $2, $3, $4, $5, $6, $7 ,$8 ,$9 ) RETURNING *'
     const values = [email.trim(), encryptPassword, name.trim(), title.trim(), institution.trim(), levelOftraining.trim(), gender.trim(), country.trim(), dateOfBirth.trim()];
     try {
         const query = await database.query(text, values).then((res) => {
@@ -39,7 +37,7 @@ const signUp = async (req,res,next) => {
 const login =  (req,res) => {
     const {email, password} = req.body;
     if(validateUser(req.body)){
-       getUserByEmail(email, (err,results)=>{
+       getUserByEmail(email,password, (err,results)=>{
             if(err){
                 res.status(500).json({
                     message : err,
@@ -55,12 +53,12 @@ const login =  (req,res) => {
             if(results.status == 0){
                 return res.json({
                     status : 0,
-                    message : 'Use is not activated yet!'
+                    message : 'User is not activated yet!'
                 })
             }
-            const result = bcrypt.compare(password, results.password);
-            if(result){
-                results.password = undefined;
+
+            if(results){
+                console.log(results)
                 const jsonToken = sign({
                         username: results.name,
                         userID: results.id
@@ -88,7 +86,7 @@ const login =  (req,res) => {
                     status : 0
                 });
             }
-       });
+            });
     } else {
         res.status(500).json({
             status : 0,
@@ -98,15 +96,15 @@ const login =  (req,res) => {
 
 }
 
-function getUserByEmail(email, callback){
+function getUserByEmail(email,password, callback){
     const getUserByEmail = {
-        text : 'SELECT password,status FROM users WHERE email = $1',
-        values : [email]
+        text : 'SELECT id,name,password,status FROM users WHERE email = $1 AND password = $2',
+        values : [email,md5(password)]
     }
     try {
         const query = database.query(getUserByEmail).then(res => {
             if(res.rows.length > 0){
-                callback(null, {password : res.rows[0].password, status : res.rows[0].status})
+                callback(null, {id : res.rows[0].id,name : res.rows[0].name,email : res.rows[0].email,password : res.rows[0].password, status : res.rows[0].status})
             } else {
                 callback(null)
             }
@@ -130,5 +128,5 @@ const test = async (req,res,next) => {
 module.exports = {
     signUp,
     login,
-    test
+    test,
 }

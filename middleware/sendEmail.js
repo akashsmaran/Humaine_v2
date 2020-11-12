@@ -22,6 +22,13 @@ const sendEmail = (req,res,next) => {
             console.log(error);
         } else {
             console.log('Email sent: ' + info.response);
+            if(res.status_message = true){
+                res.status(200).json({
+                    status: 1,
+                    message: 'An email has been sent to your account. Please follow the instructions to complete the process'
+                });
+            }
+
         }
     });
 }
