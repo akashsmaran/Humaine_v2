@@ -1,13 +1,15 @@
 const {database} = require('../config/database');
 const {ReasonPhrases,StatusCodes,getReasonPhrase,getStatusCode}=  require('http-status-codes');
 const md5 = require('md5');
-
+const jwtDecode = require('jwt-decode');
 
 const getUser = async (req,res) => {
-    const userId = req.params.userId;
+    let token = req.headers.authorization;
+    let userInfo = jwtDecode(token);
+
     const getUserById = {
         text : 'SELECT id,email,status,name, title, institution, level_of_training, gender, country, date_of_birth FROM users WHERE id = $1',
-        values : [userId]
+        values : [userInfo.userID]
     }
     try {
         const response  = await database.query(getUserById);
