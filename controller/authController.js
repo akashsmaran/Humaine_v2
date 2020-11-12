@@ -19,7 +19,7 @@ const signUp = async (req,res,next) => {
         }).then((obj) => {
             res.email = obj.email;
             res.subject = 'Account activation';
-            res.body = '<p>Click <a href="http://localhost:3000/users/activate/' + obj.userId + '">here</a> to activate your account</p>'
+            res.body = '<p>Click <a href="http://localhost:4000/users/activate/' + obj.userId + '">here</a> to activate your account</p>'
             next();
         });
         res.status(200).json({

@@ -82,7 +82,7 @@ const forgotPassword = async (req,res,next) => {
         }
         res.email = email;
         res.subject = 'Reset Password';
-        res.body = '<p>Click <a href="'+process.env.HOST_URL+'/reset-password/' + results.userId + '">here</a> to reset your account</p>';
+        res.body = '<p>Click <a href="'+process.env.HOST_FRONT_URL+'/reset-password/' + results.userId + '">here</a> to reset your account</p>';
         res.status_message = true;
         next();
     });
