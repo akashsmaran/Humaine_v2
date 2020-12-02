@@ -24,5 +24,5 @@ app.use(cors({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRoutes);
-app.use('/case', caseRoutes);
+app.use('/cases', caseRoutes);
 module.exports = app;
