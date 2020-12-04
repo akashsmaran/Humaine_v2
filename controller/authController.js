@@ -58,9 +58,11 @@ const login =  (req,res) => {
             }
 
             if(results){
+
                 const jsonToken = sign({
                         username: results.name,
-                        userID: results.id
+                        userID: results.id,
+                        nlpToken : req.nlpToken
                     },
                     process.env.ACCESS_TOKEN_SECRET, {
                         expiresIn: "24hr"
@@ -94,6 +96,7 @@ const login =  (req,res) => {
     }
 
 }
+
 
 function getUserByEmail(email,password, callback){
     const getUserByEmail = {

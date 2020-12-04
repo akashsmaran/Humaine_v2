@@ -137,9 +137,16 @@ const resetPassword = async (req,res,next) => {
     }
 }
 
+const health = async (req,res) => {
+    res.status(200).json({
+        status: 1,
+        message: 'Server Is running'
+    });
+}
 module.exports = {
     activateUser,
     forgotPassword,
     resetPassword,
-    getUser
+    getUser,
+    health
 }

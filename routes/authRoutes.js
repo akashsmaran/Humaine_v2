@@ -7,7 +7,7 @@ var authController = require('../controller/authController');
 
 
 router.post('/signup',authMiddleware.validateSignup, authController.signUp,emailMiddleware.sendEmail);
-router.post('/login', authController.login);
+router.post('/login', authMiddleware.nlpLogin, authController.login);
 router.get('/test',authMiddleware.validateToken,authController.test)
 
 

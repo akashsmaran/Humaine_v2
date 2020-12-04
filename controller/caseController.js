@@ -1,7 +1,8 @@
 const {database} = require('../config/database');
 const {ReasonPhrases,StatusCodes,getReasonPhrase,getStatusCode}=  require('http-status-codes');
 const md5 = require('md5');
-const jwtDecode = require('jwt-decode');
+const axios = require("axios");
+const jwtDecode = require("jwt-decode");
 
 const getCase = async (req,res) => {
     let token = req.headers.authorization;
@@ -309,6 +310,38 @@ const addDiagnosis = async (req,res,next) => {
     }
 }
 
+const sendMessage = async (req,res) => {
+    const {message, sender_id} = req;
+    let token = req.headers.authorization;
+    let userInfo = jwtDecode(token);
+    console.log(message, sender_id)
+    const config = {
+        headers: { Authorization: `Bearer ${userInfo.nlpToken}` }
+    };
+    const bodyParameters = {
+        message: message
+    };
+    axios.post(
+        ' http://aa04e4996f2824c7e8ee0c8006a93725-1422191672.us-east-2.elb.amazonaws.com:8000/api/conversations/'+sender_id+'/messages',
+        bodyParameters,
+        config
+    ).then(response => {
+        return res.status(200).json({
+            status: 1,
+            message: 'Success',
+            sender_id : sender_id,
+            data : response.data
+        });
+
+    })
+    .catch(error => {
+        return res.status(500).json({
+            status: 0,
+            message: error
+        });
+    });
+}
+
 module.exports = {
     getCase,
     addCase,
@@ -318,6 +351,6 @@ module.exports = {
     addNotes,
     getNotes,
     addDiagnosis,
-    getDiagnosis
-
+    getDiagnosis,
+    sendMessage
 }

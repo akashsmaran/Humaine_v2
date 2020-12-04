@@ -3,6 +3,7 @@ var router = express.Router();
 
 var authMiddleware = require('../middleware/authMiddleware');
 var caseController = require('../controller/caseController');
+var nlpMiddleware = require('../middleware/nlpMiddleware');
 
 router.get('/',authMiddleware.validateToken,caseController.getCase);
 router.post('/',authMiddleware.validateToken,caseController.addCase);
@@ -17,6 +18,8 @@ router.post('/support/notes/add',authMiddleware.validateToken,caseController.add
 
 router.get('/support/diagnosis/:id',authMiddleware.validateToken,caseController.getDiagnosis);
 router.post('/support/diagnosis/add',authMiddleware.validateToken,caseController.addDiagnosis);
+
+router.post('/nlp/message', nlpMiddleware.getSenderId, caseController.sendMessage);
 
 
 module.exports = router;
