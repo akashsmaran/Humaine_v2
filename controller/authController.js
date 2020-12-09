@@ -62,6 +62,7 @@ const login =  (req,res) => {
                 const jsonToken = sign({
                         username: results.name,
                         userID: results.id,
+                        senderId : req.sender_id,
                         nlpToken : req.nlpToken
                     },
                     process.env.ACCESS_TOKEN_SECRET, {

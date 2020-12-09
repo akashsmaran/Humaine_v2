@@ -39,6 +39,8 @@ const addCase = async (req,res,next) => {
     let token = req.headers.authorization;
     let userInfo = jwtDecode(token);
     const {caseName,caseDescription,caseDifficulty} = req.body;
+    const {intent, intentList} = req;
+    return false;
     if(!caseName  || !caseDescription || !caseDifficulty){
         return res.status(500).json({
             status: 0,
@@ -105,24 +107,40 @@ const getCaseComments = async (req,res) => {
 const addCaseComment = async (req,res,next) => {
     let token = req.headers.authorization;
     let userInfo = jwtDecode(token);
-    const {caseId,comment} = req.body;
-    if(!caseId  || !comment){
+    var {caseId,message} = req.body;
+    var {intent,intentList } = req;
+    let userId = userInfo.userID;
+    if(!caseId  || !message){
         return res.status(500).json({
             status: 0,
             message: 'Validation Error! CaseId, Comment are required fields'
         });
     }
+    if(intent){
+        message = intentList[0];
+        userId = 0;
+    } else {
+        intent = '';
+    }
     const notes = {
-        text : 'INSERT INTO users_cases_support(case_id, user_id, comment, is_flagged) VALUES($1, $2, $3, $4) RETURNING *',
-        values : [caseId, userInfo.userID, comment, false]
+        text : 'INSERT INTO users_cases_support(case_id, user_id, comment, is_flagged, intent) VALUES($1, $2, $3, $4, $5) RETURNING *',
+        values : [caseId, userId, message, false,intent]
     }
     try {
         const query = await database.query(notes);
         if(query.rowCount > 0){
-            return res.status(200).json({
-                status: 1,
-                message: 'success'
-            });
+            if(intent){
+
+                return res.status(200).json({
+                    status: 1,
+                    intent : intent,
+                    message : message,
+                    userId : userId
+                });
+            } else {
+                next();
+            }
+
         } else {
             return res.status(500).json({
                 status: 0,
@@ -310,38 +328,6 @@ const addDiagnosis = async (req,res,next) => {
     }
 }
 
-const sendMessage = async (req,res) => {
-    const {message, sender_id} = req;
-    let token = req.headers.authorization;
-    let userInfo = jwtDecode(token);
-    console.log(message, sender_id)
-    const config = {
-        headers: { Authorization: `Bearer ${userInfo.nlpToken}` }
-    };
-    const bodyParameters = {
-        message: message
-    };
-    axios.post(
-        ' http://aa04e4996f2824c7e8ee0c8006a93725-1422191672.us-east-2.elb.amazonaws.com:8000/api/conversations/'+sender_id+'/messages',
-        bodyParameters,
-        config
-    ).then(response => {
-        return res.status(200).json({
-            status: 1,
-            message: 'Success',
-            sender_id : sender_id,
-            data : response.data
-        });
-
-    })
-    .catch(error => {
-        return res.status(500).json({
-            status: 0,
-            message: error
-        });
-    });
-}
-
 module.exports = {
     getCase,
     addCase,
@@ -351,6 +337,5 @@ module.exports = {
     addNotes,
     getNotes,
     addDiagnosis,
-    getDiagnosis,
-    sendMessage
+    getDiagnosis
 }

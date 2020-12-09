@@ -9,7 +9,7 @@ router.get('/',authMiddleware.validateToken,caseController.getCase);
 router.post('/',authMiddleware.validateToken,caseController.addCase);
 
 router.get('/support/:id',authMiddleware.validateToken,caseController.getCaseComments);
-router.post('/support/add',authMiddleware.validateToken,caseController.addCaseComment);
+router.post('/support/add',authMiddleware.validateToken,caseController.addCaseComment,nlpMiddleware.updateMessage, nlpMiddleware.getIntent, nlpMiddleware.compareIntentAndMessage,caseController.addCaseComment);
 
 router.post('/support/flag',authMiddleware.validateToken,caseController.flagCase);
 
@@ -19,7 +19,7 @@ router.post('/support/notes/add',authMiddleware.validateToken,caseController.add
 router.get('/support/diagnosis/:id',authMiddleware.validateToken,caseController.getDiagnosis);
 router.post('/support/diagnosis/add',authMiddleware.validateToken,caseController.addDiagnosis);
 
-router.post('/nlp/message', nlpMiddleware.getSenderId, caseController.sendMessage);
+router.post('/nlp/message',authMiddleware.validateToken,nlpMiddleware.updateMessage, nlpMiddleware.getIntent, nlpMiddleware.compareIntentAndMessage);
 
-
+router.get('/nlp/compare',authMiddleware.validateToken,nlpMiddleware.compareIntentAndMessage);
 module.exports = router;
