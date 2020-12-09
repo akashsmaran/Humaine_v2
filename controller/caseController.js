@@ -77,7 +77,7 @@ const getCaseComments = async (req,res) => {
     let case_id = req.params.id;
 
     const getCommentsByCaseId = {
-        text : 'SELECT * FROM users_cases_support WHERE case_id = $1 ORDER BY comment_created DESC',
+        text : 'SELECT * FROM users_cases_support WHERE case_id = $1 ORDER BY comment_created ASC',
         values : [case_id]
     }
     try {
