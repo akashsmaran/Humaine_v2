@@ -135,7 +135,8 @@ const addCaseComment = async (req,res,next) => {
                     intent : intent,
                     message : 'success',
                     userId : userId,
-                    comment : comment
+                    comment : comment,
+                    id : query.rows[0].id
                 });
             } else {
                 next();

@@ -49,8 +49,6 @@ const updateMessage = async (req,res,next) => {
         next();
     })
         .catch(error => {
-            console.log('here')
-            console.log(error)
             return res.status(500).json({
                 status: 0,
                 message: error
