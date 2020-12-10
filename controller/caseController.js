@@ -107,35 +107,35 @@ const getCaseComments = async (req,res) => {
 const addCaseComment = async (req,res,next) => {
     let token = req.headers.authorization;
     let userInfo = jwtDecode(token);
-    var {caseId,message} = req.body;
+    var {caseId,comment} = req.body;
     var {intent,intentList } = req;
     let userId = userInfo.userID;
-    if(!caseId  || !message){
+    if(!caseId  || !comment){
         return res.status(500).json({
             status: 0,
-            message: 'Validation Error! CaseId, Comment are required fields'
+            message: 'Validation Error! caseId, comment are required fields'
         });
     }
     if(intent){
-        message = intentList[0];
+        comment = intentList[0];
         userId = 0;
     } else {
         intent = '';
     }
     const notes = {
         text : 'INSERT INTO users_cases_support(case_id, user_id, comment, is_flagged, intent) VALUES($1, $2, $3, $4, $5) RETURNING *',
-        values : [caseId, userId, message, false,intent]
+        values : [caseId, userId, comment, false,intent]
     }
     try {
         const query = await database.query(notes);
         if(query.rowCount > 0){
             if(intent){
-
                 return res.status(200).json({
                     status: 1,
                     intent : intent,
-                    message : message,
-                    userId : userId
+                    message : 'success',
+                    userId : userId,
+                    comment : comment
                 });
             } else {
                 next();

@@ -30,15 +30,14 @@ const getSenderId = async (req,res,next) => {
 const updateMessage = async (req,res,next) => {
     let token = req.headers.authorization;
     let userInfo = jwtDecode(token);
-
-    const {message} = req.body;
+    const {comment} = req.body;
     const sender_id = userInfo.senderId;
 
     const config = {
         headers: { Authorization: `Bearer ${userInfo.nlpToken}` }
     };
     const bodyParameters = {
-        message: message
+        message: comment
     };
     axios.post(
         ' http://aa04e4996f2824c7e8ee0c8006a93725-1422191672.us-east-2.elb.amazonaws.com:8000/api/conversations/'+sender_id+'/messages',
@@ -46,10 +45,11 @@ const updateMessage = async (req,res,next) => {
         config
     ).then(response => {
         req.sender_id = sender_id;
-        req.message = message;
+        req.comment = comment;
         next();
     })
         .catch(error => {
+            console.log('here')
             console.log(error)
             return res.status(500).json({
                 status: 0,
@@ -63,20 +63,20 @@ const getIntent = async (req,res,next) => {
     let userInfo = jwtDecode(token);
 
     const sender_id = userInfo.senderId;
-    const {message} = req.body;
+    const {comment} = req.body;
 
     const config = {
         headers: { Authorization: `Bearer ${userInfo.nlpToken}` }
     };
     const bodyParameters = {
-        message: message
+        message: comment
     };
     axios.get(
         'http://aa04e4996f2824c7e8ee0c8006a93725-1422191672.us-east-2.elb.amazonaws.com:8000/api/conversations/'+sender_id+'/messages',
         config
     ).then(response => {
         req.sender_id = sender_id;
-        req.message = message;
+        req.comment = comment;
         req.intent = response.data.latest_message.intent.name;
         next();
     })
