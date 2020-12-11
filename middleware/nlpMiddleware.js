@@ -23,7 +23,12 @@ const getSenderId = async (req,res,next) => {
         next();
     })
     .catch(error => {
-        console.error(error)
+        return res.status(500).json({
+            status: 0,
+            message: 'Something went wrong. Please try again later',
+            server : error
+        });
+
     });
 }
 
@@ -51,7 +56,8 @@ const updateMessage = async (req,res,next) => {
         .catch(error => {
             return res.status(500).json({
                 status: 0,
-                message: error
+                message: 'Something went wrong. Please try again later',
+                server : error
             });
         });
 }
@@ -79,7 +85,11 @@ const getIntent = async (req,res,next) => {
         next();
     })
     .catch(error => {
-        console.error(error)
+        return res.status(500).json({
+            status: 0,
+            message: 'Something went wrong. Please try again later',
+            server : error
+        });
     });
 }
 
@@ -99,16 +109,18 @@ const compareIntentAndMessage = async (req,res,next) => {
                 }
             });
         } else {
-            return res.status(200).json({
-                status: 1,
-                intent : null,
-                message : 'I am not able to understand your question!'
-            });
+            req.intent = 'NA';
+            req.intentList = '';
+            next();
         }
 
     }
     catch (e) {
-        console.log(e)
+        return res.status(500).json({
+            status: 0,
+            message: 'Something went wrong. Please try again later',
+            server : error
+        });
     }
 }
 

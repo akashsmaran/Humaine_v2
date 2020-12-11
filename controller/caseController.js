@@ -30,7 +30,8 @@ const getCase = async (req,res) => {
     } catch(error) {
         return res.status(500).json({
             status: 0,
-            message: error
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -65,10 +66,11 @@ const addCase = async (req,res,next) => {
             });
         }
 
-    } catch (err) {
-        res.status(500).json({
+    } catch (error) {
+        return res.status(500).json({
             status: 0,
-            message: err
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -99,7 +101,8 @@ const getCaseComments = async (req,res) => {
     } catch(error) {
         return res.status(500).json({
             status: 0,
-            message: error
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -117,8 +120,13 @@ const addCaseComment = async (req,res,next) => {
         });
     }
     if(intent){
-        comment = intentList[0];
+        if(intent == 'NA'){ //case if No intent returns from NLP after comparison
+            comment = 'I am not able to understand your question!';
+        } else { //case if something has been returned from the NLP
+            comment = intentList[0];
+        }
         userId = 0;
+
     } else {
         intent = '';
     }
@@ -149,10 +157,11 @@ const addCaseComment = async (req,res,next) => {
             });
         }
 
-    } catch (err) {
-        res.status(500).json({
+    } catch (error) {
+        return res.status(500).json({
             status: 0,
-            message: err
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -183,10 +192,11 @@ const flagCase = async (req,res,next) => {
             });
         }
 
-    } catch (err) {
-        res.status(500).json({
+    } catch (error) {
+        return res.status(500).json({
             status: 0,
-            message: err
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -219,10 +229,11 @@ const addNotes = async (req,res,next) => {
             });
         }
 
-    } catch (err) {
-        res.status(500).json({
+    } catch (error) {
+        return res.status(500).json({
             status: 0,
-            message: err
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -255,7 +266,8 @@ const getNotes = async (req,res) => {
     } catch(error) {
         return res.status(500).json({
             status: 0,
-            message: error
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -288,7 +300,8 @@ const getDiagnosis = async (req,res) => {
     } catch(error) {
         return res.status(500).json({
             status: 0,
-            message: error
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
@@ -321,10 +334,11 @@ const addDiagnosis = async (req,res,next) => {
             });
         }
 
-    } catch (err) {
-        res.status(500).json({
+    } catch (error) {
+        return res.status(500).json({
             status: 0,
-            message: err
+            message: 'Something went wrong. Please try again later',
+            server : error
         });
     }
 }
