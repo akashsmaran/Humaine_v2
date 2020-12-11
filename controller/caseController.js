@@ -173,7 +173,7 @@ const flagCase = async (req,res,next) => {
     if(!messageId || !isFlag){
         return res.status(500).json({
             status: 0,
-            message: 'Validation Error! CaseId and IsFlag are required fields'
+            message: 'Validation Error! messageId and IsFlag are required fields'
         });
     }
     const flag = {
