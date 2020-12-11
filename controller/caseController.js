@@ -158,16 +158,16 @@ const addCaseComment = async (req,res,next) => {
 }
 
 const flagCase = async (req,res,next) => {
-    const {caseId,isFlag} = req.body;
-    if(!caseId || !isFlag){
+    const {caseId,isFlag, messageId} = req.body;
+    if(!messageId || !isFlag){
         return res.status(500).json({
             status: 0,
             message: 'Validation Error! CaseId and IsFlag are required fields'
         });
     }
     const flag = {
-        text : 'Update users_cases_support SET is_flagged = $1 WHERE case_id = $2',
-        values : [isFlag, caseId]
+        text : 'Update users_cases_support SET is_flagged = $1 WHERE id = $2',
+        values : [isFlag, messageId]
     }
     try {
         const query = await database.query(flag);

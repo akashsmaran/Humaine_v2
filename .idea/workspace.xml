@@ -4,7 +4,6 @@
     <list default="true" id="463e82d7-370e-4a25-b530-a45144cfeb56" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/caseController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/caseController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/nlpMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/nlpMiddleware.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,8 @@
       <workItem from="1607175199697" duration="2347000" />
       <workItem from="1607342151509" duration="9569000" />
       <workItem from="1607500505596" duration="3955000" />
-      <workItem from="1607546374437" duration="6754000" />
+      <workItem from="1607546374437" duration="7734000" />
+      <workItem from="1607679178458" duration="351000" />
     </task>
     <servers />
   </component>
