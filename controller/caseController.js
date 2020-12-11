@@ -123,7 +123,9 @@ const addCaseComment = async (req,res,next) => {
         if(intent == 'NA'){ //case if No intent returns from NLP after comparison
             comment = 'I am not able to understand your question!';
         } else { //case if something has been returned from the NLP
-            comment = intentList[0];
+            var key = Math.floor(Math.random() * intentList.length);
+            comment = intentList[key];
+            console.log(key)
         }
         userId = 0;
 

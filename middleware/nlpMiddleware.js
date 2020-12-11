@@ -100,6 +100,7 @@ const compareIntentAndMessage = async (req,res,next) => {
     let result;
     try{
         let intentListExists = Object.keys(intentsList).includes(intent);
+
         if(intentListExists){
             result = Object.keys(intentsList).forEach(function(key) {
                 if(key === intent){
