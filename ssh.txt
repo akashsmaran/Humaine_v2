@@ -1,0 +1,25 @@
+SHA256:N1NoWS5h7w0P46p2HqkPsMApodiHVHps+KDZIa+4Q2g ammaryousaf6@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    .     o .    |
+|   =     . B     |
+|. B +     = B    |
+|.X X .   . = *   |
+|* * * . S + o o  |
+|oE o . o . =     |
+|=     . . +      |
+|..      .+..     |
+|..     .o+o      |
++----[SHA256]-----+
+
+
+
+
+ssh -i Downloads/humaine.pem ubuntu@{publicIP}
+
+sudo service nginx restart
+
+# pm2 start bin/www --name "humaine"
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCzcHGVS5/c0ugu3jPh50BAI69djyfX7ZV5O+c/BuRiNcp2LQGlq9fZvlBnk2Dk1thK8cvV+35CZGWeDMS9my/s8uS1sYiFcg3R7VYMqnS+lDuY912w1B9XGcuA+Gt4ilzLHjJgqtC/LgVcjYCQKydoXB7ooXpyVE4vtZBw0d3HBVK6DTQOIUysgBsLyVRyhped7EcEccY/cKHlFECAWd6hxwnu+ECBfHYTxnJe2qGsAoUxEDNaeDy8uHwRAyM+XAh6GUN1YA7JidfjQD1w6EmxSLRrZBTal06bn+q9Ldo/jcsb2IG8bg3h07HfGfypGGnbrqYqzL8sAqUUz49J5nBb1hYZhz3SjiB/79aHAS6OX54LTd7I8SxJoMlzWRilLU0cVkDnqTSIKiXq+rAbRkHFfYbQkDZa8wpzj4Grcfzu5JE67/CB2pKuXXSXoMV48LcZdU9Pp/XH2aFa9tV25p7cruf9yzGEUSJxa/6mAuiYT65wao/9jEO385eL+gvBg9nPz81jc0WkHHZZgXNoeDdjcFzfn1JtnPRJiCNbAxfHyc/KZEhpmSmvJQNrFHWBRjxqnpt3aY8qRRCkvrc8Lezuzs3yiSD7mDI+PbxFSo9D7ellbFZhbkklT8K2xKd+AUA30wwHLJTcGijSbrHs8iDHWKzXfidFpenqJ+FJApacyQ== ammaryousaf6@gmail.com

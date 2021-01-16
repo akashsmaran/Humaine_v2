@@ -36,7 +36,9 @@ const signUp = async (req,res,next) => {
 
 const login =  (req,res) => {
     const {email, password} = req.body;
+
     if(validateUser(req.body)){
+
        getUserByEmail(email,password, (err,results)=>{
             if(err){
                 res.status(500).json({
