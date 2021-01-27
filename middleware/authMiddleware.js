@@ -3,13 +3,15 @@ const {verify} = require("jsonwebtoken");
 const axios = require("axios");
 
 const validateSignup = async (req,res,next) => {
-    const {email, password,dateOfBirth} = req.body;
-    if(email){
+    const {email, password} = req.body;
+    const validEmail = typeof email == 'string' && email.trim() != '';
+    const validPassword = typeof password == 'string' && password.trim() != '' && password.trim().length >= 6;
+    if(validEmail && validPassword){
         next();
     } else {
         res.status(500).json({
             status : 0,
-            message : "Email required"
+            message : "Please check your email and password. Your password should be greater then or equal to 6 characters"
         });
     }
 }
