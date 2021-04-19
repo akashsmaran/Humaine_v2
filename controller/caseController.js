@@ -88,7 +88,7 @@ const getCase = async (req,res) => {
     let caseId = req.params.id;
 
     const getCase = {
-        text : 'SELECT cases.*,user_cases.id as sessionId FROM cases LEFT JOIN user_cases ON case_id = cases.id WHERE cases.id = $1 AND status = $2 AND user_id = $3',
+        text : 'SELECT cases.*,user_cases.id as sessionId,user_cases.created_at as case_started FROM cases LEFT JOIN user_cases ON case_id = cases.id WHERE cases.id = $1 AND status = $2 AND user_id = $3',
         values : [caseId,'in_progress', userInfo.userID]
     }
     try {
@@ -178,26 +178,43 @@ const addCase = async (req,res,next) => {
 
 const getCaseComments = async (req,res) => {
     let case_id = req.params.id;
+    let token = req.headers.authorization;
+    let userInfo = jwtDecode(token)
 
     const getCommentsByCaseId = {
-        text : 'SELECT * FROM users_cases_support WHERE case_id = $1 ORDER BY comment_created ASC',
-        values : [case_id]
+        text : 'SELECT * FROM user_cases WHERE case_id = $1 AND user_id = $2 ORDER BY created_at DESC LIMIT 1',
+        values : [case_id, userInfo.userID]
     }
     try {
         const response  = await database.query(getCommentsByCaseId);
         if (!response.rows[0]) {
             return res.status(200).json({
                 status: 0,
-                message: 'No case found',
+                message: 'No messages found',
                 data : []
             });
         }
         else {
-            return res.status(200).json({
-                status: 1,
-                message: 'success',
-                data : response.rows
-            });
+            let session_id = response.rows[0].id;
+            const getCommentsByCaseId = {
+                text : 'SELECT * FROM users_cases_support WHERE case_id = $1 AND session_id = $2 ORDER BY comment_created ASC',
+                values : [case_id,session_id]
+            }
+            const messages  = await database.query(getCommentsByCaseId);
+            if (!messages.rows[0]) {
+                return res.status(200).json({
+                    status: 0,
+                    message: 'No messages found',
+                    data : []
+                });
+            } else {
+                return res.status(200).json({
+                    status: 1,
+                    message: 'success',
+                    data : messages.rows
+                });
+            }
+            
         }
     } catch(error) {
         return res.status(500).json({
