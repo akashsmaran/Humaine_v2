@@ -3,11 +3,37 @@ const md5 = require('md5');
 const { database } = require('../config/database');
 const { ReasonPhrases, StatusCodes, getReasonPhrase, getStatusCode } = require('http-status-codes');
 
+function checkUserExists(email, callback) {
+    const getUserByEmail = {
+        text: 'SELECT id,email,status FROM users WHERE email = $1',
+        values: [email]
+    }
+    try {
+        const query = database.query(getUserByEmail).then(res => {
+            if (res.rows.length > 0) {
+                callback(null, true)
+            } else {
+                callback(null, false)
+            }
+        })
+    } catch (err) {
+        callback(err);
+    }
+}
+
 const signUp = async (req, res, next) => {
     const { email, password, name, title, institution, levelOfTraining, gender, country, dateOfBirth } = req.body;
 
     let encryptPassword = await md5(password);
 
+    checkUserExists(email, (err, result) => {
+        if (result == true) {
+            res.status(500).json({
+                status: 0,
+                message: "User with this email already exists, if you have forgotten your password, please reset it."
+            });
+        }
+    })
     const text = 'INSERT INTO users(email, password, name, title, institution, level_of_training, gender, country, date_of_birth ) VALUES($1, $2, $3, $4, $5, $6, $7 ,$8 ,$9 ) RETURNING *'
     const values = [email.trim(), encryptPassword, name, title, institution, levelOfTraining, gender, country, dateOfBirth];
     try {
@@ -27,6 +53,7 @@ const signUp = async (req, res, next) => {
             message: 'User has been registered successfully. You will recieve an email shortly to activate your account.'
         });
     } catch (err) {
+
         res.status(500).json({
             status: 0,
             message: err.stack
