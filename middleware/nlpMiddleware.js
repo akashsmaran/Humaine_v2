@@ -48,7 +48,7 @@ const updateMessage = async (req, res, next) => {
   };
   axios
     .post(
-      " http://a3514d41916e9434e89ce7affed85dc9-1560023551.us-east-2.elb.amazonaws.com:8000/api/conversations/" +
+      "http://a3514d41916e9434e89ce7affed85dc9-1560023551.us-east-2.elb.amazonaws.com:8000/api/conversations/" +
         sender_id +
         "/messages",
       bodyParameters,
@@ -60,6 +60,11 @@ const updateMessage = async (req, res, next) => {
       next();
     })
     .catch((error) => {
+      console.log(
+        "🚀 ~ file: nlpMiddleware.js ~ line 63 ~ updateMessage ~ error",
+        error
+      );
+
       return res.status(500).json({
         status: 0,
         message: "Something went wrong. Please try again later",
@@ -170,7 +175,6 @@ const compareIntentAndMessage = async (req, res, next) => {
     const response = await database.query(getIntentsIndexList);
     if (!response.rows[0]) {
       // If there is no entry for this particular userId and caseId, Initialize it
-      console.log("Reached here");
       let resultInitialize = intializeIntentIndex({ caseId, userId });
       if (resultInitialize.status == 0) {
         console.log("Error is here 1");
@@ -180,57 +184,60 @@ const compareIntentAndMessage = async (req, res, next) => {
         });
       }
     } else {
-      console.log(response.rows[0]);
-      console.log("Error is here 4");
-      //   let session_id = response.rows[0].id;
-      //   const getCommentsByCaseId = {
-      //     text:
-      //       "SELECT * FROM users_cases_support WHERE case_id = $1 AND session_id = $2 ORDER BY comment_created ASC",
-      //     values: [case_id, session_id],
-      //   };
-      //   const messages = await database.query(getCommentsByCaseId);
-      //   if (!messages.rows[0]) {
-      //     return res.status(200).json({
-      //       status: 0,
-      //       message: "No messages found",
-      //       data: [],
-      //     });
-      //   } else {
-      //     return res.status(200).json({
-      //       status: 1,
-      //       message: "success",
-      //       data: messages.rows,
-      //     });
-      //   }
+      // TODO: To get the json file of the intents list use response.rows[0]
+      //    After getting the json file, increment the index of the intent found by 1 and then
+      //  update that into the database and then use next() to proceed with the middleware
+
+      w = response.rows[0].intent;
+      intentsIndexList = response.rows[0].intent;
+      console.log(intentsIndexList);
+      intentsIndexList[intent] = intentsIndexList[intent] + 1;
+      intentsIndexListJson = JSON.stringify(intentsIndexList);
+      updatedIndexOfIntent = intentsIndexList[intent];
+      const updateIntentIndexList = {
+        text:
+          "Update users_cases_intents SET intent = $1 WHERE case_id=$2 AND user_id=$3",
+        values: [intentsIndexListJson, caseId, userId],
+      };
+      const updatedIntentListIndexs = await database.query(
+        updateIntentIndexList
+      );
+      // When you get other Intents List, change the file path
+      // where the rawdata variable is reading from
+      let rawdata = fs.readFileSync(process.env.INTENT_PATH);
+      let intentsList = JSON.parse(rawdata);
+      let result;
+      try {
+        let intentListExists = Object.keys(intentsList).includes(intent);
+
+        if (intentListExists) {
+          result = Object.keys(intentsList).forEach(function (key) {
+            if (key === intent) {
+              indexForIntentResponse =
+                updatedIndexOfIntent % intentsList[key].length;
+              req.intent = intent;
+              intentList = intentsList[key];
+
+              req.indexCommentForIntentResponse =
+                intentList[indexForIntentResponse];
+              next();
+            }
+          });
+        } else {
+          req.intent = "NA";
+          req.intentList = "";
+          next();
+        }
+      } catch (e) {
+        return res.status(500).json({
+          status: 0,
+          message: "Something went wrong. Please try again later",
+          server: error,
+        });
+      }
     }
   } catch (error) {
     console.log(error);
-    return res.status(500).json({
-      status: 0,
-      message: "Something went wrong. Please try again later",
-      server: error,
-    });
-  }
-  let rawdata = fs.readFileSync(process.env.INTENT_PATH);
-  let intentsList = JSON.parse(rawdata);
-  let result;
-  try {
-    let intentListExists = Object.keys(intentsList).includes(intent);
-
-    if (intentListExists) {
-      result = Object.keys(intentsList).forEach(function (key) {
-        if (key === intent) {
-          req.intent = intent;
-          req.intentList = intentsList[key];
-          next();
-        }
-      });
-    } else {
-      req.intent = "NA";
-      req.intentList = "";
-      next();
-    }
-  } catch (e) {
     return res.status(500).json({
       status: 0,
       message: "Something went wrong. Please try again later",

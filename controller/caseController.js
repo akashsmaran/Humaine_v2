@@ -238,7 +238,8 @@ const addCaseComment = async (req, res, next) => {
   let token = req.headers.authorization;
   let userInfo = jwtDecode(token);
   var { caseId, sessionId, comment } = req.body;
-  var { intent, intentList } = req;
+  var { intent, indexCommentForIntentResponse } = req;
+  // var { intent, intentList, indexForIntentResponse } = req;
   let userId = userInfo.userID;
   if (!caseId || !comment) {
     return res.status(500).json({
@@ -253,9 +254,9 @@ const addCaseComment = async (req, res, next) => {
       comment = "I am not able to understand your question!";
     } else {
       //case if something has been returned from the NLP
-      var key = Math.floor(Math.random() * intentList.length);
-      comment = intentList[key];
-      console.log(key);
+      // var key = Math.floor(Math.random() * intentList.length);
+
+      comment = indexCommentForIntentResponse;
     }
     userId = 0;
   } else {
