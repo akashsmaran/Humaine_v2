@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  api:
+    env_file: "./API/.env"
+    build:
+      context: ./api
+      dockerfile: ./Dockerfile
+    image: "kanlanc/humaine-api"
+    ports:
+      - "4000:4000"
+  ui:
+    build:
+      context: ./UI
+      dockerfile: ./Dockerfile
+    image: "kanlanc/humaine-ui"
+    ports:
+      - "3000:3000"
+    links:
+      - "api:api"
