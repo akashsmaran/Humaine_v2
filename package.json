@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm ./bin/www",
-    "prod": "pm2 start ./bin/www",
+    "start": "node ./bin/www",
     "dev": "nodemon --inspect ./bin/www"
   },
   "dependencies": {
