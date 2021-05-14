@@ -32,7 +32,7 @@ export const sendMessage = (formData) => async (dispatch) => {
     ],
   });
   try {
-    const res = await axios.post("/cases/support/add", body, config);
+    const res = await axios.post("/api/cases/support/add", body, config);
     const user_id = formData.userId;
     const comment = formData.comment;
     const id = Math.floor(Math.random() * 1001);
@@ -54,7 +54,7 @@ export const sendMessage = (formData) => async (dispatch) => {
 
 export const getMessages = (caseId) => async (dispatch) => {
   try {
-    const res = await axios.get("/cases/support/" + caseId);
+    const res = await axios.get("/api/cases/support/" + caseId);
     dispatch({
       type: GET_MESSAGES,
       payload: res.data.data,
@@ -72,7 +72,7 @@ export const getMessages = (caseId) => async (dispatch) => {
 
 export const getCaseInfo = (caseId) => async (dispatch) => {
   try {
-    const res = await axios.get("/cases/" + caseId);
+    const res = await axios.get("/api/cases/" + caseId);
     dispatch({
       type: GET_CASE_INFO,
       payload: res.data.data,
@@ -99,7 +99,11 @@ export const addDiagnosis = (formData) => async (dispatch) => {
   const body = JSON.stringify(formData);
 
   try {
-    const res = await axios.post("/cases/support/diagnosis/add", body, config);
+    const res = await axios.post(
+      "/api/cases/support/diagnosis/add",
+      body,
+      config
+    );
     dispatch({
       type: ADD_DIAGNOSIS,
       payload: res.data,
@@ -130,7 +134,7 @@ export const addMessageFlag = (messageId, isFlag) => async (dispatch) => {
   const body = JSON.stringify({ messageId, isFlag });
 
   try {
-    const res = await axios.post("/cases/support/flag", body, config);
+    const res = await axios.post("/api/cases/support/flag", body, config);
     dispatch({
       type: FLAG_MESSAGE,
       payload: messageId,

@@ -23,7 +23,7 @@ export const loadUser = () => async (dispatch) => {
   }
 
   try {
-    const res = await axios.get("/users");
+    const res = await axios.get("/api/users");
     dispatch({
       type: USER_LOADED,
       payload: res.data.user,
@@ -45,7 +45,7 @@ export const login = (email, password) => async (dispatch) => {
   const body = JSON.stringify({ email, password });
   console.log(body);
   try {
-    const res = await axios.post("/auth/login", body, config);
+    const res = await axios.post("/api/auth/login", body, config);
     // const res = await axios.post("/auth/login", body, config);
     console.log(res);
     dispatch({
@@ -75,7 +75,7 @@ export const register = (formData) => async (dispatch) => {
   const body = JSON.stringify(formData);
   console.log(body);
   try {
-    const res = await axios.post("/auth/signup", body, config);
+    const res = await axios.post("/api/auth/signup", body, config);
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data,
@@ -108,7 +108,7 @@ export const forgetPassword = (formData) => async (dispatch) => {
   const body = JSON.stringify(formData);
   console.log(body);
   try {
-    const res = await axios.post("/users/forgot-password", body, config);
+    const res = await axios.post("/api/users/forgot-password", body, config);
     console.log(res.data);
     dispatch({
       type: FORGET_PASSWORD_SUCCESS,
@@ -142,7 +142,7 @@ export const resetPassword = (formData) => async (dispatch) => {
   const body = JSON.stringify(formData);
   console.log(body);
   try {
-    const res = await axios.post("/users/reset-password", body, config);
+    const res = await axios.post("/api/users/reset-password", body, config);
     dispatch({
       type: RESET_PASSWORD_SUCCESS,
       payload: res.data,

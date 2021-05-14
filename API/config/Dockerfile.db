@@ -1,0 +1,7 @@
+FROM postgres:11.2-alpine
+
+
+COPY ./humaine_backup.sql /docker-entrypoint-initdb.d/humaine_backup.sql
+
+
+

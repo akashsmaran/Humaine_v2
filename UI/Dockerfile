@@ -1,4 +1,4 @@
-FROM node:15-alpine3.10
+FROM node:15-alpine3.10 as build
 ENV NODE_ENV production
 LABEL version="1.0"
 LABEL description="This is the base docker image for Humaine frontend react app."
@@ -10,10 +10,19 @@ COPY ["package.json", "package-lock.json", "./"]
 
 RUN npm install --production
 
-COPY --chown=node:node . .
+COPY . ./
 
-USER node
+# COPY --chown=node:node . .
 
-EXPOSE 3000
+# USER node
 
-CMD "npm" "start"
+RUN npm run build
+
+
+# production environment
+FROM nginx:1.19.10-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+
+COPY --from=build /app/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

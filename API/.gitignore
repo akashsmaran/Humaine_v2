@@ -1,7 +1,0 @@
-node_modules/
-
-api/node_modules/
-
-humaine/node_modules/
-
-#.env   #Remove env file in production
