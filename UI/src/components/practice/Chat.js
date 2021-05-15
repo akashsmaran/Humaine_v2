@@ -77,7 +77,7 @@ const Chat = ({
           sayings.length > 0 &&
           sayings.map((saying) => (
             <Say
-              pitch={0.5}
+              pitch={1}
               volume={0.8}
               speak=""
               text={saying.comment}

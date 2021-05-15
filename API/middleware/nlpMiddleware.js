@@ -144,7 +144,7 @@ const compareIntentAndMessage1 = async (req, res, next) => {
   }
 };
 const compareIntentAndMessage = async (req, res, next) => {
-  const { message, sender_id, intent, userId } = req;
+  let { message, sender_id, intent, userId } = req;
   const caseId = req.body.caseId;
 
   if (!caseId && caseId != 0) {
@@ -180,10 +180,16 @@ const compareIntentAndMessage = async (req, res, next) => {
       //    After getting the json file, increment the index of the intent found by 1 and then
       //  update that into the database and then use next() to proceed with the middleware
 
+      let Followup = "Followup";
       intentsIndexList = response.rows[0].intent;
-
+      if (intent == Followup) {
+        intent = intentsIndexList[Followup];
+      }
       intentsIndexList[intent] = intentsIndexList[intent] + 1;
+
+      intentsIndexList[Followup] = intent;
       intentsIndexListJson = JSON.stringify(intentsIndexList);
+
       updatedIndexOfIntent = intentsIndexList[intent];
       const updateIntentIndexList = {
         text: "Update users_cases_intents SET intent = $1 WHERE case_id=$2 AND user_id=$3",
@@ -218,7 +224,8 @@ const compareIntentAndMessage = async (req, res, next) => {
           req.intentList = "";
           next();
         }
-      } catch (e) {
+      } catch (error) {
+        console.log(error);
         return res.status(500).json({
           status: 0,
           message: "Something went wrong. Please try again later",
@@ -227,6 +234,7 @@ const compareIntentAndMessage = async (req, res, next) => {
       }
     }
   } catch (error) {
+    console.log(error);
     return res.status(500).json({
       status: 0,
       message: "Something went wrong. Please try again later",
