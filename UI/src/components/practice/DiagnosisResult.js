@@ -42,7 +42,7 @@ const DiagnosisResult = ({
 
                 <div>
                   <img
-                    src="./assets/images/diagnosis-result.png"
+                    src="assets/images/diagnosis-result.png"
                     className="img img-result"
                   />
                 </div>

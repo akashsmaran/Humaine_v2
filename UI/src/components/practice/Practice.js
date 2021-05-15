@@ -70,7 +70,7 @@ const Practice = ({
                   <div className="user-info-wrapper">
                     <div className="user-info-img">
                       <img
-                        src="./assets/images/chat.png"
+                        src="assets/images/chat.png"
                         className="img img-responsive"
                         width="50"
                         height="50"
@@ -125,7 +125,7 @@ const Practice = ({
           </div>
           <div className="col-5-cust no-padding">
             <div className="image-bg full-extend">
-              <img src="./assets/images/lady.png" className="full-extend" />
+              <img src="assets/images/lady.png" className="full-extend" />
             </div>
 
             {caseInfo && (

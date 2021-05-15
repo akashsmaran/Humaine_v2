@@ -60,11 +60,6 @@ const updateMessage = async (req, res, next) => {
       next();
     })
     .catch((error) => {
-      console.log(
-        "🚀 ~ file: nlpMiddleware.js ~ line 63 ~ updateMessage ~ error",
-        error
-      );
-
       return res.status(500).json({
         status: 0,
         message: "Something went wrong. Please try again later",
@@ -153,7 +148,6 @@ const compareIntentAndMessage = async (req, res, next) => {
   const caseId = req.body.caseId;
 
   if (!caseId && caseId != 0) {
-    console.log("Reached  here");
     return res.status(500).json({
       status: 0,
       message: "Validation Error! CaseId, userId are required fields",
@@ -167,8 +161,7 @@ const compareIntentAndMessage = async (req, res, next) => {
   }
 
   const getIntentsIndexList = {
-    text:
-      "SELECT * FROM users_cases_intents WHERE case_id = $1 AND user_id = $2",
+    text: "SELECT * FROM users_cases_intents WHERE case_id = $1 AND user_id = $2",
     values: [caseId, userId],
   };
   try {
@@ -177,7 +170,6 @@ const compareIntentAndMessage = async (req, res, next) => {
       // If there is no entry for this particular userId and caseId, Initialize it
       let resultInitialize = intializeIntentIndex({ caseId, userId });
       if (resultInitialize.status == 0) {
-        console.log("Error is here 1");
         return res.status(500).json({
           status: 0,
           message: "Something went wrong. Please try again later",
@@ -188,15 +180,13 @@ const compareIntentAndMessage = async (req, res, next) => {
       //    After getting the json file, increment the index of the intent found by 1 and then
       //  update that into the database and then use next() to proceed with the middleware
 
-      w = response.rows[0].intent;
       intentsIndexList = response.rows[0].intent;
-      console.log(intentsIndexList);
+
       intentsIndexList[intent] = intentsIndexList[intent] + 1;
       intentsIndexListJson = JSON.stringify(intentsIndexList);
       updatedIndexOfIntent = intentsIndexList[intent];
       const updateIntentIndexList = {
-        text:
-          "Update users_cases_intents SET intent = $1 WHERE case_id=$2 AND user_id=$3",
+        text: "Update users_cases_intents SET intent = $1 WHERE case_id=$2 AND user_id=$3",
         values: [intentsIndexListJson, caseId, userId],
       };
       const updatedIntentListIndexs = await database.query(
@@ -237,7 +227,6 @@ const compareIntentAndMessage = async (req, res, next) => {
       }
     }
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       status: 0,
       message: "Something went wrong. Please try again later",
@@ -260,8 +249,7 @@ const intializeIntentIndex = async ({ userId, caseId }) => {
   );
 
   const initializeIntentQuery = {
-    text:
-      "INSERT INTO users_cases_intents(case_id, user_id, intent) VALUES($1, $2, $3) RETURNING *",
+    text: "INSERT INTO users_cases_intents(case_id, user_id, intent) VALUES($1, $2, $3) RETURNING *",
     values: [caseId, userId, initializeIntentsListIndex],
   };
 

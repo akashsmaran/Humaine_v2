@@ -51,7 +51,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <div className="logout-btm">
           <div className="user-info-img">
             <img
-              src="./assets/images/user.png"
+              src="assets/images/user.png"
               className="img img-responsive"
               width="80"
               height="80"

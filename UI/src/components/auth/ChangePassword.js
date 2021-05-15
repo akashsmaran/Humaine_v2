@@ -42,7 +42,7 @@ const ChangePassword = ({
           <div className="login-box box-wrapper-head">
             <div className="logo logo-top">
               <Link to="/">
-                <img src="./assets/images/logo.png" />
+                <img src="assets/images/logo.png" />
               </Link>
             </div>
             <div className="logo-text-bottom">
@@ -90,7 +90,7 @@ const ChangePassword = ({
             </div>
             <div className="login-form-image">
               <img
-                src="./assets/images/image_4.png"
+                src="assets/images/image_4.png"
                 className="img4 login-image img-responsive"
               />
             </div>

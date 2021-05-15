@@ -87,7 +87,7 @@ const Chat = ({
           ))}
         {isBotThinking && (
           <div className="bot-parent">
-            <img src="./assets/images/source.gif" className="bot-thinking" />
+            <img src="assets/images/source.gif" className="bot-thinking" />
           </div>
         )}
         <div ref={messagesEndRef} />

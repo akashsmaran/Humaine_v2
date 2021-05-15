@@ -14,7 +14,7 @@ const ChatItem = ({
           <div className="col-2">
             <div className="user-info-img-chat">
               <img
-                src="./assets/images/chat.png"
+                src="assets/images/chat.png"
                 className="img img-responsive"
                 width="35"
                 height="35"
@@ -41,7 +41,7 @@ const ChatItem = ({
           <div className="col-2">
             <div className="user-info-img-chat">
               <img
-                src="./assets/images/user.png"
+                src="assets/images/user.png"
                 className="img img-responsive"
                 width="35"
                 height="35"

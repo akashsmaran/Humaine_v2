@@ -39,7 +39,7 @@ const Dashboard = ({
                   <div className="div-training-img">
                     <img
                       className="div-training-pic"
-                      src="./assets/images/play.png"
+                      src="assets/images/play.png"
                       alt="rover"
                     />
                   </div>
@@ -73,7 +73,7 @@ const Dashboard = ({
                         {caseItem.case_difficulty}
                       </div>
                       <div className="card-header-fit">
-                        <img src="./assets/images/user2.jpeg" alt="rover" />
+                        <img src="assets/images/user2.jpeg" alt="rover" />
                       </div>
                       <div className="card-body">
                         <div className="main-card-head">
@@ -91,7 +91,7 @@ const Dashboard = ({
                       <div className="card-body-bottom">
                         <div className="btm-image">
                           <img
-                            src="./assets/images/play.png"
+                            src="assets/images/play.png"
                             className="play-btn-resp"
                             alt="rover"
                           />
@@ -125,7 +125,7 @@ const Dashboard = ({
                                 <div className="card card-blue-bg">
                                     <div className="status-label lbl-hard">Hard</div>
                                     <div className="card-header-fit">
-                                        <img src="./assets/images/user3.jpg" alt="rover" />
+                                        <img src="assets/images/user3.jpg" alt="rover" />
                                     </div>
                                     <div className="card-body">
                                         <div className="main-card-head">Mr. Brian Montgomery</div>
@@ -138,7 +138,7 @@ const Dashboard = ({
                                     </div>
                                     <div className="card-body-bottom">
                                         <div className="btm-image">
-                                            <img src="./assets/images/play.png" alt="rover" />
+                                            <img src="assets/images/play.png" alt="rover" />
                                         </div>
                                         <div className="score-info-wrapper">
                                             <table>
@@ -164,7 +164,7 @@ const Dashboard = ({
                                 <div className="card card-green-bg">
                                     <div className="status-label">Easy</div>
                                     <div className="card-header-fit">
-                                        <img src="./assets/images/user4.png" alt="rover" />
+                                        <img src="assets/images/user4.png" alt="rover" />
                                     </div>
                                     <div className="card-body">
                                         <div className="main-card-head">Mr. Brian Montgomery</div>
@@ -177,7 +177,7 @@ const Dashboard = ({
                                     </div>
                                     <div className="card-body-bottom">
                                         <div className="btm-image">
-                                            <img src="./assets/images/play.png" alt="rover" />
+                                            <img src="assets/images/play.png" alt="rover" />
                                         </div>
                                         <div className="score-info-wrapper">
                                             <table>
@@ -204,7 +204,7 @@ const Dashboard = ({
                                 <div className="card card-green-bg">
                                     <div className="status-label">Easy</div>
                                     <div className="card-header-fit">
-                                        <img src="./assets/images/user4.png" alt="rover" />
+                                        <img src="assets/images/user4.png" alt="rover" />
                                     </div>
                                     <div className="card-body">
                                         <div className="main-card-head">Mr. Brian Montgomery</div>
@@ -217,7 +217,7 @@ const Dashboard = ({
                                     </div>
                                     <div className="card-body-bottom">
                                         <div className="btm-image">
-                                            <img src="./assets/images/play.png" alt="rover" />
+                                            <img src="assets/images/play.png" alt="rover" />
                                         </div>
                                         <div className="score-info-wrapper">
                                             <table>
@@ -244,7 +244,7 @@ const Dashboard = ({
                                 <div className="card card-blue-bg">
                                     <div className="status-label lbl-easy">Easy</div>
                                     <div className="card-header-fit">
-                                        <img src="./assets/images/user.png" alt="rover" />
+                                        <img src="assets/images/user.png" alt="rover" />
                                     </div>
                                     <div className="card-body">
                                         <div className="main-card-head">Mr. Brian Montgomery</div>
@@ -257,7 +257,7 @@ const Dashboard = ({
                                     </div>
                                     <div className="card-body-bottom">
                                         <div className="btm-image">
-                                            <img src="./assets/images/play.png" alt="rover" />
+                                            <img src="assets/images/play.png" alt="rover" />
                                         </div>
                                         <div className="score-info-wrapper">
                                             <table>
@@ -283,7 +283,7 @@ const Dashboard = ({
                                 <div className="card card-blue-bg">
                                     <div className="status-label lbl-medium">Medium</div>
                                     <div className="card-header-fit">
-                                        <img src="./assets/images/user2.jpeg" alt="rover" />
+                                        <img src="assets/images/user2.jpeg" alt="rover" />
                                     </div>
                                     <div className="card-body">
                                         <div className="main-card-head">Mr. Brian Montgomery</div>
@@ -296,7 +296,7 @@ const Dashboard = ({
                                     </div>
                                     <div className="card-body-bottom">
                                         <div className="btm-image">
-                                            <img src="./assets/images/play.png" alt="rover" />
+                                            <img src="assets/images/play.png" alt="rover" />
                                         </div>
                                         <div className="score-info-wrapper">
                                             <table>
@@ -322,7 +322,7 @@ const Dashboard = ({
                                 <div className="card card-blue-bg">
                                     <div className="status-label lbl-hard">Hard</div>
                                     <div className="card-header-fit">
-                                        <img src="./assets/images/user3.jpg" alt="rover" />
+                                        <img src="assets/images/user3.jpg" alt="rover" />
                                     </div>
                                     <div className="card-body">
                                         <div className="main-card-head">Mr. Brian Montgomery</div>
@@ -335,7 +335,7 @@ const Dashboard = ({
                                     </div>
                                     <div className="card-body-bottom">
                                         <div className="btm-image">
-                                            <img src="./assets/images/play.png" alt="rover" />
+                                            <img src="assets/images/play.png" alt="rover" />
                                         </div>
                                         <div className="score-info-wrapper">
                                             <table>
@@ -361,7 +361,7 @@ const Dashboard = ({
           </div>
           {/* <div className="col-3 no-padding">
                         <div className="text-center">
-                            <img src="./assets/images/user.png" />
+                            <img src="assets/images/user.png" />
                             <p className="name-style">
                                 <span>{user && user.title}</span>&nbsp;<span>{user && user.name}</span>
                             </p>
