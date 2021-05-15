@@ -125,7 +125,11 @@ const Practice = ({
           </div>
           <div className="col-5-cust no-padding">
             <div className="image-bg full-extend">
-              <img src="assets/images/lady.png" className="full-extend" />
+              <img
+                src={require("./assets/images/lady.png")}
+                className="full-extend"
+              />
+              {/* <img src="assets/images/lady.png" className="full-extend" /> */}
             </div>
 
             {caseInfo && (
