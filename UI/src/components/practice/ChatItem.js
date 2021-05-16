@@ -6,10 +6,15 @@ const ChatItem = ({
   message: { id, user_id, comment, comment_created, is_flagged },
   user,
   flagMessage,
+  messagesCount,
 }) => {
+  console.log(
+    "🚀 ~ file: ChatItem.js ~ line 59 ~ messagesCount",
+    messagesCount
+  );
   return (
     <div className="chat-section-wrapper">
-      {user.id != user_id ? (
+      {messagesCount % 2 == 0 ? (
         <div className="chat-div">
           <div className="col-2">
             <div className="user-info-img-chat">

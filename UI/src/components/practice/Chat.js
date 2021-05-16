@@ -53,6 +53,7 @@ const Chat = ({
     (voices) => [...voices].find((v) => v.name === "Google UK English Male"),
     []
   );
+  let messagesCount = -1;
   return user == null ? (
     <Spinner />
   ) : (
@@ -65,14 +66,23 @@ const Chat = ({
         id="style-10"
       >
         {chatLoading && <Spinner />}
-        {messages.map((message) => (
-          <ChatItem
-            key={message.id}
-            message={message}
-            user={user}
-            flagMessage={flagMessage}
-          />
-        ))}
+        {messages.map((message) => {
+          messagesCount++;
+          console.log(
+            "🚀 ~ file: Chat.js ~ line 82 ~ {messages.map ~ messagesCount",
+            messagesCount
+          );
+
+          return (
+            <ChatItem
+              key={message.id}
+              message={message}
+              user={user}
+              flagMessage={flagMessage}
+              messagesCount={messagesCount}
+            />
+          );
+        })}
         {sayings &&
           sayings.length > 0 &&
           sayings.map((saying) => (
