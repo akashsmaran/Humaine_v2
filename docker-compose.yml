@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   postgres:
-    image: postgres:11.2-alpine
+    image: kanlanc/humaine:production_16052021_postgres
     hostname: postgres
     container_name: postgres
     restart: always
@@ -34,7 +34,7 @@ services:
     build:
       context: ./api
       dockerfile: ./Dockerfile
-    image: "kanlanc/humaine-api"
+    image: "kanlanc/humaine:production_16052021_api"
     links:
       - postgres
     ports:
@@ -45,7 +45,7 @@ services:
     build:
       context: ./UI
       dockerfile: ./Dockerfile
-    image: "kanlanc/humaine-ui"
+    image: "kanlanc/humaine:production_16052021_ui"
     container_name: ui
     ports:
       - "80:80"

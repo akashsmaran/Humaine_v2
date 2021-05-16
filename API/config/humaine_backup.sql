@@ -146,20 +146,6 @@ CREATE TABLE public.users_cases_intents (
 ALTER TABLE public.users_cases_intents OWNER TO postgres;
 
 --
--- Name: users_cases_intents_before; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.users_cases_intents_before (
-    id integer NOT NULL,
-    user_id integer,
-    case_id integer,
-    intent json
-);
-
-
-ALTER TABLE public.users_cases_intents_before OWNER TO postgres;
-
---
 -- Name: users_cases_intents_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -344,15 +330,7 @@ COPY public.users_cases_diagnosis (id, user_id, case_id, diagnosis) FROM stdin;
 --
 
 COPY public.users_cases_intents (id, user_id, case_id, intent) FROM stdin;
-3	0	6	{"ADLs":0,"AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":7,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":0,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":0,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":0,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":0,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0}
-\.
-
-
---
--- Data for Name: users_cases_intents_before; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.users_cases_intents_before (id, user_id, case_id, intent) FROM stdin;
+3	0	6	{"ADLs":0,"Followup":"WhatProblem","AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":7,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":0,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":0,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":1,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":11,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0,"chitchat":null}
 \.
 
 
@@ -380,6 +358,12 @@ COPY public.users_cases_support (id, user_id, case_id, comment, is_flagged, comm
 28	0	6	 Thank you for your kind words doctor.	f	2021-01-16 22:57:51.319294	3	Empathy
 29	16	6	I need medicine	f	2021-01-16 23:01:07.674869	3	
 30	0	6	 Thank you for your kind words doctor.	f	2021-01-16 23:01:10.346278	3	Empathy
+217	0	6	x	f	2021-05-15 13:50:10.398465	14	
+218	0	6	I am okay doctor, just my legs bothering me	f	2021-05-15 13:50:12.067284	14	SmallTalk
+219	0	6	a	f	2021-05-15 13:52:23.150662	14	
+220	0	6	I am not able to understand your question!	f	2021-05-15 13:52:24.455274	14	NA
+221	0	6	what is the problem	f	2021-05-15 13:52:37.192434	14	
+222	0	6	My legs have been just really swollen for a few weeks now. It has me a little worried	f	2021-05-15 13:52:38.770962	14	WhatProblem
 31	0	6	hello	f	2021-04-27 15:28:10.736228	14	
 32	0	6	Good morning doctor	f	2021-04-27 15:28:12.781743	14	Introduction
 33	0	6	hello	f	2021-04-27 15:28:59.711033	14	
@@ -566,6 +550,31 @@ COPY public.users_cases_support (id, user_id, case_id, comment, is_flagged, comm
 214	0	6	Hello doctor	f	2021-05-12 10:42:13.439285	14	Introduction
 215	0	6	hello	f	2021-05-12 10:42:16.992122	14	
 216	0	6	Hello	f	2021-05-12 10:42:19.231235	14	Introduction
+223	0	6	what is the problem	f	2021-05-15 13:57:59.723151	14	
+224	0	6	 I have noticed my legs have become quite swollen	f	2021-05-15 13:58:01.411285	14	WhatProblem
+225	0	6	can you explain more	f	2021-05-15 13:58:14.886497	14	
+226	0	6	can you explain more	f	2021-05-15 14:04:04.879526	14	
+227	0	6	what is your problem	f	2021-05-15 14:11:53.66582	17	
+228	0	6	My legs have been just really swollen for a few weeks now. It has me a little worried	f	2021-05-15 14:11:55.062735	17	WhatProblem
+229	0	6	can you explain more	f	2021-05-15 14:13:18.348599	17	
+230	0	6	can you explain more	f	2021-05-15 14:16:06.201029	14	
+231	0	6	can you explain more	f	2021-05-15 14:19:31.843187	14	
+232	0	6	 I have noticed my legs have become quite swollen	f	2021-05-15 14:19:33.190759	14	WhatProblem
+233	0	6	can you tell me about your problem	f	2021-05-15 14:20:10.192818	14	
+234	0	6	My legs have been just really swollen for a few weeks now. It has me a little worried	f	2021-05-15 14:20:11.57114	14	WhatProblem
+235	0	6	can you tell me more	f	2021-05-15 14:20:39.514401	14	
+236	0	6	 I have noticed my legs have become quite swollen	f	2021-05-15 14:20:41.092981	14	WhatProblem
+237	0	6	can you tell me more	f	2021-05-15 14:20:59.285843	14	
+238	0	6	My legs have been just really swollen for a few weeks now. It has me a little worried	f	2021-05-15 14:21:00.914075	14	WhatProblem
+239	0	7	can you explain more	f	2021-05-16 05:35:27.916409	15	
+240	0	6	can you tell me about your problem	f	2021-05-16 10:11:33.888606	14	
+241	0	6	I have been struggling to catch my breath at times and I need to see a specialist about this.	f	2021-05-16 10:11:35.374078	14	WhatProblem
+242	0	6	can you tell me more	f	2021-05-16 10:11:42.514897	14	
+243	0	6	My family doctor has sent me to you because he couldn't help treat my shortness of breath.	f	2021-05-16 10:11:43.856642	14	WhatProblem
+244	0	6	 can you tell me more	f	2021-05-16 10:11:52.921662	14	
+245	0	6	I have been quite breathless and my regular doctor couldn't help.	f	2021-05-16 10:11:54.424066	14	WhatProblem
+246	0	6	can you tell me more	f	2021-05-16 10:11:59.800437	14	
+247	0	6	I have been struggling to catch my breath at times and I need to see a specialist about this.	f	2021-05-16 10:12:01.323401	14	WhatProblem
 \.
 
 
@@ -608,7 +617,7 @@ SELECT pg_catalog.setval('public.users_cases_notes_id_seq', 5, true);
 -- Name: users_cases_support_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_cases_support_id_seq', 216, true);
+SELECT pg_catalog.setval('public.users_cases_support_id_seq', 247, true);
 
 
 --
@@ -640,14 +649,6 @@ ALTER TABLE ONLY public.user_cases
 
 ALTER TABLE ONLY public.users_cases_diagnosis
     ADD CONSTRAINT users_cases_diagnosis_pkey PRIMARY KEY (id);
-
-
---
--- Name: users_cases_intents_before users_cases_intents_before_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.users_cases_intents_before
-    ADD CONSTRAINT users_cases_intents_before_pkey PRIMARY KEY (id);
 
 
 --
@@ -723,14 +724,6 @@ ALTER TABLE ONLY public.users_cases_diagnosis
 
 
 --
--- Name: users_cases_intents_before fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.users_cases_intents_before
-    ADD CONSTRAINT fk_cases FOREIGN KEY (case_id) REFERENCES public.cases(id);
-
-
---
 -- Name: users_cases_intents fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -768,14 +761,6 @@ ALTER TABLE ONLY public.users_cases_notes
 
 ALTER TABLE ONLY public.users_cases_diagnosis
     ADD CONSTRAINT fk_users FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE SET NULL;
-
-
---
--- Name: users_cases_intents_before fk_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.users_cases_intents_before
-    ADD CONSTRAINT fk_users FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
