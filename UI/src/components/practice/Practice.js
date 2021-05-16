@@ -70,7 +70,7 @@ const Practice = ({
                   <div className="user-info-wrapper">
                     <div className="user-info-img">
                       <img
-                        src="assets/images/chat.png"
+                        src="./assets/images/chat.png"
                         className="img img-responsive"
                         width="50"
                         height="50"

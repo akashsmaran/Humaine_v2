@@ -1,0 +1,285 @@
+{
+  "ADLs": ["Yeah, I do everything for myself"],
+  "AbdoCramps": [" Not that I can think of."],
+  "AbdoDistention": ["No"],
+  "AbdoPain": [" No."],
+  "Accommodation": [
+    "I live in my house that I rent",
+    "Yes",
+    "I live in a house"
+  ],
+  "Age": [" I am 65 years old."],
+  "Alcohol": ["No, I don't drink alochol", "Never"],
+  "AllergyHx": ["No"],
+  "AnimalAllergy": ["No"],
+  "AntiSickness": ["No"],
+  "Appendicectomy": [" No."],
+  "Appetite": ["It's ok"],
+  "AsbestosExposure": [" No"],
+  "Ascites": [" No."],
+  "AssociatedFactors": [" Nothing other than the breathlessness."],
+  "AssociatedFactorsPast": ["No."],
+  "BarleyExposure": [" No"],
+  "BeeWaspStingAllergy": [" No"],
+  "BerylliumExposure": [" No"],
+  "BirdAllergy": [" No"],
+  "Bloatedness": [" No"],
+  "BloodyStool": ["No"],
+  "BowelFrequency": [
+    " I am opening my bowels once a day - it's pretty much normal."
+  ],
+  "BowelHabit": ["Once a day"],
+  "BowelIncontinence": [" No."],
+  "BowelMotions": [" Yes"],
+  "CasualPartner": ["No"],
+  "CheckDrug": [
+    "No",
+    "I have arthritis in my hips and knees and take them now and then",
+    "About 3 years now"
+  ],
+  "Character": [
+    "It is a really florid breathlessness.  It seems to come on suddenly and leaves me gasping for breath sometimes.  But at other times, it is not so severe.  Taking inhalers or any other medicines has little effect..",
+    "I get breathless really quickly sometimes, especially in the evenings and night.  Sometimes I just get some tightness in my chest, and feel wheezy."
+  ],
+  "ChestPain": ["No. I don't get any chest pain"],
+  "Cholecystectomy": ["No"],
+  "CoalExposure": [" No"],
+  "ColdWeatherExacerbation": [" No"],
+  "Colonoscopy": [" No"],
+  "Concern": ["I can't breathe properly and can't sleep"],
+  "ConfirmName": [" Yes, my name is Amjad Khan"],
+  "ConfirmProblem": ["Yes, I just have leg swelling and breathing problems"],
+  "Constipation": [" Not that I can think of."],
+  "Contacts": ["No one"],
+  "CottonExposure": [" No"],
+  "Cough": ["No"],
+  "DIabetes": ["Oh, probably 15 years"],
+  "DOB": ["Third of January, 1965"],
+  "DampHome": [" No"],
+  "DarkUrine": ["No"],
+  "Delivery": ["I don't know doc"],
+  "Diarrhea": [" Not that I can think of."],
+  "Diet": ["My wife keeps telling me to eat less salty foods"],
+  "DiagnosticStatement": ["I see", "Oh okay"],
+  "Diarrhoea": ["No"],
+  "DoctorQuestion": ["What do you think is going on?", "What will happen now?"],
+  "DrugAbuse": [" No"],
+  "DrugHx": [
+    "I am on a few tablets and also insulin. I'll give you my prescription because I can never remember all the names",
+    "Here is my prescription.",
+    "Sometimes, I do miss my blood pressure medications"
+  ],
+  "DustExposure": ["No"],
+  "Dyspepsia": [" No"],
+  "Dysphagia": [" No"],
+  "EggAllergy": ["No"],
+  "Empathy": ["Yes it's been hard"],
+  "EnvironmentChangeHouse": ["No"],
+  "ExacerbatingFactors": ["If I sit up, I feel better"],
+  "Exercise": [
+    "Not as much as I should be. I used to walk twice every week in local park but can't even do that anymore"
+  ],
+  "ExerciseToleranceNorm": [
+    "Normally, I can walk a few miles but now I can maybe manage 20 yards"
+  ],
+  "ExerciseToleranceNow": [" No, not that I have noted."],
+  "Expectations": [
+    "Give me something to help get my legs down and make me sleep better"
+  ],
+  "FamilyHx": [
+    "My mum and dad had diabetes, and dad had a heart attack when he was my age",
+    "Two brothers - both fine"
+  ],
+  "FamilyMember": ["My wife"],
+  "FarmingExposure": ["No"],
+  "Fever": ["No"],
+  "FoodAllergy": [" No"],
+  "Frequency": ["I get it all the time really"],
+  "FrequencyUrine": ["No", "No, I'm passing normal amounts"],
+  "Followup": "",
+  "GORD": [" No."],
+  "Gastritis": [" No."],
+  "Goodbye": ["Thank you", "Thanks very much"],
+  "Haematemesis": ["No"],
+  "Haemoptysis": [" No"],
+  "HaemoptysisMixedStreak": [" I only have a dry cough."],
+  "Hayfever": ["No"],
+  "Heart attack": [
+    "Yes, I had a heart attack 10 years ago and they put a stent into my artery because there was a blockage. "
+  ],
+  "HerniaOp": ["No"],
+  "HiatusHernia": [" No."],
+  "Hoarseness": [" No"],
+  "Hobbies": ["I spend time with my family"],
+  "Ideas": ["I have no idea."],
+  "IVDU": [" No."],
+  "IndustrialExposure": [" Not that I know of."],
+  "IntroAndName": ["My name is Amjad Khan", "Amjad Khan"],
+  "Introduction": ["Hello doctor", "Hello", "Good morning doctor"],
+  "ItchyEyesNoseThroat": ["No"],
+  "Jaundice": [" No."],
+  "LUTOpen": [
+    "No",
+    "No, my urine is fine.",
+    "Yes, I'm passing urine ok",
+    "No, I'm passing urine ok",
+    "No, my urine looks ok"
+  ],
+  "Lethargy": ["Yes I do. Just don't have any energy anymnore"],
+  "Lifestyle": ["It's okay"],
+  "ManagementPlan": ["That sounds good"],
+  "MushroomExposure": [" No"],
+  "Name": ["My name is Amjad Khan", "Amjad Khan"],
+  "NameAndDOB ": [
+    "My name is Amjad Khan. My date of birth is third of january 1965"
+  ],
+  "NameAndAge": ["I am Judith Palfrey and I am 45 years old."],
+  "Nausea": [" No"],
+  "NeuroSOB": [" No, not at all."],
+  "NewWorkConditions": [
+    "No, I have been with the same office now for at least 10 years.",
+    "No, I am a veteran at my office!"
+  ],
+  "NewLivingConditions": [" No"],
+  "Nocturia": ["No"],
+  "NutsAllergy": [" No"],
+  "OGD": ["No"],
+  "OTCDrugHx": ["No"],
+  "Occupation": ["I'm retired now but worked as a Taxi driver"],
+  "Odynophagia": ["No"],
+  "Onset": ["I get the breathing problem when I lie flat"],
+  "OnsetTrigger": ["I get the breathing problem when I lie flat"],
+  "Orthopnoea": ["Yes and I need at least 3 pillows to sleep"],
+  "OtherProblems": ["No, apart from the leg swelling and breathing problems"],
+  "PND": [" No"],
+  "PUD": [" No"],
+  "PainKiller": ["No"],
+  "PainfulDefecation": [" No."],
+  "PaleStool": [" No."],
+  "Partner": [" Um... How is this a relevant question?"],
+  "PassiveSmoke": [" No."],
+  "PassiveSmokeContact": [" Not that I know of."],
+  "PastMedicalHx": [
+    "Yes, I have diabetes and high blood pressure.",
+    "About 20 years I think",
+    "20 years ago",
+    "Yes, I did last year and I had to have laser treatment to my eyes",
+    "Yes",
+    "My GP",
+    "Yes, my GP has been looking after my diabetes",
+    "Sorry, I don't know"
+  ],
+  "PastSurgicalHx": [" No, never had surgery for nothing"],
+  "PeripheralOedema": [
+    "Yes, it's all around the ankles and legs",
+    "I'm not sure, maybe you can have a look.",
+    "Yes, both legs"
+  ],
+  "PetsExposure": [" No"],
+  "Piles": [" No."],
+  "PillowsSleep": ["Three pillows, but I normally only had one", "Just one"],
+  "PollenAllergy": [" No"],
+  "PreviousICU": [" No"],
+  "PreviousTransfusions": [" No."],
+  "ProblemBefore": [" No.", "Never"],
+  "ProblemProgression": ["It has been getting worse for 3 weeks now"],
+  "ProblemStart": ["Around 3 weeks now', 'It all started about 3 weeks ago"],
+  "PrutitisAni": ["No"],
+  "PrutitisSkin": ["No"],
+  "ProblemStartPast": [" That episode happened two years ago."],
+  "PruritisAni": [" No."],
+  "PruritisSkin": [" No."],
+  "Radiation": [" I am not sure what you mean."],
+  "RadiationPast": [" The pain would radiate to my back."],
+  "Reassurance": ["'Yes, I have been worried"],
+  "RecentTreatment": [" No treatment"],
+  "RegularPartner": ["Yeah"],
+  "RelievingFactors": ["'If I sit up, I feel better"],
+  "Rhinitis": ["No"],
+  "SOB": [
+    " Yes. I get short of breath climbing up the stairs and can't walk as far as I used to be able to",
+    "I am really struggling with the stairs"
+  ],
+  "SOBWork": [" No"],
+  "SafeSex": ["Yeah."],
+  "SeafoodAllergy": [" No"],
+  "SeasonVariation": [" No"],
+  "Severity": [
+    "I am not sure what you mean",
+    "Its a pretty bad problem, for sure"
+  ],
+  "SexType": [" Um... How is this a relevant question?"],
+  "Site": [" I am not sure what you mean."],
+  "SitePast": [
+    " It was in my stomach as well, but more like on the upper right side."
+  ],
+  "SkinChange": [" No"],
+  "SmallTalk": ["I am okay doctor, just my legs bothering me"],
+  "Smoke": [
+    " I used to smoke a lot before my heart attack. Since my heart attack, I've not smoked.",
+    "Cigarettes. ",
+    "About 20 a day for 30 years",
+    "I used to smoke a lot before my heart attack. Since my heart attack, I've not smoked"
+  ],
+  "Sleep": [
+    "Well I need two more pillows at night but I do manage to get a fews hours sleep"
+  ],
+  "Sneezing": ["No"],
+  "SOBExert": [
+    " Nothing out of the ordinary. But if I am already short of breath, I can't really do much activity anyway."
+  ],
+  "SOBExertion": [
+    "Yes, I get breathless when I'm walking far. I have to stop after a few minutes to catch my breath and then I can start again"
+  ],
+  "SOBVariation": ["No"],
+  "Sputum": [" No"],
+  "SputumAmount": [" I only have a dry cough."],
+  "SputumColour": ["I don't have any sputum"],
+  "StoolBulk": [" It all seems very normal."],
+  "StoolConsistency": [" It all seems very normal."],
+  "StoolDescribe": [" It all seems very normal."],
+  "StoolFloat": [" No."],
+  "StoolMucus": [" I don't think so."],
+  "StoolSmell": [" No."],
+  "StressIncontinence": ["No"],
+  "Summary": ["Yeah, that's right"],
+  "SurgeryPast": [
+    " I don't really remember much about my wisdom tooth extraction."
+  ],
+  "Sweating": [" No"],
+  "Tenesmus": [" No."],
+  "TermDelivery": ["I don't know doc.  I was born in Pakistan."],
+  "Timing": ["I feel breathless as long as I am lying flat"],
+  "TimingPast": [
+    " The pain just sort of came on one day suddenly, and then I went in to the emergency room."
+  ],
+  "TransitionPoints": [" Ok"],
+  "TravelHx": ["'No.  I went to Pakistan to see my family in 2015"],
+  "Urgency": ["No"],
+  "Vomit": [" No"],
+  "WeightLoss": ["I think I've put weight on, if anything", "No"],
+  "WhatProblem": [
+    " I have noticed my legs have become quite swollen",
+    "My legs have been just really swollen for a few weeks now. It has me a little worried"
+  ],
+  "Wheeze": [" No"],
+  "WheezeWork": ["No"],
+  "ask_rephrase": [" Can you rephrase the question?"],
+  "backtrack": [" Let's get back to my issue please doctor."],
+  "default": [" I'm not sure doctor, I don't really recall. "],
+  "Palpitations": ["No"],
+  "PillowSleep": [
+    " I sleep on one pillow, as I have always done really.",
+    "I only use one pillow and have not changed this."
+  ],
+  "MasonryExposure": [" No."],
+  "ConstructionExposure": [" No"],
+  "CeramicsExposure": [" No."],
+  "Arrhythmia": ["No"],
+  "Anxiety": [
+    "My breathlessness is making me a little anxious I think. I fear coming home sometimes, as I live alone. I am not usually an anxious person though."
+  ],
+  "Stress": [
+    " These symptoms are stressing me out - I am not usually one to be stressed though."
+  ]
+}

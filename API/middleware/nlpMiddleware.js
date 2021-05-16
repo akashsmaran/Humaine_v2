@@ -200,7 +200,8 @@ const compareIntentAndMessage = async (req, res, next) => {
       );
       // When you get other Intents List, change the file path
       // where the rawdata variable is reading from
-      let rawdata = fs.readFileSync(process.env.INTENT_PATH);
+      // let rawdata = fs.readFileSync(process.env.INTENT_PATH);
+      let rawdata = fs.readFileSync(`./public/intent_${caseId}.json`);
       let intentsList = JSON.parse(rawdata);
       let result;
       try {
