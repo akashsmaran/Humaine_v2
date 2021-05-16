@@ -7,7 +7,7 @@ services:
     container_name: postgres
     restart: always
     build:
-      context: ./API/config
+      context: ./api/config
       dockerfile: Dockerfile.db
     ports:
       - "5432:5432"
@@ -18,7 +18,7 @@ services:
 
     volumes:
       - humaine:/var/lib/postgresql/data
-      - ./API/config:/docker-entrypoint-initdb.d
+      - ./api/config:/docker-entrypoint-initdb.d
   # pgadmin:
   #   container_name: pgadmin4_container
   #   image: dpage/pgadmin4
@@ -29,7 +29,7 @@ services:
   #   ports:
   #     - "5050:80"
   api:
-    env_file: "./API/.env"
+    env_file: "./api/.env"
     container_name: api
     build:
       context: ./api
@@ -40,17 +40,17 @@ services:
     ports:
       - "4000:4000"
     # volumes:
-    #   - ./API:/app
+    #   - ./api:/app
   ui:
     build:
-      context: ./UI
+      context: ./ui
       dockerfile: ./Dockerfile
     image: "kanlanc/humaine:production_16052021_ui"
     container_name: ui
     ports:
       - "80:80"
     # volumes:
-    #   - ./UI:/app
+    #   - ./ui:/app
     links:
       - "api:api"
 

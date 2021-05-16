@@ -4,7 +4,7 @@ version: "3.7"
 
 services:
   api:
-    env_file: "./API/.env"
+    env_file: "./api/.env"
     container_name: api
     build:
       context: ./api
@@ -14,7 +14,7 @@ services:
       - "4000:4000"
   ui:
     build:
-      context: ./UI
+      context: ./ui
       dockerfile: ./Dockerfile.dev
     image: "kanlanc/humaine-ui-dev"
     container_name: ui-dev
