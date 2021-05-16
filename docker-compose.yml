@@ -43,7 +43,7 @@ services:
     #   - ./API:/app
   ui:
     build:
-      context: ./ui
+      context: ./UI
       dockerfile: ./Dockerfile
     image: "kanlanc/humaine:production_16052021_ui"
     container_name: ui
