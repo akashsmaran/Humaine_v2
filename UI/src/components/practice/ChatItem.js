@@ -8,10 +8,6 @@ const ChatItem = ({
   flagMessage,
   messagesCount,
 }) => {
-  console.log(
-    "🚀 ~ file: ChatItem.js ~ line 59 ~ messagesCount",
-    messagesCount
-  );
   return (
     <div className="chat-section-wrapper">
       {messagesCount % 2 == 0 ? (

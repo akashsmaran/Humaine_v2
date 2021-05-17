@@ -68,10 +68,6 @@ const Chat = ({
         {chatLoading && <Spinner />}
         {messages.map((message) => {
           messagesCount++;
-          console.log(
-            "🚀 ~ file: Chat.js ~ line 82 ~ {messages.map ~ messagesCount",
-            messagesCount
-          );
 
           return (
             <ChatItem

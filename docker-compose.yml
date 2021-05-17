@@ -3,6 +3,7 @@ version: "3.7"
 services:
   postgres:
     image: kanlanc/humaine:production_17052021_postgres
+
     hostname: postgres
     container_name: postgres
     restart: always
@@ -21,6 +22,7 @@ services:
   api:
     env_file: "./API/.env"
     container_name: api
+    restart: always
     build:
       context: ./API
       dockerfile: ./Dockerfile
@@ -36,6 +38,7 @@ services:
       context: ./UI
       dockerfile: ./Dockerfile
     image: "kanlanc/humaine:production_17052021_ui"
+    restart: always
     container_name: ui
     ports:
       - "80:80"
