@@ -5,7 +5,7 @@ const client = new Client({
   user: process.env.DB_USER,
   // For dev, use below
   // host: process.env.DB_HOST,
-  host: process.env.DB_HOST_DOCKER || process.env.DB_HOST,
+  host: process.env.DB_HOST_DOCKER,
   database: process.env.DB_DATABASE,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
