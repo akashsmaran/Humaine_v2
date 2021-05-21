@@ -55,14 +55,14 @@ services:
       - ./UI/nginx/certbot/conf:/etc/letsencrypt
       - ./UI/nginx/certbot/www:/var/www/certbot
 
-  ##############################
-  # Certbot Container
-  ##############################
-  certbot:
-    image: certbot/certbot:latest
-    volumes:
-      - ./UI/nginx/certbot/conf:/etc/letsencrypt
-      - ./UI/nginx/certbot/www:/var/www/certbot
+  # ##############################
+  # # Certbot Container
+  # ##############################
+  # certbot:
+  #   image: certbot/certbot:latest
+  #   volumes:
+  #     - ./UI/nginx/certbot/conf:/etc/letsencrypt
+  #     - ./UI/nginx/certbot/www:/var/www/certbot
 
 ##############################
 # Pgadmin Container
