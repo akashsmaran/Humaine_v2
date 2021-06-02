@@ -1,1 +1,13 @@
 docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup.sql for prepoulating the database
+
+after making the action be on branch stage, I figured out that there are two methods to go ahead with
+
+## First Method
+
+1. make a github action in the stage branch and deploy stage branch everytime a commit is done
+
+## Second Method
+
+2. make 2 different github actions in frontend and backend_v3 which on commit build and push a docker image to docker hub or to ECR, but this requires changing the docker compose file in stage to tell it pull the images and run the images instead of remaking them in production.
+
+The scond method would make the stage branch only a docker-compose file and scripts folder and a few other folders

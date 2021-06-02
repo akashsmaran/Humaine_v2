@@ -1,0 +1,53 @@
+name: AWS CI/CD Pipeline
+on:
+  push:
+    branches: [ stage ]
+
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1
+      - uses: actions/checkout@v2
+      with:
+        ref: 'stage'
+      # Step 2
+      # - name: Set up Python 3.7
+      #   uses: actions/setup-python@v2
+      #   with:
+      #     python-version: 3.7
+      # # Step 3
+      # - name: Install dependencies
+      #   run: pip install -r requirements.txt
+      # Step 4
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id:${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key:${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+      # Step 5
+      - name: Build Application 
+        run: docker-compose up 
+
+  continuous-deployment:
+    runs-on: ubuntu-latest
+    needs: [continuous-integration]
+    if: github.ref == 'refs/heads/stage'
+    steps:
+     # Step 1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id:${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key:${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+     # Step 2
+      - name: Create CodeDeploy Deployment
+        id: deploy
+        run: |
+          aws deploy create-deployment \
+            --application-name webapp_production \
+            --deployment-group-name github_kanlanc_stage \
+            --deployment-config-name CodeDeployDefault.OneAtATime \
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
