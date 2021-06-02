@@ -28,7 +28,7 @@ jobs:
           aws-region: us-east-2
       # Step 5
       - name: Build Application
-        run: docker-compose up
+        run: docker-compose up -d
 
   continuous-deployment:
     runs-on: ubuntu-latest
