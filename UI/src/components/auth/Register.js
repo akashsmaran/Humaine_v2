@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useMemo } from 'react';
+import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { setAlert, clearAlert } from '../../actions/alert';
@@ -8,10 +8,8 @@ import { Modal, Form } from "react-bootstrap";
 import Moment from 'react-moment';
 import moment from 'moment';
 import Alert from './../layout/Alert';
-import countryList from 'react-select-country-list'
 
 const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegister, handleClose }) => {
-
   const [formData, setFormData] = useState({
     name: '',
     title: '',
@@ -25,8 +23,6 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
     dateOfBirth: ''
   });
 
-
-  const options = useMemo(() => countryList().getData(), [])
   const {
     name, title, email, password, confirmPassword, institution, levelOfTraining, gender, country, dateOfBirth
   } = formData;
@@ -38,7 +34,6 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
     e.preventDefault();
     console.log(formData);
     clearAlert();
-
     if (password !== confirmPassword) {
       setAlert('Password and Confirm Password fields does not match', 'danger');
     } else {
@@ -46,8 +41,12 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
     }
   };
 
-
-
+  const validate = () => {
+    let errors = {};
+    if (password !== confirmPassword) {
+      errors["password"] = "Please and confirm password didn't match";
+    }
+  }
 
   if (isAuthenticated) {
     return <Redirect to="/dashboard" />;
@@ -58,39 +57,39 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
       <Modal show={showRegister} size="lg">
         <Modal.Body>
 
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <div>
-                <h2 className="title text-center mt-4" >Register Now</h2>
-                <span className="close-btn" onClick={() => handleClose()}>X</span>
-              </div>
-              <div className="form-wrapper">
-                <form className="form" onSubmit={e => onSubmit(e)}>
+            <div className="row">
+              <div className="col-lg-12 text-center">
+                <div>
+                  <h2 className="title text-center mt-4" >Register Now</h2>
+                  <span className="close-btn" onClick={() => handleClose()}>X</span>
+                </div>
+                <div className="form-wrapper">
+                  <form className="form" onSubmit={e => onSubmit(e)}>
                   <div className="form-container-box-register ">
                     <div className="row row-space">
                       <div className="col-md-6 col-xs-12">
                         <div className="form-group ">
                           <input
-                            type="text"
-                            name="name"
-                            className="form-control style-common"
-                            id="nameInput"
-                            placeholder="Name"
-                            value={name}
-                            onChange={e => onChange(e)}
-                            required
+                              type="text"
+                              name="name"
+                              className="form-control style-common"
+                              id="nameInput"
+                              placeholder="Name"
+                              value={name}
+                              onChange={e => onChange(e)}
+                              required
                           />
                         </div>
                       </div>
                       <div className="col-md-6 col-xs-12">
                         <div className="form-group">
                           <select
-                            className="form-control style-common"
-                            name="title"
-                            value={title}
-                            onChange={e => onChange(e)}
-                            required
-                            id="titleInput" >
+                              className="form-control style-common"
+                              name="title"
+                              value={title}
+                              onChange={e => onChange(e)}
+                              required
+                              id="titleInput" >
                             <option value="">Title</option>
                             <option value="Mr">Mr</option>
                             <option value="Mrs">Mrs</option>
@@ -103,15 +102,15 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                       <div className="col-md-12 col-xs-12">
                         <div className="form-group">
                           <input
-                            className="form-control style-common"
-                            name="email"
-                            type="email"
-                            value={email}
-                            onChange={e => onChange(e)}
-                            id="emailInput"
-                            aria-describedby="emailHelp"
-                            placeholder="Email address"
-                            required
+                              className="form-control style-common"
+                              name="email"
+                              type="email"
+                              value={email}
+                              onChange={e => onChange(e)}
+                              id="emailInput"
+                              aria-describedby="emailHelp"
+                              placeholder="Email address"
+                              required
                           />
                         </div>
                       </div>
@@ -120,28 +119,28 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                       <div className="col-md-6 col-xs-12">
                         <div className="form-group">
                           <input
-                            className="form-control style-common"
-                            type="password"
-                            value={password}
-                            onChange={e => onChange(e)}
-                            id="passwordInput"
-                            placeholder="Password"
-                            name="password"
-                            required
+                              className="form-control style-common"
+                              type="password"
+                              value={password}
+                              onChange={e => onChange(e)}
+                              id="passwordInput"
+                              placeholder="Password"
+                              name="password"
+                              required
                           />
                         </div>
                       </div>
                       <div className="col-md-6 col-xs-12">
                         <div className="form-group">
                           <input
-                            className="form-control style-common"
-                            type="password"
-                            value={confirmPassword}
-                            onChange={e => onChange(e)}
-                            id="confirmPasswordInput"
-                            placeholder="Confirm Password"
-                            name="confirmPassword"
-                            required
+                              className="form-control style-common"
+                              type="password"
+                              value={confirmPassword}
+                              onChange={e => onChange(e)}
+                              id="confirmPasswordInput"
+                              placeholder="Confirm Password"
+                              name="confirmPassword"
+                              required
                           />
                         </div>
                       </div>
@@ -150,15 +149,14 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                       <div className="col-md-12 col-xs-12">
                         <div className="form-group">
                           <input
-                            className="form-control style-common"
-                            name="institution"
-                            value={institution}
-                            onChange={e => onChange(e)}
-                            type="text"
-                            id="institutionInput"
-                            aria-describedby="institutionHelp"
-                            placeholder="Institution"
-                            required
+                              className="form-control style-common"
+                              name="institution"
+                              value={institution}
+                              onChange={e => onChange(e)}
+                              type="text"
+                              id="institutionInput"
+                              aria-describedby="institutionHelp"
+                              placeholder="Institution"
                           />
                         </div>
                       </div>
@@ -167,19 +165,15 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                       <div className="col-md-12 col-xs-12">
                         <div className="form-group">
                           <select
-                            className="form-control style-common"
-                            name="levelOfTraining"
-                            value={levelOfTraining}
-                            onChange={e => onChange(e)}
-                            id="levelOfTrainingInput"
-                            required>
-                            <option value="">Level of Training</option>
-                            <option value="Pre-clinical Medical Student">Pre-clinical Medical Student</option>
-                            <option value="Early Clinical Medical student">Early Clinical Medical student</option>
-                            <option value="Final Year Medical Student">Final Year Medical Student</option>
-                            <option value="Intern">Intern (House Officer)</option>
-                            <option value="Resident">Resident (Senior House Officer)</option>
-                            <option value="Attending">Attending (Registrar upwards)</option>
+                              className="form-control style-common"
+                              name="levelOfTraining"
+                              value={levelOfTraining}
+                              onChange={e => onChange(e)}
+                              id="levelOfTrainingInput" >
+                            <option>Level of Training</option>
+                            <option value="M1">M1</option>
+                            <option value="M2">M2</option>
+                            <option value="PGY-1">PGY-1</option>
                           </select>
                         </div>
                       </div>
@@ -188,13 +182,12 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                       <div className="col-md-6 col-xs-12">
                         <div className="form-group">
                           <select
-                            className="form-control style-common"
-                            name="gender"
-                            value={gender}
-                            onChange={e => onChange(e)}
-                            id="genderInput"
-                            required>
-                            <option value="">Select Gender</option>
+                              className="form-control style-common"
+                              name="gender"
+                              value={gender}
+                              onChange={e => onChange(e)}
+                              id="genderInput" >
+                            <option>Select Gender</option>
                             <option value="M">Male</option>
                             <option value="F">Female</option>
                           </select>
@@ -203,22 +196,17 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                       <div className="col-md-6 col-xs-12">
                         <div className="input-group">
                           <select
-                            className="form-control style-common"
-                            name="country"
-                            value={country}
-                            onChange={e => onChange(e)}
-                            id="cuntryInput"
-                            required>
-                            <option value="">Select Country</option>
-                            {/* <option>Pakistan</option>
+                              className="form-control style-common"
+                              name="country"
+                              value={country}
+                              onChange={e => onChange(e)}
+                              id="cuntryInput" >
+                            <option>Select Country</option>
+                            <option>Pakistan</option>
                             <option>India</option>
                             <option>China</option>
                             <option>USA</option>
-                            <option>UK</option> */}
-
-                            {options.map((op) => {
-                              return (<option value={op.label}>{op.label}</option>)
-                            })}
+                            <option>UK</option>
                           </select>
 
                         </div>
@@ -229,23 +217,22 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                       <div className="col-6">
                         <div className="form-group">
                           <input
-                            className="form-control style-common"
-                            name="dateOfBirth"
-                            value={dateOfBirth}
-                            onChange={e => onChange(e)}
-                            type="date"
-                            id="dateOfBirth"
-                            aria-describedby="dateOfBirth"
-                            placeholder="Select Date of Birth"
-                            data-date-format="DD MMMM YYYY"
-                            required
+                              className="form-control style-common"
+                              name="dateOfBirth"
+                              value={dateOfBirth}
+                              onChange={e => onChange(e)}
+                              type="date"
+                              id="dateOfBirth"
+                              aria-describedby="dateOfBirth"
+                              placeholder="Select Date of Birth"
+                              data-date-format="DD MMMM YYYY"
                           />
                         </div>
                       </div>
 
                     </div>
                     <div className="checkbox text-left term-condition-section ">
-                      <label><input type="checkbox" value="" required /> I agree to the <span className="term-text">terms and conditions</span></label>
+                      <label><input type="checkbox" value="" /> I agree to the <span className="term-text">terms and conditions</span></label>
                     </div>
 
                     <div className="mb-4">
@@ -259,10 +246,10 @@ const Register = ({ setAlert, clearAlert, register, isAuthenticated, showRegiste
                     <Alert />
                     <button className="btn btn-success btn-lg active btn-signup-custom">Sign Up</button>
                   </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
         </Modal.Body>
       </Modal>
     </Fragment>

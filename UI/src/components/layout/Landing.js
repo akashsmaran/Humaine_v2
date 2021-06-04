@@ -9,11 +9,9 @@ export const Landing = ({ isAuthenticated }) => {
   }
 
   return (
-    <div className="container">
-      < section className="" >
-        <h1 className="text-center mt-5">LANDING PAGE</h1>
-      </section >
-    </div>
+    <section className="">
+      <h1 className="text-center mt-5">LANDING PAGE</h1>
+    </section>
   );
 };
 

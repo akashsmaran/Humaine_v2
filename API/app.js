@@ -1,15 +1,18 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
-const cors = require("cors");
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-const authRoutes = require("./routes/authRoutes");
-const caseRoutes = require("./routes/caseRoutes");
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+const cors = require('cors');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+const authRoutes = require('./routes/authRoutes')
+const caseRoutes = require('./routes/caseRoutes');
+const fileUpload = require('express-fileupload');
+
 var app = express();
 
-app.use(logger("dev"));
+app.use(fileUpload());
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -24,10 +27,7 @@ app.use(
   })
 );
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-// app.use('/auth', authRoutes);
-// app.use('/cases', caseRoutes);
+
 app.use("/api", indexRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/auth", authRoutes);

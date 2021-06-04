@@ -1,4 +1,14 @@
-docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup.sql for prepoulating the database
+For prepoulating the database
+
+```
+docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup_latest.sql
+```
+
+For backing up databases in the laptop
+
+```
+pg_dump -U postgres humaine > C:\Users\saivi\OneDrive\Desktop\humaine_backup_03052021.sql
+```
 
 after making the action be on branch stage, I figured out that there are two methods to go ahead with
 

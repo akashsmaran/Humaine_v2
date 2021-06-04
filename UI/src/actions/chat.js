@@ -78,7 +78,6 @@ export const getCaseInfo = (caseId) => async (dispatch) => {
       payload: res.data.data,
     });
   } catch (err) {
-    console.log("Error , ::", err, typeof err);
     const error = err.response.data;
     if (error) {
       //dispatch(setAlert(error.message, 'danger'));

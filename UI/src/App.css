@@ -94,9 +94,7 @@ body {
 .reset-pass-lbl { color: #6b6e73}
 
 .case-wrapper { height: inherit}
-.case-col-left { height: inherit; 
-  /* background-color: #4EA2EE; */
-}
+.case-col-left { height: inherit; background-color: #4EA2EE;}
 
 .case-nav-top { height: 90px; background-color: #8BD8F6;}
 .no-padding { padding: 0px !important; margin: 0px !important;}
@@ -298,9 +296,6 @@ body {
 .col-5-cust {
   width: 50%;
 }
-.col-8-cust {
-  width: 63%;
-}
 .col-10-cust {
   width: 87%;
 }
@@ -327,21 +322,6 @@ body {
   color: white;
   font-weight: bold;
   font-size: ita;
-  font-style: italic;
-  padding: 6px 25px;
-  cursor: pointer;
-}
-.chat-timer {
-  /* border: 1px solid red; */
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  /* width: 90px; */
-  /* height: 35px; */
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
   font-style: italic;
   padding: 6px 25px;
   cursor: pointer;
@@ -380,7 +360,7 @@ body {
     height: inherit;
     background-color: rgba(227, 228, 230, 0.3);
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 16px;
     color: white;
     padding: 20px;
     border: 1px solid #989898;
@@ -954,59 +934,4 @@ body {
 }
 .fix-img {
   width: 45%;
-}
-/* Message box css */
-.usid{
-  border: 2px solid #3498db;
-  display: block;
-  text-align: center;
-  box-shadow: 0 2px 0 #000;
-  /* color: #888; */
-  color: #fff;
-  padding: 14px 10px;
-  outline: none;
-  font-family: 'cabin' Arial, Helvetica, sans-serif;
-  /* font-size: 13px; */
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-shadow: 0 -1px 0 #000;
-  border-radius: 24px;
-  transition: 0.25;
-}
-.usid::-webkit-input-placeholder{
-  color: #888;
-}
-.usid:-moz-placeholder{
-  color: #888;
-}
-.glowing{
-  animation: glow 800ms ease-out infinite alternate;
-  border-color: #393;
-  box-shadow: 0 0 5px #00ff0033, inset 0 0 5px #00ff001a, 0 2px 0 #000;
-  color: #efe;
-  outline: none;
-}
-.usid:focus::-webkit-input-placeholder{
-  color: #efe;
-}
-.usid:focus:-moz-placeholder{
-  color: #efe;
-}
-
-@keyframes glow {
-  0%{
-      border-color: #393;
-      box-shadow: 0 0 5px #00ff0033, inset 0 0 5px #00ff001a, 0 2px 0 #000 ;
-  }
-  100%{
-      border-color: #6f6;
-      box-shadow: 0 0 20px #00ff0099, inset 0 0 10px #00ff0066, 0 2px 0 #000;
-  }
-}
-
-.red { 
-  color: red;
-}
-.green  {
-  color: #01B576;
 }

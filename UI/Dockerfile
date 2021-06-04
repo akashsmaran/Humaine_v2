@@ -6,7 +6,7 @@ LABEL maintainer = ["saivicky2015@gmail.com", "akashsmaran@gmail.com"]
 
 WORKDIR /app
 
-COPY ["package.json", "package-lock.json", "./"]
+COPY ["package.json", "./"]
 
 RUN npm install --production
 
