@@ -4,6 +4,15 @@ For prepoulating the database
 docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup_latest.sql
 ```
 
+For checking if image exists in the table
+
+```
+docker exec -i postgres psql -U postgres humaine
+
+Select image from user;
+
+```
+
 For backing up databases in the laptop
 
 ```
