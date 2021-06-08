@@ -1,6 +1,6 @@
 #FROM postgres:13.3-alpine THis is not working with initialization
 
-FROM postgres:11.2-alpine
+FROM postgres:13.2-alpine
 COPY ./humaine_backup_latest.sql /docker-entrypoint-initdb.d/
 
 
