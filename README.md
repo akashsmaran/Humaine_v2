@@ -30,3 +30,10 @@ after making the action be on branch stage, I figured out that there are two met
 2. make 2 different github actions in frontend and backend_v3 which on commit build and push a docker image to docker hub or to ECR, but this requires changing the docker compose file in stage to tell it pull the images and run the images instead of remaking them in production.
 
 The scond method would make the stage branch only a docker-compose file and scripts folder and a few other folders
+
+## QUICK Commands
+
+```
+docker volume ls
+docker volume rm <option>
+```
