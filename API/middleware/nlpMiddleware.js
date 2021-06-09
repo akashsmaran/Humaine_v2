@@ -15,11 +15,7 @@ const getSenderId = async (req, res, next) => {
     message: message,
   };
   axios
-    .post(
-      " http://a3514d41916e9434e89ce7affed85dc9-1560023551.us-east-2.elb.amazonaws.com:8000/api/conversations",
-      bodyParameters,
-      config
-    )
+    .post("3.16.137.82/api/conversations", bodyParameters, config)
     .then((res) => {
       req.sender_id = res.data.sender_id;
 
@@ -48,9 +44,7 @@ const updateMessage = async (req, res, next) => {
   };
   axios
     .post(
-      "http://a3514d41916e9434e89ce7affed85dc9-1560023551.us-east-2.elb.amazonaws.com:8000/api/conversations/" +
-        sender_id +
-        "/messages",
+      "3.16.137.82/api/conversations/" + sender_id + "/messages",
       bodyParameters,
       config
     )
@@ -83,12 +77,7 @@ const getIntent = async (req, res, next) => {
     message: comment,
   };
   axios
-    .get(
-      " http://a3514d41916e9434e89ce7affed85dc9-1560023551.us-east-2.elb.amazonaws.com:8000/api/conversations/" +
-        sender_id +
-        "/messages",
-      config
-    )
+    .get("3.16.137.82/api/conversations/" + sender_id + "/messages", config)
     .then((response) => {
       req.sender_id = sender_id;
       req.userId = userId;
