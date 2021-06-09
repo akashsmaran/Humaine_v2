@@ -10,8 +10,20 @@ import {
   GET_CASE_INFO,
   IS_BOT_THINKING,
   APPEND_CHAT_MESSAGE,
+  MUTE_BOT,
+  UN_MUTE_BOT,
+  HIDE_CASES_FEEDBACK_MODAL,
+  SUBMIT_FEEDBACK,
+  RESULTS_BEING_FETCHED,
+  RESULTS_FETCH_SUCCESS,
 } from "./types";
+import setAuthToken from "../utils/setAuthToken";
 
+const apiUrl = process.env.API_URL || "http://127.0.0.1:4000/";
+
+export const toggleMute = () => async (dispatch) => {
+  dispatch({ type: MUTE_BOT });
+};
 export const sendMessage = (formData) => async (dispatch) => {
   const config = {
     headers: {
@@ -50,6 +62,9 @@ export const sendMessage = (formData) => async (dispatch) => {
       type: SEND_MESSAGE_ERROR,
     });
   }
+  dispatch({
+    type: SEND_MESSAGE_ERROR,
+  });
 };
 
 export const getMessages = (caseId) => async (dispatch) => {
@@ -78,9 +93,12 @@ export const getCaseInfo = (caseId) => async (dispatch) => {
       payload: res.data.data,
     });
   } catch (err) {
-    const error = err.response.data;
-    if (error) {
-      //dispatch(setAlert(error.message, 'danger'));
+    console.log("Error , ::", err, typeof err);
+    if (err && err.response) {
+      const error = err.response.data;
+      if (error) {
+        //dispatch(setAlert(error.message, 'danger'));
+      }
     }
     dispatch({
       type: SEND_MESSAGE_ERROR,
@@ -108,6 +126,53 @@ export const addDiagnosis = (formData) => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
+    const error = err.response.data;
+    if (error) {
+      //dispatch(setAlert(error.message, 'danger'));
+    }
+    dispatch({
+      type: SEND_MESSAGE_ERROR,
+    });
+  }
+};
+
+export const stepsSubmitted = (formData) => async (dispatch) => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  if (localStorage.token) {
+    setAuthToken(localStorage.token);
+  }
+  const { caseId, sessionId } = formData;
+
+  try {
+    dispatch({
+      type: HIDE_CASES_FEEDBACK_MODAL,
+      payload: "",
+    });
+    dispatch({
+      type: SUBMIT_FEEDBACK,
+      payload: "",
+    });
+    dispatch({
+      type: RESULTS_BEING_FETCHED,
+      payload: "",
+    });
+
+    const res = await axios.get(
+      `${apiUrl}cases/case-result/${caseId}/${sessionId}`,
+      config
+    );
+    console.log("Feed back is now submitted cases result ", res.data);
+    dispatch({
+      type: RESULTS_FETCH_SUCCESS,
+      payload: res.data.data,
+    });
+  } catch (err) {
+    console.log("Error occured while submitting Feed back", err);
+
     const error = err.response.data;
     if (error) {
       //dispatch(setAlert(error.message, 'danger'));
@@ -152,5 +217,11 @@ export const addMessageFlag = (messageId, isFlag) => async (dispatch) => {
 export const hideDiagnosisResult = () => (dispatch) => {
   dispatch({
     type: HIDE_DIAGNOSIS_RESULT,
+  });
+};
+
+export const hideCaseFeedBack = () => (dispatch) => {
+  dispatch({
+    type: HIDE_CASES_FEEDBACK_MODAL,
   });
 };

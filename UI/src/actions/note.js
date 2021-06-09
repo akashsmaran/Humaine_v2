@@ -10,9 +10,12 @@ export const getNotes = (caseId) => async (dispatch) => {
       payload: res.data.data,
     });
   } catch (err) {
-    const error = err.response.data;
-    if (error) {
-      //dispatch(setAlert(error.message, 'danger'));
+    console.log(err);
+    if (err && err.response && err.response.data) {
+      const error = err.response.data;
+      if (error) {
+        //dispatch(setAlert(error.message, 'danger'));
+      }
     }
     dispatch({
       type: SEND_NOTES_ERROR,

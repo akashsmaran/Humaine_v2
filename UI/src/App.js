@@ -1,11 +1,12 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
-import Landing from "./components/layout/Landing";
+// import Landing from "./components/layout/LandingPage/LandingPage";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Alert from "./components/layout/Alert";
 import Dashboard from "./components/dashboard/Dashboard";
+import Settings from "./components/settings/Settings";
 
 import PrivateRoute from "./routing/PrivateRoute";
 
@@ -39,6 +40,12 @@ const App = () => {
               <Route exact path="/" component={Login} />
               <Route path="/reset-password/:token" component={ChangePassword} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute
+                exact
+                path="/cases/support/:id"
+                component={Practice}
+              />
+              <PrivateRoute exact path="/settings" component={Settings} />
               <PrivateRoute
                 exact
                 path="/cases/support/:id"
