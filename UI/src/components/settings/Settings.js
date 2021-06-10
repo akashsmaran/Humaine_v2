@@ -126,7 +126,7 @@ const Settings = ({
   useEffect(() => {
     console.log("User info ", user);
     if (user && !user.image) {
-      user.image = "http://localhost:3000/assets/images/user.png";
+      user.image = "/assets/images/user.png";
     }
   }, [user]);
   return loading === null ? (

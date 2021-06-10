@@ -19,6 +19,16 @@ const Dashboard = ({
   const [modalShow, setModalShow] = React.useState(false);
   const src = "/assets/images/play.png";
   const srcOnHover = "/assets/images/play_2.png";
+  const findImg = (name) => {
+    switch(name){
+      case "Brian Montgomery":
+        return "/assets/images/BrianM.jpeg"
+      case "Judith Palfrey":
+        return "/assets/images/JudithPalfrey.jpeg"
+      default:
+        return "/assets/images/lady.png"
+    }
+  }
 
   useEffect(() => {
     getCases();
@@ -83,14 +93,14 @@ const Dashboard = ({
                   >
                     <div
                       className={"card " + colorClass}
-                      style={{ height: "67vh" }}
+                      style={{ height: "50vh" }}
                     >
                       <div className={"status-label " + tagClass}>
                         {caseItem.case_difficulty}
                       </div>
                       <div className="card-header-fit">
                         <img
-                          src="http://localhost:3000/assets/images/user2.jpeg"
+                          src={findImg(caseItem.case_name)}
                           alt="rover"
                         />
                       </div>
@@ -108,28 +118,28 @@ const Dashboard = ({
                         </Link>
                       </div>
                       <div className="card-body-bottom">
-                        <div className="btm-image">
+                        {/* <div className="btm-image">
                           <img
-                            src="http://localhost:3000/assets/images/play.png"
+                            src="/assets/images/play.png"
                             className="play-btn-resp"
                             alt="rover"
                           />
-                        </div>
+                        </div> */}
                         <div className="score-info-wrapper">
                           <table>
                             <tbody>
                               <tr className="tr-header">
                                 <th>{caseItem.user_cases.length}</th>
-                                <th>{caseItem.score}</th>
+                                {/* <th>{caseItem.score}</th> */}
                               </tr>
                               <tr className="tr-data">
                                 <td>Attempts</td>
-                                <td>Best Score</td>
+                                {/* <td>Best Score</td> */}
                               </tr>
                               <tr>
-                                <td className="tr-scorecard" colSpan="2">
+                                {/* <td className="tr-scorecard" colSpan="2">
                                   Scorecards
-                                </td>
+                                </td> */}
                               </tr>
                             </tbody>
                           </table>
