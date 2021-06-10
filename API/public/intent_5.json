@@ -1,345 +1,255 @@
 {
   "ADLs": [
-    "I am independent, until my breathing gets difficult. At that time, it is totally debilitating - although it does eventually get better."
+    "I am fully independent.",
+    "I have no problems with any issues of self care, and am completely independent.",
+    "I can do everything for myself at home - I am fully independent.",
+    "I am fully independent."
   ],
-  "AbdoCramps": ["No.", "No."],
-  "AbdoDistention": ["No.", "No."],
-  "AbdoPain": ["No.", "No.", "No."],
-  "Accommodation": ["I live in a flat in the city."],
-  "Age": ["45", "I am 45 years old", "My age is 45"],
+  "AbdoCramps": ["No"],
+  "AbdoDistention": ["No"],
+  "AbdoPain": ["No"],
+  "Accommodation": [
+    "I live in a small apartment on the ground floor.",
+    "My wife and I are in a small apartment on the ground floor.",
+    "Yes",
+    "I have a small ground floor apartment."
+  ],
+  "Age": ["I am 52 years old.", "Right now, I am 52 years of age."],
   "Alcohol": [
-    "I drink socially and very occasionally - like maybe at Christmas or Easter at family gatherings."
+    "I am a teetotaler.",
+    "No, I have always steered clear of alcohol and other addictions."
   ],
-  "AllergyHx": ["No.", "Not that I know of."],
-  "AnalSex": ["I am not really sexually active."],
-  "AnimalAllergy": ["Not that I know of.", "No."],
-  "AntiSickness": ["No.", "No.", "No."],
-  "Anxiety": [
-    "My breathlessness is making me a little anxious I think. I fear coming home sometimes, as I live alone. I am not usually an anxious person though."
-  ],
-  "Appendicectomy": ["No.", "No."],
+  "AllergyHx": ["No"],
+  "AnalSex": ["..."],
+  "AntiSickness": ["No, not yet"],
+  "Appendicectomy": ["No"],
   "Appetite": [
-    "I am just less interested in food while I have this problem. My appetite has been down recently, yes.",
-    "I am off food right now - I don't feel like eating."
+    "I have a good appetite, but I get pain when I eat.  So I am eating less."
   ],
-  "Arrhythmia": ["No, I have not.", "No."],
-  "AsbestosExposure": ["No.", "Not that I know of."],
-  "Ascites": ["No.", "No.", "No."],
+  "Ascites": ["No"],
   "AssociatedFactors": [
-    "When I get breathless, sometimes I start to feel dizzy and get headaches. Sometimes the muscles in my body ache.",
-    ">> Once when it got particularly bad, I was alone on a Saturday at home, and I thought my fingers became blue... "
+    "I feel a little sickly sometimes when the pain starts",
+    "The pain makes me feel sick."
   ],
-  "BarleyExposure": ["Not that I know of.", "No."],
-  "BarrierContraception": ["I am not really sexually active."],
-  "BeeWaspStingAllergy": ["Not that I know of.", "No."],
-  "BerylliumExposure": ["Not that I know of.", "No."],
-  "BirdAllergy": ["Not that I know of.", "No."],
-  "Bloatedness": ["No.", "No.", "No."],
-  "BloodyStool": [
-    "No.",
-    "No.",
-    "No.",
-    "No.",
-    "No.",
-    "No.",
-    "No.",
-    "No.",
-    "No."
-  ],
-  "BowelFrequency": ["No.", "No."],
-  "BowelHabit": ["No.", "No.", "No.", "No."],
-  "BowelIncontinence": ["No.", "No."],
-  "BowelMotions": ["No.", "No.", "No."],
-  "CasualPartner": [
-    "I am not really sexually active.",
-    "I am not really sexually active."
-  ],
-  "CeramicsExposure": ["No."],
+  "BarrierContraception": ["No"],
+  "Bloatedness": ["No"],
+  "BloodyStool": ["No"],
+  "BowelFrequency": ["Once a day"],
+  "BowelHabit": ["I open my bowels once a day."],
+  "BowelIncontinence": ["No"],
+  "BowelMotions": ["I think so"],
+  "CasualPartner": ["No", "No"],
   "Character": [
-    "It is a really florid breathlessness.  It seems to come on suddenly and leaves me gasping for breath sometimes.  But at other times, it is not so severe.  Taking inhalers or any other medicines has little effect.",
-    "I get breathless really quickly sometimes, especially in the evenings and night.  Sometimes I just get some tightness in my chest, and feel wheezy."
+    "It is a dull, throbbing pain",
+    "I feel it as a deep and dull pain."
   ],
-  "CheckDrug": ["No.", "Not that I know of."],
-  "ChestPain": ["Not that I have noted.", "No, not really."],
-  "Cholecystectomy": ["No.", "No."],
-  "CoalExposure": ["No.", "Not that I know of."],
-  "ColdWeatherExacerbation": ["No.", "Not that I know of."],
-  "Colonoscopy": ["No.", "No."],
+  "Cholecystectomy": ["No"],
+  "Colonoscopy": ["No"],
   "Concern": [
-    "I am worried by the fact that it just wont go away. I dread coming home from work as I have to face these symptoms alone, and that can be terrifying sometimes.",
-    "I don't know - maybe that my symptoms have  lasted for so long. I am not very old yet",
-    " but I am wondering if these kind of problems are just part of the ageing process. I am especially worried to be at home alone when the symptoms strike."
+    "I am worried about what this sudden pain might be and if you can help me.",
+    "I am concerned by how suddenly this pain started for me.",
+    "I am worried about what this pain may be."
   ],
-  "ConfirmName": ["Judith Palfrey"],
-  "ConfirmProblem": ["Yes, It think so.", "Yes."],
-  "Constipation": ["No.", "No.", "No."],
-  "ConstructionExposure": ["Not that I know of."],
-  "Contacts": [
-    "I mostly just go from work to home, so I have not been in touch with anyone unusual or new."
+  "ConfirmName": ["I am Brian Montgomery."],
+  "ConfirmProblem": ["I think so, yeah"],
+  "Constipation": ["No"],
+  "Contacts": ["Nobody"],
+  "DOB": [
+    "I was born on the 18th of October. 1967.",
+    "My date of birth is 18. 10. 1967."
   ],
-  "CottonExposure": ["Not that I know of.", "No."],
-  "Cough": [
-    "I get some occasional cough, but it is not a regular occurence. ",
-    "I have coughed a handful of times, but not very much,"
+  "DarkUrine": ["No"],
+  "Delivery": ["I think so"],
+  "DiagnosticStatement": ["Okay"],
+  "Diarrhoea": ["No"],
+  "Diet": [
+    "I try and eat healthily and be active. ",
+    "I would say I have a normal diet and walk for at least a few hours every day.",
+    "I have a decent diet and am fairly active."
   ],
-  "DOB": ["24th June 1975", "24 June 1975"],
-  "DampHome": ["I don't think so.", "No."],
-  "DarkUrine": ["No.", "No."],
-  "Delivery": [
-    "I had a pretty normal delivery I think.  I can't remember anyone telling me otherwise."
+  "DoctorQuestion": ["No, I just weant to know what is causing my symptoms."],
+  "DrugAbuse": [
+    "I am a teetotaler.",
+    "No, I have always steered clear of alcohol and other addictions."
   ],
-  "DiagnosticStatement": ["Oh I see.", "Okay that makes sense I guess."],
-  "Diarrhoea": ["No.", "No.", "No."],
-  "Diet": ["I eat normally - I am not on any special diets or anything."],
-  "DoctorQuestion": [
-    "No, I just want to figure out why I am getting like this.",
-    "Not that I can think of right now.",
-    "Not at the moment, thanks."
-  ],
-  "DrugAbuse": ["I would never do that!"],
   "DrugHx": [
-    "Nothing regularly. But my doctor has started me on a blue inhaler to see if it will help.",
-    ">>It doesn't help"
+    "I take 5 miligrams of Ramipril and 40mg of Atorvastatin every night.",
+    "I take Ramipril and a Statin daily."
   ],
-  "DustExposure": ["I don't think so.", "No."],
-  "Dyspepsia": ["No.", "No.", "No.", "No.", "No.", "No."],
-  "Dysphagia": ["No.", "No.", "No.", "No.", "No.", "No.", "No."],
-  "EggAllergy": ["Not that I know of.", "No."],
-  "Empathy": ["Thank you very much.", "Thank you."],
-  "EnvironmentChangeHouse": [
-    "Yes, it does seem to get a little bit better when I get out of the house.  I don't exactly know why that may be."
+  "Dyspepsia": ["No"],
+  "Dysphagia": ["No"],
+  "Empathy": [
+    "Thank you for your kind words",
+    "Your consideration means a lot",
+    "I feel better having shared my problems with you"
   ],
   "ExacerbatingFactors": [
-    "I have noted that if I stay indoors too long, I can sometimes suffer more from the breathing. If I go outside for fresh air, that can help sometimes.",
-    "I think being inside, especially in stuffy or smoky environments can make things worse."
+    "It seems that eating more food makes it worse and staying hungry reduces it, so I am eating less"
   ],
   "Exercise": [
-    "I must admit that I do not exercise much normally - but now I am afraid of getting breathless, so I am actively avoiding all exercise."
+    "I try and eat healthily and be active. ",
+    "I walk for at least a few hours every day. But I could lose a bit more weight probably.",
+    "I am fairly active."
   ],
-  "ExerciseToleranceNorm": [
-    "I was very fit and could do long stretches of activity before I got breathless. Walking or running was never a problem.",
-    "I never had to think about how far I could or could not walk before this breathlessness started."
-  ],
-  "ExerciseToleranceNow": [
-    "I start to huff and puff, and can't do much around the house at all. It is scary when it gets that bad... but its not always like that; sometimes I am not breathless."
-  ],
-  "Expectations": [
-    "Whatever you think is the right thing to do really.  I feel a little exhausted by all this and would love some clarity on my medical problems.",
-    "Whatever you suggest to be honest."
-  ],
-  "FamilyHx": [
-    "I don't know really.",
-    "Nothing that I know of - but I can check with my dad and get back to you."
-  ],
-  "FamilyMember": ["I live alone", "I am single and live alone."],
-  "FarmingExposure": [
-    "Not that I know of.",
-    "No.",
-    "Not that I know of.",
-    "No."
+  "Expectations": ["I am hoping you can treat me"],
+  "FamilyHx": ["I don't have any diseases in the family."],
+  "FamilyMember": [
+    "I live with my wife. We have no children.",
+    "My wife and I live at home, and we have no children.",
+    "My wife lives with me."
   ],
   "Fever": [
-    "I don't know. Sometimes I get a bit chilly and shaky, but I am not sure I have had a fever.",
-    "I am not sure.  I have not taken my temperature."
+    "I have felt a bit hot at times but not taken my temperature.",
+    "I have been getting a little hot and cold"
   ],
-  "FoodAllergy": ["Not that I know of.", "No."],
   "Frequency": [
-    "I tend to notice the breathlessness at its peak maybe 2 or 3 times a week. But I equally feel that my breathing is quite laboured throughout the week."
+    "Essentially, I get 2 or 3 minutes of severe, dull pain over a period of about a half-hour"
   ],
-  "GORD": ["No.", "No."],
-  "Gastritis": ["No.", "No."],
+  "GORD": ["No"],
+  "Gastritis": ["No"],
   "Goodbye": [
-    "Thank you very much - please let me know when you find out more about my problem.",
-    "Many thanks",
-    "Take care and thank you"
+    "Thank you for speaking with me today.",
+    "Many thanks for your help.",
+    "It has been great to talk to you today."
   ],
-  "Haematemesis": ["No.", "No.", "No.", "No.", "No."],
-  "Haemoptysis": ["No.", "Not at all."],
-  "HaemoptysisAmount": ["I only have a dry cough."],
-  "HaemoptysisColour": ["I only have a dry cough."],
-  "HaemoptysisMixedStreak": [
-    "I only have a dry cough.",
-    "I only have a dry cough."
+  "Haematemesis": ["No"],
+  "HerniaOp": ["No"],
+  "HiatusHernia": ["No"],
+  "Hobbies": ["My wife and I enjoy long walks in the countryside"],
+  "IVDU": ["No.", "No, I have never taken any drugs like that."],
+  "Ideas": ["I don't know to be honest"],
+  "IntroAndName": ["My name is Brian Montgomery.", "I am Brian Montgomery."],
+  "Introduction": [
+    "Hello",
+    "Hi",
+    "Hello. Very nice to meet you.",
+    "Good day to you.",
+    "Pleased to meet you."
   ],
-  "Hayfever": ["Not that I know of.", "No."],
-  "HerniaOp": ["No.", "No."],
-  "HiatusHernia": ["No.", "No."],
-  "Hoarseness": ["No, not that I have noted.", "I don't think so."],
-  "Hobbies": [
-    "I enjoy watching movies and reading books on the weekends.",
-    "I am more of an indoors kind of person."
-  ],
-  "IVDU": ["Never!"],
-  "Ideas": [
-    "I am very confused.  Initially, I agreed with my regular doctor that this could be asthma, but I am not sure what is going on anymore.",
-    "I feel really unsure to be honest.  I don't think that this is asthma like my family doctor thought."
-  ],
-  "IndustrialExposure": ["No.", "Not that I know of."],
-  "IntroAndName": ["Hello, I am Ms Judith Palfrey"],
-  "Introduction": ["Hi", "Good morning", "Hello"],
-  "ItchyEyesNoseThroat": ["Not that I know of.", "No."],
-  "Jaundice": ["No.", "No.", "No.", "No."],
-  "Lethargy": [
-    "I do feel very tired. I am not sure if my mind is playing games with me."
-  ],
+  "Jaundice": ["No"],
+  "Lethargy": ["No, not really."],
   "Lifestyle": [
-    "I feel priveleged to have a comfortable life, and I am financially stable."
+    "I enjoy a banced lifestyle.",
+    "I am not too stressed out or anything - life is good!"
   ],
-  "ManagementPlan": ["Alright, sure.", "Okay sure that sounds good."],
-  "MasonryExposure": ["No."],
-  "MushroomExposure": ["Not that I know of.", "No."],
-  "Name": ["Judith Palfrey", "I am Ms Judith Palfrey"],
-  "NameAndAge": ["I am Judith Palfrey and I am 45 years old"],
-  "NameAndDOB": ["I am Judith Palfrey and I was born on 24th June 1975"],
-  "Nausea": ["No.", "No.", "No."],
-  "NeuroSOB": ["No.", "No, not al all."],
-  "NewLivingConditions": ["No, not al all.", "No."],
-  "NewWorkConditions": [
-    "No, I have been with the same office now for at least 10 years.",
-    "No, I am a veteran at my office!"
+  "ManagementPlan": ["Okay, alright"],
+  "Name": ["My name is Brian Montgomery.", "I am Brian Montgomery."],
+  "NameAndAge": ["I am Brian Montgomery and I am 52 years old."],
+  "NameAndDOB": ["I am Brian Montgomery and I was born on October 18th, 1967."],
+  "Nausea": [
+    "I feel a little sickly sometimes when the pain starts",
+    "The pain makes me feel sick.",
+    "I get nauseous suddenly when the pain comes on"
   ],
-  "NutsAllergy": ["Not that I know of.", "No."],
-  "OGD": ["No.", "No."],
-  "OTCDrugHx": [
-    "I take Vitamin D, which I buy at the supermarket. That's all."
+  "OGD": ["No"],
+  "OTCDrugHx": ["No"],
+  "Occupation": [
+    "I am a plumber, but coming close to retirement.",
+    "I am presently a self-employed plumber.",
+    "I am a plumber."
   ],
-  "Occupation": ["I am a legal secretary"],
-  "Odynophagia": ["No.", "No.", "No.", "No.", "No."],
+  "Odynophagia": ["No"],
   "Onset": [
-    "I get breathless on some days more than others, but it seems to be mostly in the evenings. I seem to be mostly fine during the day.",
-    "I notice that, typically, I get the most breathless at around 8 or 9pm, around the time I am getting ready for bed. For some strange reason though, the problem seems worse on the weekends.",
-    "It sometimes feels like my work keeps my mind off my breathing and when I am home alone, I just keep getting sick. I say that because on the weekends, the breathlessness can be particularly pervasive."
+    "It seems to come on when I eat food",
+    "It happens around 15 minutes after I have a heavy meal."
   ],
   "OnsetTrigger": [
-    "Um I am not totally sure.  Sometimes I think the suffiness of staying indoor at home may be causing my symptoms.",
-    "I may be getting asthma because of something in my house.  That is what my family doctor sometimes suspected."
+    "I get the pain after a heavy meal, especially if it is fried."
   ],
-  "OralSex": ["I am not really sexually active."],
-  "Orthopnoea": ["No.", "No, not al all.", "No."],
-  "OtherProblems": ["No, I only have this breathing difficulty mostly.", "No."],
-  "PND": ["No, not al all.", "No.", "No, not al all."],
-  "PUD": ["No.", "No."],
+  "OralSex": ["..."],
+  "OtherProblems": ["No, just this stomach ache"],
+  "PUD": ["No"],
   "PainKiller": [
-    "My family doctor started me on some inhalers but they do not help."
+    "No, painkillers have not helped.",
+    "I have tried paracetamol and it has made little difference."
   ],
-  "PainfulDefecation": ["No.", "No.", "No."],
-  "PaleStool": ["No.", "No."],
-  "Palpitation": ["No, I have not.", "No."],
-  "PassiveSmoke": ["No.", "Not that I know of."],
-  "PassiveSmokeContact": ["No.", "Not that I know of."],
+  "PainfulDefecation": ["No"],
+  "PaleStool": ["No"],
   "PastMedicalHx": [
-    "I don't have any established illnesses.",
-    "Nothing in the past, no."
+    "I suffer from high blood pressure and high blood cholesterol. Otherwise, I had asthma as a child but that got better.",
+    "As I said, I have high blood pressure and cholesterol."
   ],
-  "PastSurgicalHx": ["No.", "No surgeries in the past."],
-  "Penetration": ["I am not really sexually active."],
-  "PeripheralOedema": ["No.", "No, not al all."],
-  "PetsExposure": [
-    "Yes, I keep a pair of lovebirds - I got them last year, as it was getting really lonely at home.",
-    ">> I got them around 8 or 9 months ago. The two lovebirds are called Tweety and Twitter!"
+  "PastSurgicalHx": [
+    "Thankfully, I have never had any surgery done on me.",
+    "I have not had any operations in my life."
   ],
-  "Piles": ["No.", "No."],
-  "PillowsSleep": [
-    "I sleep on 1 pillow, as I have always done really.",
-    "I only use 1 pillow and have not changed this."
-  ],
-  "PollenAllergy": ["Not that I know of.", "No."],
-  "PreviousICU": ["No, I am not sure what that is.", "Not that I know."],
-  "PreviousTransfusions": ["No.", "No.", "No.", "No.", "No.", "No."],
+  "Penetration": ["..."],
+  "Piles": ["No"],
+  "PrematureDelivery": ["I think I was born at the normal time"],
+  "PreviousICU": ["No"],
+  "PreviousTransfusions": ["No"],
   "ProblemBefore": [
-    "No, but this has been an issue for me for a while now.",
-    "No."
+    "No, this only started around a week ago",
+    "I've had stomach pain before, but never like this.",
+    "This pain is completely new for me."
   ],
   "ProblemProgression": [
-    "I don't know to be honest. It feels like it is worse, but sometimes I don't have this problem at all, so I don't know.",
-    "I am not sure. It tends to come and go, so I can't be totally sure. And that is why my family doctor kept on trying different things."
+    "The pain has been getting worse and not better",
+    "Since the pain started, it has been getting worse and not better",
+    "The pain has increased slowly but has not decreased"
   ],
   "ProblemStart": [
-    "I have been getting these symptoms for a good few months.",
-    "I have had this for, what, 4 or maybe 6 months now",
-    "It has been with me a long time - maybe half a year."
+    "I have had this pain for a week now",
+    "One week ago",
+    "I first noted the pain one week ago",
+    "The pain has been with me for a week."
   ],
-  "PrutitisAni": ["No.", "No.", "No."],
-  "PrutitisSkin": ["No.", "No.", "No."],
-  "Radiation": ["I am not sure what you mean."],
-  "Reassurance": ["Yes thanks"],
+  "PrutitisAni": ["No"],
+  "PrutitisSkin": ["No"],
+  "Radiation": [
+    "Yes, it sometimes travels to the back",
+    "I have noted that it has gone to my back maybe 2 or 3 times only since it started.",
+    "It has travelled to the back only a few times during the entire episode."
+  ],
+  "Reassurance": ["Thank you", "Yes, thanks"],
   "RecentTreatment": [
-    "My family doctor has started me on inhalers thinking that this was asthma, but it hasn't worked.  She has sent my to your clinic as she is not sure what is going on.",
-    "I have been on inhalers for around 4 months and I have not found that to be useful.  My doctor isn't sure why they are not helping."
+    "I haven't sought any medical help for this before - it's only been with me a week."
   ],
-  "RegularPartner": ["I am not really sexually active."],
+  "RegularPartner": ["My wife"],
   "RelievingFactors": [
-    "The inhalers certainly don't help.  I feel that going outside and breathing the fresh air can make me feel better.",
-    "Yes, taking in the crisp outdoors air can at times be helpful"
+    "It seems that eating more food makes it worse and staying hungry reduces it, so I am eating less"
   ],
-  "Rhinitis": ["Not that I know of.", "No."],
-  "SOB": [
-    "Yes, my family doctor has sent me to you because he couldn't help treat it.",
-    "Yes, I have been quite breathless and my regular doctor couldn't help.",
-    "Yes, I have been struggling to catch my breath at times and I need to see a specialist about this apparently."
-  ],
-  "SOBExertion": [
-    "Nohting out of the ordinary.  But if I am already short of breath, I can't really do much activity anyway."
-  ],
-  "SOBVariation": [
-    "The breathing seems to be worse in the late evenings when I am home after work.",
-    "Sometimes it is bad first thing in the morning, before I leave for work.  Or it is particularly bad at night as I get ready for bed."
-  ],
-  "SOBWork": ["No, not that I have noted.", "I don't think so."],
-  "SafeSex": ["I am not really sexually active."],
-  "SeafoodAllergy": ["Not that I know of.", "No."],
-  "SeasonVariation": ["No, not that I have noted.", "I don't think so."],
+  "SafeSex": ["Er... yes, I think so"],
   "Severity": [
-    "When I get the symptoms, I really struggle for breath. I start to huff and puff, and can't do much around the house at all. It is scary when it gets that bad... but then it improves again."
+    "It is actually quite painful - I can't do anything else when the pain begins",
+    "On a scale of 1 to 10, I would say it is around 7"
   ],
-  "Sex>2": ["I am not really sexually active."],
-  "SexWorker": ["No!"],
-  "Site": ["I am not sure what you mean."],
-  "SkinChange": ["No.", "I don't think so"],
-  "Sleep": ["I sleep well thanks.", "My sleep is mostly undisturbed."],
+  "Sex>2": ["..."],
+  "SexWorker": ["..."],
+  "Site": [
+    "It's here - in the upper part of my stomach, on the right hand side.",
+    "It is just under the ribs on the right hand side"
+  ],
+  "SkinChange": ["No"],
   "SmallTalk": [
-    "Thanks for seeing me today - You know how it is... its always a rush to fit in everything in the day",
-    "Thank you for your time.  I wish I didn't need to come and see you today!"
+    "I am okay except this issue that has been bothering me.",
+    "Things are good, but I have this problem"
   ],
-  "Smoke": ["No, I have never smoked"],
-  "Sneezing": ["Not that I know of.", "No."],
-  "Sputum": ["No, I only have a dry cough."],
-  "SputumAmount": ["I only have a dry cough."],
-  "SputumColour": ["I only have a dry cough."],
-  "StoolBulk": ["No."],
-  "StoolConsistency": ["No."],
-  "StoolDescribe": ["No."],
-  "StoolFloat": ["No.", "No."],
-  "StoolMucus": ["No.", "No.", "No.", "No."],
-  "StoolSmell": ["No.", "No."],
-  "Stress": [
-    "My symptoms are stressing me out - I am not usually one to be stressed though."
+  "Smoke": [
+    "I used to smoke socially, but gave that up many years ago.",
+    "I used to smoke maybe 2 or 3 cigarettes a week when I was in my twenties, but quit when I hit an age of 30."
   ],
-  "Summary": ["Yes", "Yes, that is correct"],
-  "Sweating": ["No.", "I don't think so"],
-  "Tenesmus": ["No.", "No.", "No."],
-  "TermDelivery": [
-    "I had a pretty normal delivery I think.  I can't remember anyone telling me that I was premature or anything."
-  ],
+  "StoolBulk": ["No"],
+  "StoolConsistency": ["Normal really"],
+  "StoolDescribe": ["It is normal"],
+  "StoolFloat": ["They are normal"],
+  "StoolMucus": ["No"],
+  "StoolSmell": ["They are normal"],
+  "Summary": ["Yes", "Yes, I think so"],
+  "Sweating": ["No, not really"],
+  "Tenesmus": ["No"],
+  "TermDelivery": ["I think so"],
   "Timing": [
-    "It can vary. Sometimes I am breathless for like 3 to 4 hours, and other times it just seems more insidious and can bother me for days... I am not really sure to be honest.",
-    "Mostly, I get a bit of discomfort in the chest, but when the breathlessness really takes over, it lasts for maybe 3 hours. But sometimes much longer."
+    "The pain lasts only for a short while, maybe 1 or 2 minutes, but I have many bouts of this"
   ],
-  "TransitionPoints": ["Alright.", "Okay, please procee.", "Great!"],
-  "TravelHx": [
-    "No, I am not into traveling much... I think the last time I travelled anywhere other than this city was in 2003."
-  ],
-  "VaginalSex": ["I am not really sexually active."],
-  "Vomit": ["No.", "No.", "No.", "No.", "No.", "No.", "No.", "No.", "No."],
-  "Weight Loss": [
-    "Now that you mention it, I have noted a few kilos dropping off me, but I don't have much of an appetite anymore.",
-    "I have probably lost around 2 kilograms in 3 months maybe(havent removed this from random responses)"
-  ],
+  "TransitionPoints": ["Okay, sure.", "Yes, go on."],
+  "TravelHx": ["No"],
+  "VaginalSex": ["..."],
+  "Vomit": ["No I have not vomited even though I feel sick"],
+  "Weight Loss": ["No"],
   "WhatProblem": [
-    "My family doctor has sent me to you because he couldn't help treat my shortness of breath.",
-    "I have been quite breathless and my regular doctor couldn't help.",
-    "I have been struggling to catch my breath at times and I need to see a specialist about this."
-  ],
-  "Wheeze": ["No, not that I have noted.", "No."],
-  "WheezeWork": ["I don't get any wheezing."]
+    "I am coming to the hospital today because I have been experiencing bouts of terrible stomach pain.",
+    "I noted a pain in my stomach from about a week ago, and it is becoming difficult to cope with.",
+    "As I have said, I am getting terrible episodes of stomach pain that are worrying me. I want to know what this may be."
+  ]
 }

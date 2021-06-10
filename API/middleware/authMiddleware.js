@@ -44,7 +44,7 @@ const validateToken = async (req, res, next) => {
 
 const nlpLogin = async (req, res, next) => {
   axios
-    .post("3.16.137.82/api/auth", {
+    .post("http://3.16.137.82/api/auth", {
       username: "me",
       password: "rasarasa",
     })

@@ -152,7 +152,7 @@ const DiagnoseSubmit = ({
             <div className="col-lg-12 text-center">
               <div>
                 <h5 className="title text-center mt-4">
-                  What are your differencials?
+                  What are your differentials?
                 </h5>
                 <span
                   className="close-btn"
