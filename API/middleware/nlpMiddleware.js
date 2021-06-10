@@ -15,7 +15,7 @@ const getSenderId = async (req, res, next) => {
     message: message,
   };
   axios
-    .post("3.16.137.82/api/conversations", bodyParameters, config)
+    .post("http://3.16.137.82/api/conversations", bodyParameters, config)
     .then((res) => {
       req.sender_id = res.data.sender_id;
 
@@ -44,7 +44,7 @@ const updateMessage = async (req, res, next) => {
   };
   axios
     .post(
-      "3.16.137.82/api/conversations/" + sender_id + "/messages",
+      "http://3.16.137.82/api/conversations/" + sender_id + "/messages",
       bodyParameters,
       config
     )
@@ -77,7 +77,10 @@ const getIntent = async (req, res, next) => {
     message: comment,
   };
   axios
-    .get("3.16.137.82/api/conversations/" + sender_id + "/messages", config)
+    .get(
+      "http://3.16.137.82/api/conversations/" + sender_id + "/messages",
+      config
+    )
     .then((response) => {
       req.sender_id = sender_id;
       req.userId = userId;
