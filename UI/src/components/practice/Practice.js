@@ -25,15 +25,15 @@ import CaseFeedback from "./../modals/CaseFeedbackModal";
 import "./Practice.css";
 
 const findImg = (name) => {
-  switch(name){
+  switch (name) {
     case "Brian Montgomery":
-      return "/assets/images/BrianM.jpeg"
+      return "/assets/images/BrianM.jpeg";
     case "Judith Palfrey":
-      return "/assets/images/JudithPalfrey.jpeg"
+      return "/assets/images/JudithPalfrey.jpeg";
     default:
-      return "/assets/images/lady.png"
+      return "/assets/images/lady.png";
   }
-}
+};
 const Practice = ({
   getCurrentProfile,
   getCaseInfo,
@@ -54,10 +54,10 @@ const Practice = ({
   const [options, setOptions] = useState();
 
   const { elapsedTime, reset } = useElapsedTime(true, options);
-  
+
   const caseId = match.params.id;
   const [startDate, setStartDate] = useState("2015-04-19");
-  
+
   useEffect(() => {
     getCaseInfo(caseId);
     // console.log("Case info" , caseId  , caseInfo , getCaseInfo)
@@ -205,11 +205,11 @@ const Practice = ({
           </div>
           <div className="col-5-cust no-padding">
             <div className="image-bg full-extend">
-              {/* {caseInfo[0].case_name == "Berty Le Roux" ? (
+              {caseInfo[0].case_name == "Berty Le Roux" ? (
                 <img src="/assets/images/lady.png" className="full-extend" />
               ) : (
                 ""
-              )} */}
+              )}
               {caseInfo[0].case_name == "Brian Montgomery" ? (
                 <img src="/assets/images/BrianM.jpeg" className="full-extend" />
               ) : (

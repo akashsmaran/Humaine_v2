@@ -1,24 +1,79 @@
-# This is for developement enviroment and react is not built and served with nginx
-
 version: "3.7"
 
 services:
+  ##############################
+  # Backend Container
+  ##############################
+  postgres:
+    image: kanlanc/humaine:production_09062021_postgres_dev
+    hostname: postgres
+    container_name: postgres
+    restart: always
+    build:
+      context: ./API/config
+      dockerfile: Dockerfile.db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: humaine
+      DB_USER: postgres
+      DB_PASSWORD: abc12345
+      POSTGRES_PASSWORD: abc12345
+
+    volumes:
+      - humaine:/var/lib/postgresql/data
   api:
-    env_file: "./api/.env"
+    env_file: "./API/.env"
     container_name: api
     build:
-      context: ./api
-      dockerfile: ./Dockerfile
-    image: "kanlanc/humaine-api"
+      context: ./API
+      dockerfile: ./Dockerfile.dev
+    image: "kanlanc/humaine:production_09062021_api_dev"
+    depends_on:
+      - postgres
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+
     ports:
       - "4000:4000"
+    volumes:
+      - type: bind
+        source: ./API
+        target: /app
+
+  ##############################
+  # UI Container
+  ##############################
   ui:
     build:
-      context: ./ui
+      context: ./UI
       dockerfile: ./Dockerfile.dev
-    image: "kanlanc/humaine-ui-dev"
-    container_name: ui-dev
+    image: "kanlanc/humaine:production_09062021_ui_dev"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    container_name: ui
     ports:
       - "80:3000"
-    links:
-      - "api:api"
+      - "443:443"
+    depends_on:
+      - api
+    volumes:
+      - type: bind
+        source: ./UI
+        target: /app
+
+  ##############################
+  # Pgadmin Container
+  ##############################
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: a@a.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+
+volumes:
+  humaine:

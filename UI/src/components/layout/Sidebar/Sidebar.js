@@ -39,7 +39,7 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split("/");
-  console.log(location);
+  // console.log(location);
 
   const logoutUser = () => {
     logout();
