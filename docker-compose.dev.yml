@@ -25,6 +25,7 @@ services:
   api:
     env_file: "./API/.env"
     container_name: api
+    restart: always
     build:
       context: ./API
       dockerfile: ./Dockerfile.dev
@@ -48,6 +49,7 @@ services:
     build:
       context: ./UI
       dockerfile: ./Dockerfile.dev
+    restart: always
     image: "kanlanc/humaine:production_09062021_ui_dev"
     environment:
       CHOKIDAR_USEPOLLING: "true"

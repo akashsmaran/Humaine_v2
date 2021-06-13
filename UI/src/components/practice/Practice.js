@@ -255,8 +255,7 @@ const Practice = ({
       <CaseFeedback
         caseId={caseId}
         sessionId={caseInfo ? caseInfo[0].sessionid : "0"}
-        // showCaseFeedback={showCaseFeedback}
-        showCaseFeedback={false}
+        showCaseFeedback={showCaseFeedback}
         handleCloseCaseFeedback={handleCloseCaseFeedback}
       />
       <DiagnosisResult

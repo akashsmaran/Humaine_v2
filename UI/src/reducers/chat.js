@@ -74,8 +74,7 @@ export default function (state = initialState, action) {
     case ADD_DIAGNOSIS:
       return {
         ...state,
-        // showCaseFeedback: true,
-        showCaseFeedback: false,
+        showCaseFeedback: true,
       };
     case SUBMIT_FEEDBACK:
       return {

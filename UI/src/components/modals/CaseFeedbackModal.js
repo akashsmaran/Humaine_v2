@@ -19,9 +19,8 @@ const CaseFeedback = ({
 
   return (
     <Fragment>
-      {false && (
+      {showCaseFeedback && (
         <ReactTypeformEmbed
-          // {showCaseFeedback && (<ReactTypeformEmbed
           popup
           autoOpen={true}
           url="https://38ti4g7ro2d.typeform.com/to/HdGxpP1J"

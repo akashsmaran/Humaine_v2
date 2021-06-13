@@ -14,7 +14,7 @@ import Select from "react-select";
 import axios from "axios";
 import setAuthToken from "../../utils/setAuthToken";
 const apiUrl = process.env.API_URL || "http://127.0.0.1:4000/";
-
+console.log(process.env.API_URL);
 const DiagnoseSubmit = ({
   caseID,
   showEndDialog,
