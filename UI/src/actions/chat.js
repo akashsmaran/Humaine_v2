@@ -146,6 +146,7 @@ export const stepsSubmitted = (formData) => async (dispatch) => {
     setAuthToken(localStorage.token);
   }
   const { caseId, sessionId } = formData;
+  console.log(formData);
 
   try {
     dispatch({
@@ -160,9 +161,9 @@ export const stepsSubmitted = (formData) => async (dispatch) => {
       type: RESULTS_BEING_FETCHED,
       payload: "",
     });
-
+    console.log(apiUrl);
     const res = await axios.get(
-      `${apiUrl}cases/case-result/${caseId}/${sessionId}`,
+      `${apiUrl}api/cases/case-result/${caseId}/${sessionId}`,
       config
     );
     console.log("Feed back is now submitted cases result ", res.data);

@@ -1,0 +1,71 @@
+version: "3.7"
+
+services:
+  ##############################
+  # Backend Container
+  ##############################
+  postgres:
+    image: kanlanc/humaine:production_09062021_postgres
+    hostname: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: humaine
+      DB_USER: postgres
+      DB_PASSWORD: abc12345
+      POSTGRES_PASSWORD: abc12345
+    volumes:
+      - humaine:/var/lib/postgresql/data
+  api:
+    env_file: "./API/.env"
+    container_name: api
+    restart: always
+    image: "kanlanc/humaine:production_09062021_api"
+    depends_on:
+      - postgres
+
+    ports:
+      - "4000:4000"
+
+  ##############################
+  # UI Container
+  ##############################
+  ui:
+    image: "kanlanc/humaine:production_09062021_ui"
+    restart: always
+    container_name: ui
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api
+    volumes:
+      - ./UI/nginx/certbot/conf:/etc/letsencrypt
+      - ./UI/nginx/certbot/www:/var/www/certbot
+
+  # ##############################
+  # # Certbot Container
+  # ##############################
+  # certbot:
+  #   image: certbot/certbot:latest
+  #   volumes:
+  #     - ./UI/nginx/certbot/conf:/etc/letsencrypt
+  #     - ./UI/nginx/certbot/www:/var/www/certbot
+
+##############################
+# Pgadmin Container
+##############################
+# pgadmin:
+#   container_name: pgadmin4_container
+#   image: dpage/pgadmin4
+#   restart: always
+#   environment:
+#     PGADMIN_DEFAULT_EMAIL: a@a.com
+#     PGADMIN_DEFAULT_PASSWORD: root
+#   ports:
+#     - "5050:80"
+
+volumes:
+  humaine:

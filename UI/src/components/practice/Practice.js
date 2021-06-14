@@ -121,7 +121,7 @@ const Practice = ({
       ],
     });
   };
-  return loading === null || user == null ? (
+  return loading === null || user == null || caseInfo == null ? (
     <Spinner />
   ) : (
     <Fragment>

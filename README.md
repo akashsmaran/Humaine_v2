@@ -4,12 +4,10 @@ For prepoulating the database
 docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup_latest.sql
 ```
 
-For checking if image exists in the table
+For running in development
 
 ```
-docker exec -i postgres psql -U postgres humaine
-
-Select image from user;
+docker-compose -f docker-compose.dev.yml up
 
 ```
 
