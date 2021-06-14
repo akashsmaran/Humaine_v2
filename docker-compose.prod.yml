@@ -5,7 +5,7 @@ services:
   # Backend Container
   ##############################
   postgres:
-    image: kanlanc/humaine:production_09062021_postgres
+    image: kanlanc/humaine:production_14062021_postgres
     hostname: postgres
     container_name: postgres
     restart: always
@@ -22,7 +22,7 @@ services:
     env_file: "./API/.env"
     container_name: api
     restart: always
-    image: "kanlanc/humaine:production_09062021_api"
+    image: "kanlanc/humaine:production_14062021_api"
     depends_on:
       - postgres
 
@@ -33,7 +33,7 @@ services:
   # UI Container
   ##############################
   ui:
-    image: "kanlanc/humaine:production_09062021_ui"
+    image: "kanlanc/humaine:production_14062021_ui"
     restart: always
     container_name: ui
     ports:
