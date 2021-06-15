@@ -1,10 +1,11 @@
 import {
-    GET_CASES,
+    GET_CASES,CLOSE_CASE_MODAL
   } from '../actions/types';
   
   const initialState = {
       cases: [],
       casesLoading: true,
+      allCasesCompleted : true
   };
   
   export default function(state = initialState, action) {
@@ -18,7 +19,11 @@ import {
             cases: payload,
             casesLoading: false
         }
-      
+      case CLOSE_CASE_MODAL :
+        return {
+          ...state ,
+          allCasesCompleted :false
+        }
       default:
         return state;
     }

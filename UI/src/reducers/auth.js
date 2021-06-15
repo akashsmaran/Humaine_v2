@@ -7,7 +7,10 @@ import {
   LOGIN_FAIL,
   LOGOUT,
   ACCOUNT_DELETED,
-  FORGET_PASSWORD_FAIL, FORGET_PASSWORD_SUCCESS, RESET_PASSWORD_SUCCESS
+  FORGET_PASSWORD_FAIL, 
+  FORGET_PASSWORD_SUCCESS, 
+  RESET_PASSWORD_SUCCESS,
+  IMAGE_UPLOADED
 } from '../actions/types';
 
 const initialState = {
@@ -28,6 +31,13 @@ export default function(state = initialState, action) {
         loading: false,
         user: payload
       };
+    case IMAGE_UPLOADED : 
+      return {
+        ...state ,
+        user : { ...state.user ,  
+              image : payload 
+        } 
+      }
     case LOGIN_SUCCESS:
       localStorage.setItem('token', payload.token);
       return {

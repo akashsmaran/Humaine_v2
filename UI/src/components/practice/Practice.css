@@ -1,0 +1,26 @@
+.react-confirm-alert-button-group>button{
+    display: block !important;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+.react-confirm-alert-button-group>button:nth-child(1){
+    background: rgb(255, 171, 15);
+    color: #fff;
+}
+.react-confirm-alert-button-group>button:nth-child(2){
+    background: rgb(23, 170, 228);
+    color: #fff;
+}
+.react-confirm-alert-button-group{
+    display: block;
+}
+.fa-flag{
+    font-size : 14px !important;
+}
+.fa-times-circle{
+    font-size : 20px !important;
+}
+.f16{
+    font-size :16px !important;
+}

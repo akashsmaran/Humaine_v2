@@ -1,255 +1,285 @@
 {
-  "ADLs": [
-    "I am fully independent.",
-    "I have no problems with any issues of self care, and am completely independent.",
-    "I can do everything for myself at home - I am fully independent.",
-    "I am fully independent."
-  ],
-  "AbdoCramps": ["No"],
+  "ADLs": ["Yeah, I do everything for myself"],
+  "AbdoCramps": [" Not that I can think of."],
   "AbdoDistention": ["No"],
-  "AbdoPain": ["No"],
+  "AbdoPain": [" No."],
   "Accommodation": [
-    "I live in a small apartment on the ground floor.",
-    "My wife and I are in a small apartment on the ground floor.",
+    "I live in my house that I rent",
     "Yes",
-    "I have a small ground floor apartment."
+    "I live in a house"
   ],
-  "Age": ["I am 52 years old.", "Right now, I am 52 years of age."],
-  "Alcohol": [
-    "I am a teetotaler.",
-    "No, I have always steered clear of alcohol and other addictions."
-  ],
+  "Age": [" I am 65 years old."],
+  "Alcohol": ["No, I don't drink alochol", "Never"],
   "AllergyHx": ["No"],
-  "AnalSex": ["..."],
-  "AntiSickness": ["No, not yet"],
-  "Appendicectomy": ["No"],
-  "Appetite": [
-    "I have a good appetite, but I get pain when I eat.  So I am eating less."
-  ],
-  "Ascites": ["No"],
-  "AssociatedFactors": [
-    "I feel a little sickly sometimes when the pain starts",
-    "The pain makes me feel sick."
-  ],
-  "BarrierContraception": ["No"],
-  "Bloatedness": ["No"],
+  "AnimalAllergy": ["No"],
+  "AntiSickness": ["No"],
+  "Appendicectomy": [" No."],
+  "Appetite": ["It's ok"],
+  "AsbestosExposure": [" No"],
+  "Ascites": [" No."],
+  "AssociatedFactors": [" Nothing other than the breathlessness."],
+  "AssociatedFactorsPast": ["No."],
+  "BarleyExposure": [" No"],
+  "BeeWaspStingAllergy": [" No"],
+  "BerylliumExposure": [" No"],
+  "BirdAllergy": [" No"],
+  "Bloatedness": [" No"],
   "BloodyStool": ["No"],
-  "BowelFrequency": ["Once a day"],
-  "BowelHabit": ["I open my bowels once a day."],
-  "BowelIncontinence": ["No"],
-  "BowelMotions": ["I think so"],
-  "CasualPartner": ["No", "No"],
+  "BowelFrequency": [
+    " I am opening my bowels once a day - it's pretty much normal."
+  ],
+  "BowelHabit": ["Once a day"],
+  "BowelIncontinence": [" No."],
+  "BowelMotions": [" Yes"],
+  "CasualPartner": ["No"],
+  "CheckDrug": [
+    "No",
+    "I have arthritis in my hips and knees and take them now and then",
+    "About 3 years now"
+  ],
   "Character": [
-    "It is a dull, throbbing pain",
-    "I feel it as a deep and dull pain."
+    "It is a really florid breathlessness.  It seems to come on suddenly and leaves me gasping for breath sometimes.  But at other times, it is not so severe.  Taking inhalers or any other medicines has little effect..",
+    "I get breathless really quickly sometimes, especially in the evenings and night.  Sometimes I just get some tightness in my chest, and feel wheezy."
   ],
+  "ChestPain": ["No. I don't get any chest pain"],
   "Cholecystectomy": ["No"],
-  "Colonoscopy": ["No"],
-  "Concern": [
-    "I am worried about what this sudden pain might be and if you can help me.",
-    "I am concerned by how suddenly this pain started for me.",
-    "I am worried about what this pain may be."
-  ],
-  "ConfirmName": ["I am Brian Montgomery."],
-  "ConfirmProblem": ["I think so, yeah"],
-  "Constipation": ["No"],
-  "Contacts": ["Nobody"],
-  "DOB": [
-    "I was born on the 18th of October. 1967.",
-    "My date of birth is 18. 10. 1967."
-  ],
+  "CoalExposure": [" No"],
+  "ColdWeatherExacerbation": [" No"],
+  "Colonoscopy": [" No"],
+  "Concern": ["I can't breathe properly and can't sleep"],
+  "ConfirmName": [" Yes, my name is Amjad Khan"],
+  "ConfirmProblem": ["Yes, I just have leg swelling and breathing problems"],
+  "Constipation": [" Not that I can think of."],
+  "Contacts": ["No one"],
+  "CottonExposure": [" No"],
+  "Cough": ["No"],
+  "DIabetes": ["Oh, probably 15 years"],
+  "DOB": ["Third of January, 1965"],
+  "DampHome": [" No"],
   "DarkUrine": ["No"],
-  "Delivery": ["I think so"],
-  "DiagnosticStatement": ["Okay"],
+  "Delivery": ["I don't know doc"],
+  "Diarrhea": [" Not that I can think of."],
+  "Diet": ["My wife keeps telling me to eat less salty foods"],
+  "DiagnosticStatement": ["I see", "Oh okay"],
   "Diarrhoea": ["No"],
-  "Diet": [
-    "I try and eat healthily and be active. ",
-    "I would say I have a normal diet and walk for at least a few hours every day.",
-    "I have a decent diet and am fairly active."
-  ],
-  "DoctorQuestion": ["No, I just weant to know what is causing my symptoms."],
-  "DrugAbuse": [
-    "I am a teetotaler.",
-    "No, I have always steered clear of alcohol and other addictions."
-  ],
+  "DoctorQuestion": ["What do you think is going on?", "What will happen now?"],
+  "DrugAbuse": [" No"],
   "DrugHx": [
-    "I take 5 miligrams of Ramipril and 40mg of Atorvastatin every night.",
-    "I take Ramipril and a Statin daily."
+    "I am on a few tablets and also insulin. I'll give you my prescription because I can never remember all the names",
+    "Here is my prescription.",
+    "Sometimes, I do miss my blood pressure medications"
   ],
-  "Dyspepsia": ["No"],
-  "Dysphagia": ["No"],
-  "Empathy": [
-    "Thank you for your kind words",
-    "Your consideration means a lot",
-    "I feel better having shared my problems with you"
-  ],
-  "ExacerbatingFactors": [
-    "It seems that eating more food makes it worse and staying hungry reduces it, so I am eating less"
-  ],
+  "DustExposure": ["No"],
+  "Dyspepsia": [" No"],
+  "Dysphagia": [" No"],
+  "EggAllergy": ["No"],
+  "Empathy": ["Yes it's been hard"],
+  "EnvironmentChangeHouse": ["No"],
+  "ExacerbatingFactors": ["If I sit up, I feel better"],
   "Exercise": [
-    "I try and eat healthily and be active. ",
-    "I walk for at least a few hours every day. But I could lose a bit more weight probably.",
-    "I am fairly active."
+    "Not as much as I should be. I used to walk twice every week in local park but can't even do that anymore"
   ],
-  "Expectations": ["I am hoping you can treat me"],
-  "FamilyHx": ["I don't have any diseases in the family."],
-  "FamilyMember": [
-    "I live with my wife. We have no children.",
-    "My wife and I live at home, and we have no children.",
-    "My wife lives with me."
+  "ExerciseToleranceNorm": [
+    "Normally, I can walk a few miles but now I can maybe manage 20 yards"
   ],
-  "Fever": [
-    "I have felt a bit hot at times but not taken my temperature.",
-    "I have been getting a little hot and cold"
+  "ExerciseToleranceNow": [" No, not that I have noted."],
+  "Expectations": [
+    "Give me something to help get my legs down and make me sleep better"
   ],
-  "Frequency": [
-    "Essentially, I get 2 or 3 minutes of severe, dull pain over a period of about a half-hour"
+  "FamilyHx": [
+    "My mum and dad had diabetes, and dad had a heart attack when he was my age",
+    "Two brothers - both fine"
   ],
-  "GORD": ["No"],
-  "Gastritis": ["No"],
-  "Goodbye": [
-    "Thank you for speaking with me today.",
-    "Many thanks for your help.",
-    "It has been great to talk to you today."
-  ],
+  "FamilyMember": ["My wife"],
+  "FarmingExposure": ["No"],
+  "Fever": ["No"],
+  "FoodAllergy": [" No"],
+  "Frequency": ["I get it all the time really"],
+  "FrequencyUrine": ["No", "No, I'm passing normal amounts"],
+  "Followup": "",
+  "GORD": [" No."],
+  "Gastritis": [" No."],
+  "Goodbye": ["Thank you", "Thanks very much"],
   "Haematemesis": ["No"],
+  "Haemoptysis": [" No"],
+  "HaemoptysisMixedStreak": [" I only have a dry cough."],
+  "Hayfever": ["No"],
+  "Heart attack": [
+    "Yes, I had a heart attack 10 years ago and they put a stent into my artery because there was a blockage. "
+  ],
   "HerniaOp": ["No"],
-  "HiatusHernia": ["No"],
-  "Hobbies": ["My wife and I enjoy long walks in the countryside"],
-  "IVDU": ["No.", "No, I have never taken any drugs like that."],
-  "Ideas": ["I don't know to be honest"],
-  "IntroAndName": ["My name is Brian Montgomery.", "I am Brian Montgomery."],
-  "Introduction": [
-    "Hello",
-    "Hi",
-    "Hello. Very nice to meet you.",
-    "Good day to you.",
-    "Pleased to meet you."
+  "HiatusHernia": [" No."],
+  "Hoarseness": [" No"],
+  "Hobbies": ["I spend time with my family"],
+  "Ideas": ["I have no idea."],
+  "IVDU": [" No."],
+  "IndustrialExposure": [" Not that I know of."],
+  "IntroAndName": ["My name is Amjad Khan", "Amjad Khan"],
+  "Introduction": ["Hello doctor", "Hello", "Good morning doctor"],
+  "ItchyEyesNoseThroat": ["No"],
+  "Jaundice": [" No."],
+  "LUTOpen": [
+    "No",
+    "No, my urine is fine.",
+    "Yes, I'm passing urine ok",
+    "No, I'm passing urine ok",
+    "No, my urine looks ok"
   ],
-  "Jaundice": ["No"],
-  "Lethargy": ["No, not really."],
-  "Lifestyle": [
-    "I enjoy a banced lifestyle.",
-    "I am not too stressed out or anything - life is good!"
+  "Lethargy": ["Yes I do. Just don't have any energy anymnore"],
+  "Lifestyle": ["It's okay"],
+  "ManagementPlan": ["That sounds good"],
+  "MushroomExposure": [" No"],
+  "Name": ["My name is Amjad Khan", "Amjad Khan"],
+  "NameAndDOB ": [
+    "My name is Amjad Khan. My date of birth is third of january 1965"
   ],
-  "ManagementPlan": ["Okay, alright"],
-  "Name": ["My name is Brian Montgomery.", "I am Brian Montgomery."],
-  "NameAndAge": ["I am Brian Montgomery and I am 52 years old."],
-  "NameAndDOB": ["I am Brian Montgomery and I was born on October 18th, 1967."],
-  "Nausea": [
-    "I feel a little sickly sometimes when the pain starts",
-    "The pain makes me feel sick.",
-    "I get nauseous suddenly when the pain comes on"
+  "NameAndAge": ["I am Judith Palfrey and I am 45 years old."],
+  "Nausea": [" No"],
+  "NeuroSOB": [" No, not at all."],
+  "NewWorkConditions": [
+    "No, I have been with the same office now for at least 10 years.",
+    "No, I am a veteran at my office!"
   ],
+  "NewLivingConditions": [" No"],
+  "Nocturia": ["No"],
+  "NutsAllergy": [" No"],
   "OGD": ["No"],
   "OTCDrugHx": ["No"],
-  "Occupation": [
-    "I am a plumber, but coming close to retirement.",
-    "I am presently a self-employed plumber.",
-    "I am a plumber."
-  ],
+  "Occupation": ["I'm retired now but worked as a Taxi driver"],
   "Odynophagia": ["No"],
-  "Onset": [
-    "It seems to come on when I eat food",
-    "It happens around 15 minutes after I have a heavy meal."
-  ],
-  "OnsetTrigger": [
-    "I get the pain after a heavy meal, especially if it is fried."
-  ],
-  "OralSex": ["..."],
-  "OtherProblems": ["No, just this stomach ache"],
-  "PUD": ["No"],
-  "PainKiller": [
-    "No, painkillers have not helped.",
-    "I have tried paracetamol and it has made little difference."
-  ],
-  "PainfulDefecation": ["No"],
-  "PaleStool": ["No"],
+  "Onset": ["I get the breathing problem when I lie flat"],
+  "OnsetTrigger": ["I get the breathing problem when I lie flat"],
+  "Orthopnoea": ["Yes and I need at least 3 pillows to sleep"],
+  "OtherProblems": ["No, apart from the leg swelling and breathing problems"],
+  "PND": [" No"],
+  "PUD": [" No"],
+  "PainKiller": ["No"],
+  "PainfulDefecation": [" No."],
+  "PaleStool": [" No."],
+  "Partner": [" Um... How is this a relevant question?"],
+  "PassiveSmoke": [" No."],
+  "PassiveSmokeContact": [" Not that I know of."],
   "PastMedicalHx": [
-    "I suffer from high blood pressure and high blood cholesterol. Otherwise, I had asthma as a child but that got better.",
-    "As I said, I have high blood pressure and cholesterol."
+    "Yes, I have diabetes and high blood pressure.",
+    "About 20 years I think",
+    "20 years ago",
+    "Yes, I did last year and I had to have laser treatment to my eyes",
+    "Yes",
+    "My GP",
+    "Yes, my GP has been looking after my diabetes",
+    "Sorry, I don't know"
   ],
-  "PastSurgicalHx": [
-    "Thankfully, I have never had any surgery done on me.",
-    "I have not had any operations in my life."
+  "PastSurgicalHx": [" No, never had surgery for nothing"],
+  "PeripheralOedema": [
+    "Yes, it's all around the ankles and legs",
+    "I'm not sure, maybe you can have a look.",
+    "Yes, both legs"
   ],
-  "Penetration": ["..."],
-  "Piles": ["No"],
-  "PrematureDelivery": ["I think I was born at the normal time"],
-  "PreviousICU": ["No"],
-  "PreviousTransfusions": ["No"],
-  "ProblemBefore": [
-    "No, this only started around a week ago",
-    "I've had stomach pain before, but never like this.",
-    "This pain is completely new for me."
-  ],
-  "ProblemProgression": [
-    "The pain has been getting worse and not better",
-    "Since the pain started, it has been getting worse and not better",
-    "The pain has increased slowly but has not decreased"
-  ],
-  "ProblemStart": [
-    "I have had this pain for a week now",
-    "One week ago",
-    "I first noted the pain one week ago",
-    "The pain has been with me for a week."
-  ],
+  "PetsExposure": [" No"],
+  "Piles": [" No."],
+  "PillowsSleep": ["Three pillows, but I normally only had one", "Just one"],
+  "PollenAllergy": [" No"],
+  "PreviousICU": [" No"],
+  "PreviousTransfusions": [" No."],
+  "ProblemBefore": [" No.", "Never"],
+  "ProblemProgression": ["It has been getting worse for 3 weeks now"],
+  "ProblemStart": ["Around 3 weeks now', 'It all started about 3 weeks ago"],
   "PrutitisAni": ["No"],
   "PrutitisSkin": ["No"],
-  "Radiation": [
-    "Yes, it sometimes travels to the back",
-    "I have noted that it has gone to my back maybe 2 or 3 times only since it started.",
-    "It has travelled to the back only a few times during the entire episode."
+  "ProblemStartPast": [" That episode happened two years ago."],
+  "PruritisAni": [" No."],
+  "PruritisSkin": [" No."],
+  "Radiation": [" I am not sure what you mean."],
+  "RadiationPast": [" The pain would radiate to my back."],
+  "Reassurance": ["'Yes, I have been worried"],
+  "RecentTreatment": [" No treatment"],
+  "RegularPartner": ["Yeah"],
+  "RelievingFactors": ["'If I sit up, I feel better"],
+  "Rhinitis": ["No"],
+  "SOB": [
+    " Yes. I get short of breath climbing up the stairs and can't walk as far as I used to be able to",
+    "I am really struggling with the stairs"
   ],
-  "Reassurance": ["Thank you", "Yes, thanks"],
-  "RecentTreatment": [
-    "I haven't sought any medical help for this before - it's only been with me a week."
-  ],
-  "RegularPartner": ["My wife"],
-  "RelievingFactors": [
-    "It seems that eating more food makes it worse and staying hungry reduces it, so I am eating less"
-  ],
-  "SafeSex": ["Er... yes, I think so"],
+  "SOBWork": [" No"],
+  "SafeSex": ["Yeah."],
+  "SeafoodAllergy": [" No"],
+  "SeasonVariation": [" No"],
   "Severity": [
-    "It is actually quite painful - I can't do anything else when the pain begins",
-    "On a scale of 1 to 10, I would say it is around 7"
+    "I am not sure what you mean",
+    "Its a pretty bad problem, for sure"
   ],
-  "Sex>2": ["..."],
-  "SexWorker": ["..."],
-  "Site": [
-    "It's here - in the upper part of my stomach, on the right hand side.",
-    "It is just under the ribs on the right hand side"
+  "SexType": [" Um... How is this a relevant question?"],
+  "Site": [" I am not sure what you mean."],
+  "SitePast": [
+    " It was in my stomach as well, but more like on the upper right side."
   ],
-  "SkinChange": ["No"],
-  "SmallTalk": [
-    "I am okay except this issue that has been bothering me.",
-    "Things are good, but I have this problem"
-  ],
+  "SkinChange": [" No"],
+  "SmallTalk": ["I am okay doctor, just my legs bothering me"],
   "Smoke": [
-    "I used to smoke socially, but gave that up many years ago.",
-    "I used to smoke maybe 2 or 3 cigarettes a week when I was in my twenties, but quit when I hit an age of 30."
+    " I used to smoke a lot before my heart attack. Since my heart attack, I've not smoked.",
+    "Cigarettes. ",
+    "About 20 a day for 30 years",
+    "I used to smoke a lot before my heart attack. Since my heart attack, I've not smoked"
   ],
-  "StoolBulk": ["No"],
-  "StoolConsistency": ["Normal really"],
-  "StoolDescribe": ["It is normal"],
-  "StoolFloat": ["They are normal"],
-  "StoolMucus": ["No"],
-  "StoolSmell": ["They are normal"],
-  "Summary": ["Yes", "Yes, I think so"],
-  "Sweating": ["No, not really"],
-  "Tenesmus": ["No"],
-  "TermDelivery": ["I think so"],
-  "Timing": [
-    "The pain lasts only for a short while, maybe 1 or 2 minutes, but I have many bouts of this"
+  "Sleep": [
+    "Well I need two more pillows at night but I do manage to get a fews hours sleep"
   ],
-  "TransitionPoints": ["Okay, sure.", "Yes, go on."],
-  "TravelHx": ["No"],
-  "VaginalSex": ["..."],
-  "Vomit": ["No I have not vomited even though I feel sick"],
-  "Weight Loss": ["No"],
+  "Sneezing": ["No"],
+  "SOBExert": [
+    " Nothing out of the ordinary. But if I am already short of breath, I can't really do much activity anyway."
+  ],
+  "SOBExertion": [
+    "Yes, I get breathless when I'm walking far. I have to stop after a few minutes to catch my breath and then I can start again"
+  ],
+  "SOBVariation": ["No"],
+  "Sputum": [" No"],
+  "SputumAmount": [" I only have a dry cough."],
+  "SputumColour": ["I don't have any sputum"],
+  "StoolBulk": [" It all seems very normal."],
+  "StoolConsistency": [" It all seems very normal."],
+  "StoolDescribe": [" It all seems very normal."],
+  "StoolFloat": [" No."],
+  "StoolMucus": [" I don't think so."],
+  "StoolSmell": [" No."],
+  "StressIncontinence": ["No"],
+  "Summary": ["Yeah, that's right"],
+  "SurgeryPast": [
+    " I don't really remember much about my wisdom tooth extraction."
+  ],
+  "Sweating": [" No"],
+  "Tenesmus": [" No."],
+  "TermDelivery": ["I don't know doc.  I was born in Pakistan."],
+  "Timing": ["I feel breathless as long as I am lying flat"],
+  "TimingPast": [
+    " The pain just sort of came on one day suddenly, and then I went in to the emergency room."
+  ],
+  "TransitionPoints": [" Ok"],
+  "TravelHx": ["'No.  I went to Pakistan to see my family in 2015"],
+  "Urgency": ["No"],
+  "Vomit": [" No"],
+  "WeightLoss": ["I think I've put weight on, if anything", "No"],
   "WhatProblem": [
-    "I am coming to the hospital today because I have been experiencing bouts of terrible stomach pain.",
-    "I noted a pain in my stomach from about a week ago, and it is becoming difficult to cope with.",
-    "As I have said, I am getting terrible episodes of stomach pain that are worrying me. I want to know what this may be."
+    " I have noticed my legs have become quite swollen",
+    "My legs have been just really swollen for a few weeks now. It has me a little worried"
+  ],
+  "Wheeze": [" No"],
+  "WheezeWork": ["No"],
+  "ask_rephrase": [" Can you rephrase the question?"],
+  "backtrack": [" Let's get back to my issue please doctor."],
+  "default": [" I'm not sure doctor, I don't really recall. "],
+  "Palpitations": ["No"],
+  "PillowSleep": [
+    " I sleep on one pillow, as I have always done really.",
+    "I only use one pillow and have not changed this."
+  ],
+  "MasonryExposure": [" No."],
+  "ConstructionExposure": [" No"],
+  "CeramicsExposure": [" No."],
+  "Arrhythmia": ["No"],
+  "Anxiety": [
+    "My breathlessness is making me a little anxious I think. I fear coming home sometimes, as I live alone. I am not usually an anxious person though."
+  ],
+  "Stress": [
+    " These symptoms are stressing me out - I am not usually one to be stressed though."
   ]
 }

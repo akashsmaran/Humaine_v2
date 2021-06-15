@@ -1,0 +1,26 @@
+.sortableItem{
+    text-decoration: none;
+    cursor: grabbing;
+    background: whitesmoke;
+    margin: 4px;
+    border-radius:3px ;
+    /* margin-left: -40px; */
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-weight: bold;
+}
+.listItem{
+    flex-grow: 1;
+}
+.handle{
+    width: 50px;
+}
+.remove{
+    cursor: pointer;
+    width: 50px;
+}
+.fa{
+    font-size: 35px;
+    margin: 3px;
+}

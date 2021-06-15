@@ -5,6 +5,7 @@ import auth from './auth';
 import chat from './chat';
 import note from './note';
 import dashboard from './dashboard';
+import case_results from './case';
 
 export default combineReducers({
   alert,
@@ -12,5 +13,6 @@ export default combineReducers({
   auth,
   chat,
   note,
-  dashboard
+  dashboard,
+  case_results
 });

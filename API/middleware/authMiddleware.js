@@ -44,10 +44,10 @@ const validateToken = async (req, res, next) => {
 
 const nlpLogin = async (req, res, next) => {
   axios
-    .post(
-      "http://a3514d41916e9434e89ce7affed85dc9-1560023551.us-east-2.elb.amazonaws.com:8000/api/auth",
-      { username: "me", password: "rasarasa" }
-    )
+    .post("http://3.16.137.82/api/auth", {
+      username: "me",
+      password: "rasarasa",
+    })
     .then((res) => {
       let token = res.data.access_token;
       req.nlpToken = token;
