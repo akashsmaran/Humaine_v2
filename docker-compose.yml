@@ -23,7 +23,7 @@ services:
     volumes:
       - humaine:/var/lib/postgresql/data
   api:
-    env_file: "./API/.env"
+    # env_file: "./API/.env"
     container_name: api
     restart: always
     build:

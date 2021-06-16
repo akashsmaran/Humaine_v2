@@ -1,6 +1,8 @@
 var pg = require("pg");
 const { Client } = require("pg");
 require("dotenv").config();
+// require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
+// make two
 const client = new Client({
   user: process.env.DB_USER,
   // For dev, use below

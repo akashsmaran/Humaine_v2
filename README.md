@@ -1,3 +1,9 @@
+For backing up the database in EC2
+
+```
+docker exec -it postgres pg_dump -U postgres humaine > humaine_backup_16062021.sql
+```
+
 For prepoulating the database
 
 ```
