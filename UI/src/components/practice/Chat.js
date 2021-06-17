@@ -51,8 +51,18 @@ const Chat = ({
   const flagMessage = (messageId, isFlag) => {
     addMessageFlag(messageId, isFlag);
   };
+  const findLang = (id) => {
+    switch (id) {
+      case "5":
+        return "Google UK English Male";
+      case "6":
+        return "Google UK English Female";
+      default:
+        return "Google UK English Male";
+    }
+  };
   const selector = useCallback(
-    (voices) => [...voices].find((v) => v.name === "Google UK English Male"),
+    (voices) => [...voices].find((v) => v.name === findLang(caseID)),
     []
   );
   let messagesCount = -1;
@@ -84,7 +94,10 @@ const Chat = ({
         {!isMuted &&
           sayings &&
           sayings.length > 0 &&
-          sayings.map((saying) => (
+          sayings.map((saying) => 
+          { //console.log(selector)
+            console.log("id = "+caseID)
+            return(
             <Say
               pitch={0}
               volume={0.8}
@@ -93,7 +106,7 @@ const Chat = ({
               key={saying.key}
               voice={selector}
             ></Say>
-          ))}
+          )})}
         {isBotThinking && (
           <div className="bot-parent">
             <img
