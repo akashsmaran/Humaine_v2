@@ -4,7 +4,19 @@ For backing up the database in EC2
 docker exec -it postgres pg_dump -U postgres humaine > humaine_backup_16062021.sql
 ```
 
-For prepoulating the database
+For initializing the database in RDS(password: abc12345)
+
+```
+psql ^
+   -f humaine_backup_16062021.sql ^
+   --host humaine.ckquecorw64p.us-east-2.rds.amazonaws.com ^
+   --port 5432 ^
+   --dbname humaine ^
+   --username postgres
+
+```
+
+For prepoulating the database in docker
 
 ```
 docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup_latest.sql
@@ -20,7 +32,7 @@ docker-compose -f docker-compose.dev.yml up
 For backing up databases in the laptop
 
 ```
-pg_dump -U postgres humaine > C:\Users\saivi\OneDrive\Desktop\humaine_backup_03052021.sql
+pg_dump -U postgres humaine > C:\Users\saivi\OneDrive\Desktop\humaine_backup_<timestamp>.sql
 ```
 
 after making the action be on branch stage, I figured out that there are two methods to go ahead with
