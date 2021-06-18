@@ -20,21 +20,21 @@ const Dashboard = ({
   const src = "/assets/images/play.png";
   const srcOnHover = "/assets/images/play_2.png";
   const findImg = (name) => {
-    switch(name){
+    switch (name) {
       case "Brian Montgomery":
-        return "/assets/images/BrianM.jpeg"
+        return "/assets/images/BrianM.jpeg";
       case "Judith Palfrey":
-        return "/assets/images/JudithPalfrey.jpeg"
+        return "/assets/images/JudithPalfrey.jpeg";
       default:
-        return "/assets/images/lady.png"
+        return "/assets/images/lady.png";
     }
-  }
+  };
 
   useEffect(() => {
     getCases();
   }, [getCases]);
 
-  return loading === null ? (
+  return loading === null || casesLoading == true ? (
     <Spinner />
   ) : (
     <Fragment>
@@ -99,10 +99,7 @@ const Dashboard = ({
                         {caseItem.case_difficulty}
                       </div>
                       <div className="card-header-fit">
-                        <img
-                          src={findImg(caseItem.case_name)}
-                          alt="rover"
-                        />
+                        <img src={findImg(caseItem.case_name)} alt="rover" />
                       </div>
                       <div className="card-body">
                         <div className="main-card-head">
