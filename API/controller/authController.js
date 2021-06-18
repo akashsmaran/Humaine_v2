@@ -27,7 +27,7 @@ function checkUserExists(email, callback) {
 }
 
 const signUp = async (req, res, next) => {
-  const {
+  let {
     email,
     password,
     name,
@@ -61,8 +61,10 @@ const signUp = async (req, res, next) => {
     levelOfTraining,
     gender,
     country,
-    dateOfBirth,
+    dateOfBirth = '1993-03-18',
   ];
+  gender = 'male'
+  dateOfBirth = 1993-03-18
   try {
     const query = await database
       .query(text, values)
@@ -76,7 +78,7 @@ const signUp = async (req, res, next) => {
         res.email = obj.email;
         res.subject = "Account activation";
         res.body =
-          '<p>Click <a href="http://localhost:4000/users/activate/' +
+          '<p>Click <a href="http://localhost:4000/api/users/activate/' +
           obj.userId +
           '">here</a> to activate your account</p>';
         next();
