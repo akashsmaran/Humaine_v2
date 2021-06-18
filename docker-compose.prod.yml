@@ -24,6 +24,8 @@ services:
       - "443:443"
     depends_on:
       - api
+    environment:
+      API_URL: "/"
     # volumes:
     #   - ./UI/nginx/certbot/conf:/etc/letsencrypt
     #   - ./UI/nginx/certbot/www:/var/www/certbot

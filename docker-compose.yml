@@ -21,6 +21,9 @@ services:
     build:
       context: ./UI
       dockerfile: ./Dockerfile
+    environment:
+      API_URL: "/"
+
     image: "kanlanc/humaine:${PROD_TIMESTAMP}_ui"
     restart: always
     container_name: ui
