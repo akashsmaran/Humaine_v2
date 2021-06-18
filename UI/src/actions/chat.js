@@ -19,7 +19,7 @@ import {
 } from "./types";
 import setAuthToken from "../utils/setAuthToken";
 
-const apiUrl = process.env.API_URL || "http://127.0.0.1:4000/";
+const apiUrl = "/";
 
 export const toggleMute = () => async (dispatch) => {
   dispatch({ type: MUTE_BOT });

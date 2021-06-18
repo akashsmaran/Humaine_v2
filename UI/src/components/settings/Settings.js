@@ -11,7 +11,8 @@ import axios from "axios";
 import setAuthToken from "../../utils/setAuthToken";
 import UpdateBasicProfile from "./../modals/updateProfileInfo";
 
-const apiUrl = process.env.API_URL || "http://127.0.0.1:4000/";
+// const apiUrl = process.env.API_URL || "http://127.0.0.1:4000/";
+const apiUrl = "/";
 
 //Show initials in the formm of an image
 const InitialIcon = ({ initials }) => {
