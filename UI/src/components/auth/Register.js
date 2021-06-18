@@ -204,8 +204,17 @@ const Register = ({
                             <option value="Final Year Medical Student">
                               Final Year Medical Student
                             </option>
+                            <option value="Physician Associate Student">
+                              Physician Associate Student
+                            </option>
                             <option value="Intern">
                               Intern (House Officer)
+                            </option>
+                            <option value="Practising Physician Associate">
+                              Practising Physician Associate
+                            </option>
+                            <option value="Practising Nurse Practitioner">
+                              Practising Nurse Practitioner
                             </option>
                             <option value="Resident">
                               Resident (Senior House Officer)
