@@ -13,8 +13,8 @@ import Select from "react-select";
 //Data
 import axios from "axios";
 import setAuthToken from "../../utils/setAuthToken";
-const apiUrl = process.env.API_URL || "/";
-
+// const apiUrl = process.env.API_URL || "/";
+const apiUrl = "/";
 const DiagnoseSubmit = ({
   caseID,
   showEndDialog,
