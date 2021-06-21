@@ -1,4 +1,4 @@
-import React, { useState, useRef, Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 //import { ReactMic } from "@cleandersonlobo/react-mic";
@@ -22,7 +22,6 @@ import { BehaviorSubject } from "rxjs/Rx";
 import useEventListener from "@use-it/event-listener";
 import ReactTooltip from "react-tooltip";
 import Popup from "./hints";
-
 // import { combineLatest, of } from 'rxjs';
 // import { map } from 'rxjs/operators';
 
@@ -42,7 +41,7 @@ const MessageBox = ({
   const [spacePressed, setSpacePressed] = useState(false);
   const [cancelRecording, setCancelRecording] = useState(false);
   const [inputFocussed, setInputFocussed] = useState(false);
-  const inputText = useRef(null);
+
   const [stepArr, setStepArr] = useState([
     "First step",
     "Second step",
@@ -57,7 +56,6 @@ const MessageBox = ({
   useEffect(() => {
     console.log("Input focus state changed", inputFocussed);
   }, [inputFocussed]);
-
   const ESCAPE_KEYS = ["27", "Escape"];
   const SPACE_KEYS = ["32", " "];
 
@@ -147,9 +145,7 @@ const MessageBox = ({
     if (event.keyCode === 13) {
       //Enter key pressed
       console.log(formData);
-
       sendChatMessage(formData);
-      inputText.current.value = "";
     }
     if (event.keyCode === 0 || event.keyCode === 32) {
       console.log("CKLCIKED");
@@ -185,25 +181,21 @@ const MessageBox = ({
 
   const sendVoiceChatMessage = (message) => {
     console.log(message);
-    // const voiceData = {
-    //     comment: message,
-    //     caseId: caseID,
-    //     userId: id,
-    //     sessionId: sessionId
-    // }
-
+    const voiceData = {
+      comment: message,
+      caseId: caseID,
+      userId: id,
+      sessionId: sessionId,
+    };
     if (message.trim() != "") {
-      setFormData({ ...formData, comment: message });
-      inputText.current.value = message;
-      // sendMessage(voiceData);
+      sendMessage(voiceData);
       resetTranscript();
-      // clearState();
+      clearState();
     }
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-
     sendChatMessage(formData);
   };
 
@@ -230,10 +222,8 @@ const MessageBox = ({
   };
   return (
     <Fragment>
-      {transcript != "" ? (inputText.current.value = transcript) : false}
       <div className="btm-action-right-wrapper">
-        {/* removed the below code so that transcript doesnt appear twice */}
-        {/* <div className="msg-trans mb-4">{transcript}</div> */}
+        <div className="msg-trans mb-4">{transcript}</div>
         <div className="main-controls">
           <div className="ctrl-left">
             <div className="q-help help-tip" data-tip data-for="hint">
@@ -249,7 +239,6 @@ const MessageBox = ({
               disabled={showLoading ? "disabled" : ""}
               onChange={(e) => onChange(e)}
               onKeyDown={(e) => handleKeyDown(e)}
-              ref={inputText}
               onFocus={(e) => setInputFocussed(true)}
               onBlur={(e) => setInputFocussed(false)}
               placeholder="Hold spacebar to talk to the patient, or type your response here"
