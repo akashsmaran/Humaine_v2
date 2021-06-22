@@ -61,10 +61,10 @@ const signUp = async (req, res, next) => {
     levelOfTraining,
     gender,
     country,
-    dateOfBirth = '1993-03-18',
+    (dateOfBirth = "1993-03-18"),
   ];
-  gender = 'male'
-  dateOfBirth = 1993-03-18
+  gender = "male";
+  dateOfBirth = 1993 - 03 - 18;
   try {
     const query = await database
       .query(text, values)
@@ -78,7 +78,7 @@ const signUp = async (req, res, next) => {
         res.email = obj.email;
         res.subject = "Account activation";
         res.body =
-          '<p>Click <a href="http://localhost:4000/api/users/activate/' +
+          '<p>Click <a href="https://humaine.ai/api/users/activate/' +
           obj.userId +
           '">here</a> to activate your account</p>';
         next();
