@@ -236,7 +236,7 @@ section {
 }
 .chat-section-main {
   overflow: auto;
-  max-height: 650px;
+  max-height: 60vh;
   padding-bottom: 30px;
 }
 .chat-section-mini {
@@ -376,7 +376,7 @@ section {
 }
 .end-btn {
   /* border: 1px solid red; */
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   /* width: 90px; */
@@ -393,7 +393,7 @@ section {
 }
 .chat-timer {
   /* border: 1px solid red; */
-  position: absolute;
+  position: fixed;
   top: 80px;
   right: 20px;
   /* width: 90px; */
@@ -407,7 +407,7 @@ section {
   cursor: pointer;
 }
 .btm-action-right-wrapper {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   width: inherit;
   text-align: center;

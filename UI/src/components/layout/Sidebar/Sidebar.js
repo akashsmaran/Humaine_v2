@@ -51,6 +51,9 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
     }
 
     window.addEventListener("resize", handleResize);
+    return function cleanupListener() {
+      window.removeEventListener("resize", handleResize);
+    };
   });
   //create a custom function that will change menucollapse state from false to true and true to false
   const menuIconClick = () => {

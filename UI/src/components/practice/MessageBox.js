@@ -235,7 +235,7 @@ const MessageBox = ({
               type="text"
               className={"ctrl-text-area usid " + (listening ? "glowing" : "")}
               name="comment"
-              // value={comment}
+              value={comment}
               disabled={showLoading ? "disabled" : ""}
               onChange={(e) => onChange(e)}
               onKeyDown={(e) => handleKeyDown(e)}
