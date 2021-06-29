@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Modal } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 import { addDiagnosis } from "../../actions/chat";
+import { stepsSubmitted } from "../../actions/chat";
 import arrayMove from "array-move";
 import "./list.css";
 //Sortable list item
@@ -20,6 +21,7 @@ const DiagnoseSubmit = ({
   showEndDialog,
   handleCloseEndDialog,
   addDiagnosis,
+  stepsSubmitted,
   sessionId,
 }) => {
   //Select 2
@@ -85,6 +87,7 @@ const DiagnoseSubmit = ({
       let dataBeingSaved = await addDiagnosis(formData);
       console.log("Data after being saved", dataBeingSaved);
       handleCloseEndDialog();
+      stepsSubmitted({ caseId: caseID, sessionId: sessionId });
     } catch (err) {
       console.log("An error occured while saving form", err);
     } finally {
@@ -268,4 +271,4 @@ DiagnoseSubmit.propTypes = {
   showEndDialog: PropTypes.bool,
 };
 
-export default connect(null, { addDiagnosis })(DiagnoseSubmit);
+export default connect(null, { addDiagnosis, stepsSubmitted })(DiagnoseSubmit);
