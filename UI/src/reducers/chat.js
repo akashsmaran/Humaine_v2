@@ -64,8 +64,8 @@ export default function (state = initialState, action) {
       return {
         ...state,
         messages: state.messages.map((message) => {
-          if (message.id == payload) {
-            message.is_flagged = true;
+          if (message.id == payload.messageId) {
+            message.is_flagged = payload.isFlag;
           }
           return message;
         }),

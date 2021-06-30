@@ -94,19 +94,20 @@ const Chat = ({
         {!isMuted &&
           sayings &&
           sayings.length > 0 &&
-          sayings.map((saying) => 
-          { //console.log(selector)
-            console.log("id = "+caseID)
-            return(
-            <Say
-              pitch={0}
-              volume={0.8}
-              speak=""
-              text={saying.comment}
-              key={saying.key}
-              voice={selector}
-            ></Say>
-          )})}
+          sayings.map((saying) => {
+            //console.log(selector)
+
+            return (
+              <Say
+                pitch={0}
+                volume={0.8}
+                speak=""
+                text={saying.comment}
+                key={saying.key}
+                voice={selector}
+              ></Say>
+            );
+          })}
         {isBotThinking && (
           <div className="bot-parent">
             <img

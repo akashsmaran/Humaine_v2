@@ -200,9 +200,14 @@ export const addMessageFlag = (messageId, isFlag) => async (dispatch) => {
 
   try {
     const res = await axios.post("/api/cases/support/flag", body, config);
+    if (isFlag == "true") {
+      isFlag = true;
+    } else {
+      isFlag = false;
+    }
     dispatch({
       type: FLAG_MESSAGE,
-      payload: messageId,
+      payload: { messageId, isFlag },
     });
   } catch (err) {
     const error = err.response.data;
