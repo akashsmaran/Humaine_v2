@@ -33,7 +33,7 @@ const ChatItem = ({
                   "fa fa-flag flag-msg " +
                   (is_flagged ? "flag-green" : "flag-blue")
                 }
-                onClick={() => flagMessage(id, is_flagged)}
+                onClick={() => flagMessage(id, !is_flagged)}
               ></i>
             </div>
           </div>
