@@ -5,14 +5,14 @@ const sendEmail = (req, res, next) => {
   var body = res.body;
 
   var transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: "smtp-relay.sendinblue.com",
     port: 587,
-    service: "gmail",
-    ignoreTLS: false,
-    secure: false,
+    // service: "gmail",
+    // ignoreTLS: false,
+    // secure: false,
     auth: {
-      user: process.env.GMAIL_EMAIL,
-      pass: process.env.GMAIL_PASSWORD,
+      user: process.env.SENDINBLUE_EMAIL,
+      pass: process.env.SENDINBLUE_PASSWORD,
     },
   });
   var mailOptions = {
