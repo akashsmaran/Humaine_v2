@@ -239,7 +239,7 @@ const Practice = ({
               </div>
               {/* <Moment format="hh:mm:ss" from="2015-04-19" interval={1000} fromNow></Moment> */}
             </div>
-            <div className="chat-timer">
+            <div className="chat-timer" style={{ display: "none" }}>
               {moment.utc(elapsedTime.toFixed(2) * 1000).format("HH:mm:ss")}
             </div>
           </div>
