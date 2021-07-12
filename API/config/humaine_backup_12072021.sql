@@ -5,6 +5,8 @@
 -- Dumped from database version 13.2
 -- Dumped by pg_dump version 13.2
 
+-- Started on 2021-07-12 15:45:35
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
@@ -21,6 +23,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- TOC entry 200 (class 1259 OID 33007)
 -- Name: cases; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -39,6 +42,7 @@ CREATE TABLE public.cases (
 ALTER TABLE public.cases OWNER TO postgres;
 
 --
+-- TOC entry 201 (class 1259 OID 33014)
 -- Name: cases_diagnosis_result; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -52,6 +56,7 @@ CREATE TABLE public.cases_diagnosis_result (
 ALTER TABLE public.cases_diagnosis_result OWNER TO postgres;
 
 --
+-- TOC entry 202 (class 1259 OID 33017)
 -- Name: cases_diagnosis_result_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -67,6 +72,8 @@ CREATE SEQUENCE public.cases_diagnosis_result_id_seq
 ALTER TABLE public.cases_diagnosis_result_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3131 (class 0 OID 0)
+-- Dependencies: 202
 -- Name: cases_diagnosis_result_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -74,6 +81,7 @@ ALTER SEQUENCE public.cases_diagnosis_result_id_seq OWNED BY public.cases_diagno
 
 
 --
+-- TOC entry 203 (class 1259 OID 33019)
 -- Name: cases_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -88,6 +96,7 @@ ALTER TABLE public.cases ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
+-- TOC entry 204 (class 1259 OID 33021)
 -- Name: cases_steps_result; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -101,6 +110,7 @@ CREATE TABLE public.cases_steps_result (
 ALTER TABLE public.cases_steps_result OWNER TO postgres;
 
 --
+-- TOC entry 205 (class 1259 OID 33024)
 -- Name: cases_steps_result_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -116,6 +126,8 @@ CREATE SEQUENCE public.cases_steps_result_id_seq
 ALTER TABLE public.cases_steps_result_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3132 (class 0 OID 0)
+-- Dependencies: 205
 -- Name: cases_steps_result_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -123,6 +135,7 @@ ALTER SEQUENCE public.cases_steps_result_id_seq OWNED BY public.cases_steps_resu
 
 
 --
+-- TOC entry 206 (class 1259 OID 33026)
 -- Name: diagnosis; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -135,6 +148,7 @@ CREATE TABLE public.diagnosis (
 ALTER TABLE public.diagnosis OWNER TO postgres;
 
 --
+-- TOC entry 207 (class 1259 OID 33029)
 -- Name: diagnosis_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -150,6 +164,8 @@ CREATE SEQUENCE public.diagnosis_id_seq
 ALTER TABLE public.diagnosis_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3133 (class 0 OID 0)
+-- Dependencies: 207
 -- Name: diagnosis_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -157,6 +173,7 @@ ALTER SEQUENCE public.diagnosis_id_seq OWNED BY public.diagnosis.id;
 
 
 --
+-- TOC entry 208 (class 1259 OID 33031)
 -- Name: steps; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -169,6 +186,7 @@ CREATE TABLE public.steps (
 ALTER TABLE public.steps OWNER TO postgres;
 
 --
+-- TOC entry 209 (class 1259 OID 33037)
 -- Name: steps_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -184,6 +202,8 @@ CREATE SEQUENCE public.steps_id_seq
 ALTER TABLE public.steps_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3134 (class 0 OID 0)
+-- Dependencies: 209
 -- Name: steps_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -191,6 +211,7 @@ ALTER SEQUENCE public.steps_id_seq OWNED BY public.steps.id;
 
 
 --
+-- TOC entry 210 (class 1259 OID 33039)
 -- Name: user_cases; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -207,6 +228,7 @@ CREATE TABLE public.user_cases (
 ALTER TABLE public.user_cases OWNER TO postgres;
 
 --
+-- TOC entry 211 (class 1259 OID 33046)
 -- Name: user_cases_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -221,6 +243,7 @@ ALTER TABLE public.user_cases ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
+-- TOC entry 212 (class 1259 OID 33048)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -236,13 +259,15 @@ CREATE TABLE public.users (
     country text,
     date_of_birth date,
     status integer DEFAULT 0,
-    image text
+    image text,
+    last_name text
 );
 
 
 ALTER TABLE public.users OWNER TO postgres;
 
 --
+-- TOC entry 213 (class 1259 OID 33055)
 -- Name: users_cases_diagnosis; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -258,6 +283,7 @@ CREATE TABLE public.users_cases_diagnosis (
 ALTER TABLE public.users_cases_diagnosis OWNER TO postgres;
 
 --
+-- TOC entry 214 (class 1259 OID 33058)
 -- Name: users_cases_diagnosis_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -272,6 +298,7 @@ ALTER TABLE public.users_cases_diagnosis ALTER COLUMN id ADD GENERATED ALWAYS AS
 
 
 --
+-- TOC entry 215 (class 1259 OID 33060)
 -- Name: users_cases_intents; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -286,6 +313,7 @@ CREATE TABLE public.users_cases_intents (
 ALTER TABLE public.users_cases_intents OWNER TO postgres;
 
 --
+-- TOC entry 216 (class 1259 OID 33066)
 -- Name: users_cases_intents_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -301,6 +329,8 @@ CREATE SEQUENCE public.users_cases_intents_id_seq
 ALTER TABLE public.users_cases_intents_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3135 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: users_cases_intents_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -308,6 +338,7 @@ ALTER SEQUENCE public.users_cases_intents_id_seq OWNED BY public.users_cases_int
 
 
 --
+-- TOC entry 217 (class 1259 OID 33068)
 -- Name: users_cases_notes; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -322,6 +353,7 @@ CREATE TABLE public.users_cases_notes (
 ALTER TABLE public.users_cases_notes OWNER TO postgres;
 
 --
+-- TOC entry 218 (class 1259 OID 33074)
 -- Name: users_cases_notes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -336,6 +368,7 @@ ALTER TABLE public.users_cases_notes ALTER COLUMN id ADD GENERATED ALWAYS AS IDE
 
 
 --
+-- TOC entry 219 (class 1259 OID 33076)
 -- Name: users_cases_steps; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -351,6 +384,7 @@ CREATE TABLE public.users_cases_steps (
 ALTER TABLE public.users_cases_steps OWNER TO postgres;
 
 --
+-- TOC entry 220 (class 1259 OID 33079)
 -- Name: users_cases_steps_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -366,6 +400,8 @@ CREATE SEQUENCE public.users_cases_steps_id_seq
 ALTER TABLE public.users_cases_steps_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3136 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: users_cases_steps_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -373,6 +409,7 @@ ALTER SEQUENCE public.users_cases_steps_id_seq OWNED BY public.users_cases_steps
 
 
 --
+-- TOC entry 221 (class 1259 OID 33081)
 -- Name: users_cases_support; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -391,6 +428,7 @@ CREATE TABLE public.users_cases_support (
 ALTER TABLE public.users_cases_support OWNER TO postgres;
 
 --
+-- TOC entry 222 (class 1259 OID 33088)
 -- Name: users_cases_support_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -405,6 +443,7 @@ ALTER TABLE public.users_cases_support ALTER COLUMN id ADD GENERATED ALWAYS AS I
 
 
 --
+-- TOC entry 223 (class 1259 OID 33090)
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -420,6 +459,8 @@ CREATE SEQUENCE public.users_id_seq
 ALTER TABLE public.users_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3137 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -427,6 +468,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
+-- TOC entry 2924 (class 2604 OID 33092)
 -- Name: cases_diagnosis_result id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -434,6 +476,7 @@ ALTER TABLE ONLY public.cases_diagnosis_result ALTER COLUMN id SET DEFAULT nextv
 
 
 --
+-- TOC entry 2925 (class 2604 OID 33093)
 -- Name: cases_steps_result id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -441,6 +484,7 @@ ALTER TABLE ONLY public.cases_steps_result ALTER COLUMN id SET DEFAULT nextval('
 
 
 --
+-- TOC entry 2926 (class 2604 OID 33094)
 -- Name: diagnosis id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -448,6 +492,7 @@ ALTER TABLE ONLY public.diagnosis ALTER COLUMN id SET DEFAULT nextval('public.di
 
 
 --
+-- TOC entry 2927 (class 2604 OID 33095)
 -- Name: steps id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -455,6 +500,7 @@ ALTER TABLE ONLY public.steps ALTER COLUMN id SET DEFAULT nextval('public.steps_
 
 
 --
+-- TOC entry 2930 (class 2604 OID 33096)
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -462,6 +508,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
+-- TOC entry 2931 (class 2604 OID 33097)
 -- Name: users_cases_intents id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -469,6 +516,7 @@ ALTER TABLE ONLY public.users_cases_intents ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
+-- TOC entry 2932 (class 2604 OID 33098)
 -- Name: users_cases_steps id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -476,6 +524,8 @@ ALTER TABLE ONLY public.users_cases_steps ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- TOC entry 3102 (class 0 OID 33007)
+-- Dependencies: 200
 -- Data for Name: cases; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -488,6 +538,8 @@ COPY public.cases (id, case_name, case_description, case_status, case_difficulty
 
 
 --
+-- TOC entry 3103 (class 0 OID 33014)
+-- Dependencies: 201
 -- Data for Name: cases_diagnosis_result; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -507,6 +559,8 @@ COPY public.cases_diagnosis_result (id, case_id, diagnosis_id) FROM stdin;
 
 
 --
+-- TOC entry 3106 (class 0 OID 33021)
+-- Dependencies: 204
 -- Data for Name: cases_steps_result; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -522,6 +576,8 @@ COPY public.cases_steps_result (id, case_id, step_id) FROM stdin;
 
 
 --
+-- TOC entry 3108 (class 0 OID 33026)
+-- Dependencies: 206
 -- Data for Name: diagnosis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1701,6 +1757,8 @@ COPY public.diagnosis (id, name) FROM stdin;
 
 
 --
+-- TOC entry 3110 (class 0 OID 33031)
+-- Dependencies: 208
 -- Data for Name: steps; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1729,6 +1787,8 @@ COPY public.steps (id, name) FROM stdin;
 
 
 --
+-- TOC entry 3112 (class 0 OID 33039)
+-- Dependencies: 210
 -- Data for Name: user_cases; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1760,20 +1820,24 @@ COPY public.user_cases (id, case_id, user_id, status, created_at, stopped_at) FR
 
 
 --
+-- TOC entry 3114 (class 0 OID 33048)
+-- Dependencies: 212
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.users (id, email, password, name, title, institution, level_of_training, gender, country, date_of_birth, status, image) FROM stdin;
-16	ammaryousaf@gmail.com	9f08e0e14eb93c9cd05fdcae991d5f35	Malik Ahs	Mr	Naruto Academysss	Narutosss	male	Pakistan	1993-11-20	1	https://res.cloudinary.com/home-tutor/image/upload/v1621523835/humaine/tulvlevcib0nsom5imod.png
-0	humainenlp@gmail.com	641fcbb54be26270abb2b91c7e795317	Humaine	Mr	Humaine.co	\N	male	UK	1993-03-18	1	\N
-18	ammaryousaf123@gmail.com	c90c8d775a8f601d38c42192c8f70020	Ammar Yousaf	\N	\N	\N	\N	\N	\N	0	\N
-21	ammarYousaf66@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N
-23	aasim@gmail	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	1	\N
-26	ammaryousaf6@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N
+COPY public.users (id, email, password, name, title, institution, level_of_training, gender, country, date_of_birth, status, image, last_name) FROM stdin;
+16	ammaryousaf@gmail.com	9f08e0e14eb93c9cd05fdcae991d5f35	Malik Ahs	Mr	Naruto Academysss	Narutosss	male	Pakistan	1993-11-20	1	https://res.cloudinary.com/home-tutor/image/upload/v1621523835/humaine/tulvlevcib0nsom5imod.png	\N
+0	humainenlp@gmail.com	641fcbb54be26270abb2b91c7e795317	Humaine	Mr	Humaine.co	\N	male	UK	1993-03-18	1	\N	\N
+18	ammaryousaf123@gmail.com	c90c8d775a8f601d38c42192c8f70020	Ammar Yousaf	\N	\N	\N	\N	\N	\N	0	\N	\N
+21	ammarYousaf66@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N	\N
+23	aasim@gmail	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	1	\N	\N
+26	ammaryousaf6@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N	\N
 \.
 
 
 --
+-- TOC entry 3115 (class 0 OID 33055)
+-- Dependencies: 213
 -- Data for Name: users_cases_diagnosis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1816,6 +1880,8 @@ COPY public.users_cases_diagnosis (id, user_id, case_id, diagnosis, session_id) 
 
 
 --
+-- TOC entry 3117 (class 0 OID 33060)
+-- Dependencies: 215
 -- Data for Name: users_cases_intents; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1827,6 +1893,8 @@ COPY public.users_cases_intents (id, user_id, case_id, intent) FROM stdin;
 
 
 --
+-- TOC entry 3119 (class 0 OID 33068)
+-- Dependencies: 217
 -- Data for Name: users_cases_notes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1845,6 +1913,8 @@ COPY public.users_cases_notes (id, user_id, case_id, note) FROM stdin;
 
 
 --
+-- TOC entry 3121 (class 0 OID 33076)
+-- Dependencies: 219
 -- Data for Name: users_cases_steps; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1884,6 +1954,8 @@ COPY public.users_cases_steps (id, case_id, user_id, session_id, step) FROM stdi
 
 
 --
+-- TOC entry 3123 (class 0 OID 33081)
+-- Dependencies: 221
 -- Data for Name: users_cases_support; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2105,6 +2177,8 @@ COPY public.users_cases_support (id, user_id, case_id, comment, is_flagged, comm
 
 
 --
+-- TOC entry 3138 (class 0 OID 0)
+-- Dependencies: 202
 -- Name: cases_diagnosis_result_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2112,6 +2186,8 @@ SELECT pg_catalog.setval('public.cases_diagnosis_result_id_seq', 1, false);
 
 
 --
+-- TOC entry 3139 (class 0 OID 0)
+-- Dependencies: 203
 -- Name: cases_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2119,6 +2195,8 @@ SELECT pg_catalog.setval('public.cases_id_seq', 8, true);
 
 
 --
+-- TOC entry 3140 (class 0 OID 0)
+-- Dependencies: 205
 -- Name: cases_steps_result_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2126,6 +2204,8 @@ SELECT pg_catalog.setval('public.cases_steps_result_id_seq', 1, false);
 
 
 --
+-- TOC entry 3141 (class 0 OID 0)
+-- Dependencies: 207
 -- Name: diagnosis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2133,6 +2213,8 @@ SELECT pg_catalog.setval('public.diagnosis_id_seq', 1173, true);
 
 
 --
+-- TOC entry 3142 (class 0 OID 0)
+-- Dependencies: 209
 -- Name: steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2140,6 +2222,8 @@ SELECT pg_catalog.setval('public.steps_id_seq', 20, true);
 
 
 --
+-- TOC entry 3143 (class 0 OID 0)
+-- Dependencies: 211
 -- Name: user_cases_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2147,6 +2231,8 @@ SELECT pg_catalog.setval('public.user_cases_id_seq', 35, true);
 
 
 --
+-- TOC entry 3144 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: users_cases_diagnosis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2154,6 +2240,8 @@ SELECT pg_catalog.setval('public.users_cases_diagnosis_id_seq', 99, true);
 
 
 --
+-- TOC entry 3145 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: users_cases_intents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2161,6 +2249,8 @@ SELECT pg_catalog.setval('public.users_cases_intents_id_seq', 3, true);
 
 
 --
+-- TOC entry 3146 (class 0 OID 0)
+-- Dependencies: 218
 -- Name: users_cases_notes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2168,6 +2258,8 @@ SELECT pg_catalog.setval('public.users_cases_notes_id_seq', 10, true);
 
 
 --
+-- TOC entry 3147 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: users_cases_steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2175,6 +2267,8 @@ SELECT pg_catalog.setval('public.users_cases_steps_id_seq', 41, true);
 
 
 --
+-- TOC entry 3148 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: users_cases_support_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2182,6 +2276,8 @@ SELECT pg_catalog.setval('public.users_cases_support_id_seq', 237, true);
 
 
 --
+-- TOC entry 3149 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2189,6 +2285,7 @@ SELECT pg_catalog.setval('public.users_id_seq', 26, true);
 
 
 --
+-- TOC entry 2937 (class 2606 OID 33100)
 -- Name: cases_diagnosis_result cases_diagnosis_result_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2197,6 +2294,7 @@ ALTER TABLE ONLY public.cases_diagnosis_result
 
 
 --
+-- TOC entry 2935 (class 2606 OID 33102)
 -- Name: cases cases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2205,6 +2303,7 @@ ALTER TABLE ONLY public.cases
 
 
 --
+-- TOC entry 2939 (class 2606 OID 33104)
 -- Name: cases_steps_result cases_steps_result_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2213,6 +2312,7 @@ ALTER TABLE ONLY public.cases_steps_result
 
 
 --
+-- TOC entry 2941 (class 2606 OID 33106)
 -- Name: diagnosis diagnosis_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2221,6 +2321,7 @@ ALTER TABLE ONLY public.diagnosis
 
 
 --
+-- TOC entry 2943 (class 2606 OID 33108)
 -- Name: diagnosis diagnosis_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2229,6 +2330,7 @@ ALTER TABLE ONLY public.diagnosis
 
 
 --
+-- TOC entry 2945 (class 2606 OID 33110)
 -- Name: steps steps_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2237,6 +2339,7 @@ ALTER TABLE ONLY public.steps
 
 
 --
+-- TOC entry 2947 (class 2606 OID 33112)
 -- Name: user_cases user_cases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2245,6 +2348,7 @@ ALTER TABLE ONLY public.user_cases
 
 
 --
+-- TOC entry 2953 (class 2606 OID 33114)
 -- Name: users_cases_diagnosis users_cases_diagnosis_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2253,6 +2357,7 @@ ALTER TABLE ONLY public.users_cases_diagnosis
 
 
 --
+-- TOC entry 2955 (class 2606 OID 33116)
 -- Name: users_cases_intents users_cases_intents_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2261,6 +2366,7 @@ ALTER TABLE ONLY public.users_cases_intents
 
 
 --
+-- TOC entry 2957 (class 2606 OID 33118)
 -- Name: users_cases_notes users_cases_notes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2269,6 +2375,7 @@ ALTER TABLE ONLY public.users_cases_notes
 
 
 --
+-- TOC entry 2959 (class 2606 OID 33120)
 -- Name: users_cases_steps users_cases_steps_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2277,6 +2384,7 @@ ALTER TABLE ONLY public.users_cases_steps
 
 
 --
+-- TOC entry 2961 (class 2606 OID 33122)
 -- Name: users_cases_support users_cases_support_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2285,6 +2393,7 @@ ALTER TABLE ONLY public.users_cases_support
 
 
 --
+-- TOC entry 2949 (class 2606 OID 33124)
 -- Name: users users_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2293,6 +2402,7 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- TOC entry 2951 (class 2606 OID 33126)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2301,6 +2411,7 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- TOC entry 2966 (class 2606 OID 33127)
 -- Name: users_cases_intents case_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2309,6 +2420,7 @@ ALTER TABLE ONLY public.users_cases_intents
 
 
 --
+-- TOC entry 2962 (class 2606 OID 33132)
 -- Name: user_cases fk_case; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2317,6 +2429,7 @@ ALTER TABLE ONLY public.user_cases
 
 
 --
+-- TOC entry 2970 (class 2606 OID 33137)
 -- Name: users_cases_support fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2325,6 +2438,7 @@ ALTER TABLE ONLY public.users_cases_support
 
 
 --
+-- TOC entry 2968 (class 2606 OID 33142)
 -- Name: users_cases_notes fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2333,6 +2447,7 @@ ALTER TABLE ONLY public.users_cases_notes
 
 
 --
+-- TOC entry 2964 (class 2606 OID 33147)
 -- Name: users_cases_diagnosis fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2341,6 +2456,7 @@ ALTER TABLE ONLY public.users_cases_diagnosis
 
 
 --
+-- TOC entry 2963 (class 2606 OID 33152)
 -- Name: user_cases fk_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2349,6 +2465,7 @@ ALTER TABLE ONLY public.user_cases
 
 
 --
+-- TOC entry 2971 (class 2606 OID 33157)
 -- Name: users_cases_support fk_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2357,6 +2474,7 @@ ALTER TABLE ONLY public.users_cases_support
 
 
 --
+-- TOC entry 2969 (class 2606 OID 33162)
 -- Name: users_cases_notes fk_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2365,6 +2483,7 @@ ALTER TABLE ONLY public.users_cases_notes
 
 
 --
+-- TOC entry 2965 (class 2606 OID 33167)
 -- Name: users_cases_diagnosis fk_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2373,12 +2492,15 @@ ALTER TABLE ONLY public.users_cases_diagnosis
 
 
 --
+-- TOC entry 2967 (class 2606 OID 33172)
 -- Name: users_cases_intents user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.users_cases_intents
     ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES public.users(id);
 
+
+-- Completed on 2021-07-12 15:45:35
 
 --
 -- PostgreSQL database dump complete

@@ -5,6 +5,8 @@
 -- Dumped from database version 13.2
 -- Dumped by pg_dump version 13.2
 
+-- Started on 2021-07-12 15:45:35
+
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
@@ -21,6 +23,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- TOC entry 200 (class 1259 OID 33007)
 -- Name: cases; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -39,6 +42,7 @@ CREATE TABLE public.cases (
 ALTER TABLE public.cases OWNER TO postgres;
 
 --
+-- TOC entry 201 (class 1259 OID 33014)
 -- Name: cases_diagnosis_result; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -52,6 +56,7 @@ CREATE TABLE public.cases_diagnosis_result (
 ALTER TABLE public.cases_diagnosis_result OWNER TO postgres;
 
 --
+-- TOC entry 202 (class 1259 OID 33017)
 -- Name: cases_diagnosis_result_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -67,6 +72,8 @@ CREATE SEQUENCE public.cases_diagnosis_result_id_seq
 ALTER TABLE public.cases_diagnosis_result_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3131 (class 0 OID 0)
+-- Dependencies: 202
 -- Name: cases_diagnosis_result_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -74,6 +81,7 @@ ALTER SEQUENCE public.cases_diagnosis_result_id_seq OWNED BY public.cases_diagno
 
 
 --
+-- TOC entry 203 (class 1259 OID 33019)
 -- Name: cases_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -88,6 +96,7 @@ ALTER TABLE public.cases ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
+-- TOC entry 204 (class 1259 OID 33021)
 -- Name: cases_steps_result; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -101,6 +110,7 @@ CREATE TABLE public.cases_steps_result (
 ALTER TABLE public.cases_steps_result OWNER TO postgres;
 
 --
+-- TOC entry 205 (class 1259 OID 33024)
 -- Name: cases_steps_result_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -116,6 +126,8 @@ CREATE SEQUENCE public.cases_steps_result_id_seq
 ALTER TABLE public.cases_steps_result_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3132 (class 0 OID 0)
+-- Dependencies: 205
 -- Name: cases_steps_result_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -123,6 +135,7 @@ ALTER SEQUENCE public.cases_steps_result_id_seq OWNED BY public.cases_steps_resu
 
 
 --
+-- TOC entry 206 (class 1259 OID 33026)
 -- Name: diagnosis; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -135,6 +148,7 @@ CREATE TABLE public.diagnosis (
 ALTER TABLE public.diagnosis OWNER TO postgres;
 
 --
+-- TOC entry 207 (class 1259 OID 33029)
 -- Name: diagnosis_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -150,6 +164,8 @@ CREATE SEQUENCE public.diagnosis_id_seq
 ALTER TABLE public.diagnosis_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3133 (class 0 OID 0)
+-- Dependencies: 207
 -- Name: diagnosis_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -157,6 +173,7 @@ ALTER SEQUENCE public.diagnosis_id_seq OWNED BY public.diagnosis.id;
 
 
 --
+-- TOC entry 208 (class 1259 OID 33031)
 -- Name: steps; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -169,6 +186,7 @@ CREATE TABLE public.steps (
 ALTER TABLE public.steps OWNER TO postgres;
 
 --
+-- TOC entry 209 (class 1259 OID 33037)
 -- Name: steps_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -184,6 +202,8 @@ CREATE SEQUENCE public.steps_id_seq
 ALTER TABLE public.steps_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3134 (class 0 OID 0)
+-- Dependencies: 209
 -- Name: steps_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -191,6 +211,7 @@ ALTER SEQUENCE public.steps_id_seq OWNED BY public.steps.id;
 
 
 --
+-- TOC entry 210 (class 1259 OID 33039)
 -- Name: user_cases; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -207,6 +228,7 @@ CREATE TABLE public.user_cases (
 ALTER TABLE public.user_cases OWNER TO postgres;
 
 --
+-- TOC entry 211 (class 1259 OID 33046)
 -- Name: user_cases_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -221,6 +243,7 @@ ALTER TABLE public.user_cases ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
+-- TOC entry 212 (class 1259 OID 33048)
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -236,13 +259,15 @@ CREATE TABLE public.users (
     country text,
     date_of_birth date,
     status integer DEFAULT 0,
-    image text
+    image text,
+    last_name text
 );
 
 
 ALTER TABLE public.users OWNER TO postgres;
 
 --
+-- TOC entry 213 (class 1259 OID 33055)
 -- Name: users_cases_diagnosis; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -258,6 +283,7 @@ CREATE TABLE public.users_cases_diagnosis (
 ALTER TABLE public.users_cases_diagnosis OWNER TO postgres;
 
 --
+-- TOC entry 214 (class 1259 OID 33058)
 -- Name: users_cases_diagnosis_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -272,6 +298,7 @@ ALTER TABLE public.users_cases_diagnosis ALTER COLUMN id ADD GENERATED ALWAYS AS
 
 
 --
+-- TOC entry 215 (class 1259 OID 33060)
 -- Name: users_cases_intents; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -286,6 +313,7 @@ CREATE TABLE public.users_cases_intents (
 ALTER TABLE public.users_cases_intents OWNER TO postgres;
 
 --
+-- TOC entry 216 (class 1259 OID 33066)
 -- Name: users_cases_intents_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -301,6 +329,8 @@ CREATE SEQUENCE public.users_cases_intents_id_seq
 ALTER TABLE public.users_cases_intents_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3135 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: users_cases_intents_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -308,6 +338,7 @@ ALTER SEQUENCE public.users_cases_intents_id_seq OWNED BY public.users_cases_int
 
 
 --
+-- TOC entry 217 (class 1259 OID 33068)
 -- Name: users_cases_notes; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -322,6 +353,7 @@ CREATE TABLE public.users_cases_notes (
 ALTER TABLE public.users_cases_notes OWNER TO postgres;
 
 --
+-- TOC entry 218 (class 1259 OID 33074)
 -- Name: users_cases_notes_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -336,6 +368,7 @@ ALTER TABLE public.users_cases_notes ALTER COLUMN id ADD GENERATED ALWAYS AS IDE
 
 
 --
+-- TOC entry 219 (class 1259 OID 33076)
 -- Name: users_cases_steps; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -351,6 +384,7 @@ CREATE TABLE public.users_cases_steps (
 ALTER TABLE public.users_cases_steps OWNER TO postgres;
 
 --
+-- TOC entry 220 (class 1259 OID 33079)
 -- Name: users_cases_steps_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -366,6 +400,8 @@ CREATE SEQUENCE public.users_cases_steps_id_seq
 ALTER TABLE public.users_cases_steps_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3136 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: users_cases_steps_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -373,6 +409,7 @@ ALTER SEQUENCE public.users_cases_steps_id_seq OWNED BY public.users_cases_steps
 
 
 --
+-- TOC entry 221 (class 1259 OID 33081)
 -- Name: users_cases_support; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -391,6 +428,7 @@ CREATE TABLE public.users_cases_support (
 ALTER TABLE public.users_cases_support OWNER TO postgres;
 
 --
+-- TOC entry 222 (class 1259 OID 33088)
 -- Name: users_cases_support_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -405,6 +443,7 @@ ALTER TABLE public.users_cases_support ALTER COLUMN id ADD GENERATED ALWAYS AS I
 
 
 --
+-- TOC entry 223 (class 1259 OID 33090)
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -420,6 +459,8 @@ CREATE SEQUENCE public.users_id_seq
 ALTER TABLE public.users_id_seq OWNER TO postgres;
 
 --
+-- TOC entry 3137 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -427,6 +468,7 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
+-- TOC entry 2924 (class 2604 OID 33092)
 -- Name: cases_diagnosis_result id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -434,6 +476,7 @@ ALTER TABLE ONLY public.cases_diagnosis_result ALTER COLUMN id SET DEFAULT nextv
 
 
 --
+-- TOC entry 2925 (class 2604 OID 33093)
 -- Name: cases_steps_result id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -441,6 +484,7 @@ ALTER TABLE ONLY public.cases_steps_result ALTER COLUMN id SET DEFAULT nextval('
 
 
 --
+-- TOC entry 2926 (class 2604 OID 33094)
 -- Name: diagnosis id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -448,6 +492,7 @@ ALTER TABLE ONLY public.diagnosis ALTER COLUMN id SET DEFAULT nextval('public.di
 
 
 --
+-- TOC entry 2927 (class 2604 OID 33095)
 -- Name: steps id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -455,6 +500,7 @@ ALTER TABLE ONLY public.steps ALTER COLUMN id SET DEFAULT nextval('public.steps_
 
 
 --
+-- TOC entry 2930 (class 2604 OID 33096)
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -462,6 +508,7 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
+-- TOC entry 2931 (class 2604 OID 33097)
 -- Name: users_cases_intents id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -469,6 +516,7 @@ ALTER TABLE ONLY public.users_cases_intents ALTER COLUMN id SET DEFAULT nextval(
 
 
 --
+-- TOC entry 2932 (class 2604 OID 33098)
 -- Name: users_cases_steps id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -476,18 +524,22 @@ ALTER TABLE ONLY public.users_cases_steps ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- TOC entry 3102 (class 0 OID 33007)
+-- Dependencies: 200
 -- Data for Name: cases; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.cases (id, case_name, case_description, case_status, case_difficulty, case_created, image, case_department) FROM stdin;
-5	Brian Montgomery	This 52 year old man presents with abdominal pain.  Please take a full history with a view to making a diagnosis.	active	Easy	2020-12-02 04:37:08.9764+00	default.jpg	Gastroenterology
-6	Judith Palfrey	You are the running a respiratory clinic and are asked to see this woman by her primary care doctor who is complaining of dyspnoea. Please take a full history with a view to making a diagnosis. 	active	Moderate	2020-12-02 04:37:08.9764+00	default.jpg	Respiratory
-7	Berty Le Roux	You are in the medical admissions unit and are asked to see this somewhat reserved man complaining of severe chest pain. He has a CRP of 155 mg/L (0-5), and a CXR as seen in the panel on the left.  His other results are outstanding.  Please take a full history with a view to making a diagnosis.	active	BETA	2020-12-02 04:37:08.9764+00	default.jpg	General Medicine
-8	Amjad Khan	This 62 year old man presents with breathlessness.  Please take a full history with a view to making a diagnosis.	active	BETA	2020-12-02 04:37:08.9764+00	default.jpg	General Medicine
+5	Brian Montgomery	This 52 year old man presents with abdominal pain.  Please take a full history with a view to making a diagnosis.	active	Easy	2020-12-02 10:07:08.9764+05:30	default.jpg	Gastroenterology
+6	Judith Palfrey	You are the running a respiratory clinic and are asked to see this woman by her primary care doctor who is complaining of dyspnoea. Please take a full history with a view to making a diagnosis. 	active	Moderate	2020-12-02 10:07:08.9764+05:30	default.jpg	Respiratory
+7	Berty Le Roux	You are in the medical admissions unit and are asked to see this somewhat reserved man complaining of severe chest pain. He has a CRP of 155 mg/L (0-5), and a CXR as seen in the panel on the left.  His other results are outstanding.  Please take a full history with a view to making a diagnosis.	active	BETA	2020-12-02 10:07:08.9764+05:30	default.jpg	General Medicine
+8	Amjad Khan	This 62 year old man presents with breathlessness.  Please take a full history with a view to making a diagnosis.	active	BETA	2020-12-02 10:07:08.9764+05:30	default.jpg	General Medicine
 \.
 
 
 --
+-- TOC entry 3103 (class 0 OID 33014)
+-- Dependencies: 201
 -- Data for Name: cases_diagnosis_result; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -507,6 +559,8 @@ COPY public.cases_diagnosis_result (id, case_id, diagnosis_id) FROM stdin;
 
 
 --
+-- TOC entry 3106 (class 0 OID 33021)
+-- Dependencies: 204
 -- Data for Name: cases_steps_result; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -522,6 +576,8 @@ COPY public.cases_steps_result (id, case_id, step_id) FROM stdin;
 
 
 --
+-- TOC entry 3108 (class 0 OID 33026)
+-- Dependencies: 206
 -- Data for Name: diagnosis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1701,6 +1757,8 @@ COPY public.diagnosis (id, name) FROM stdin;
 
 
 --
+-- TOC entry 3110 (class 0 OID 33031)
+-- Dependencies: 208
 -- Data for Name: steps; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1729,6 +1787,8 @@ COPY public.steps (id, name) FROM stdin;
 
 
 --
+-- TOC entry 3112 (class 0 OID 33039)
+-- Dependencies: 210
 -- Data for Name: user_cases; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1751,43 +1811,33 @@ COPY public.user_cases (id, case_id, user_id, status, created_at, stopped_at) FR
 4	6	16	attempted	2021-01-14 00:00:00	2021-05-11 04:43:41.093
 12	8	16	attempted	2021-01-17 00:00:00	2021-05-11 04:47:08.088
 26	8	16	attempted	2021-04-20 20:18:07.646825	2021-04-20 23:22:07.646825
+32	7	0	in_progress	2021-05-26 21:04:53.722984	\N
+33	5	0	in_progress	2021-05-27 11:34:09.001524	\N
 34	8	0	in_progress	2021-05-27 11:36:48.330272	\N
 31	6	0	attempted	2021-05-26 21:04:30.357547	2021-05-27 14:05:01.269624
-32	7	0	attempted	2021-05-26 21:04:53.722984	2021-06-13 13:02:18.56135
-36	7	0	in_progress	2021-06-13 13:04:16.379798	\N
-33	5	0	attempted	2021-05-27 11:34:09.001524	2021-06-13 13:05:45.132121
-35	6	0	attempted	2021-05-27 21:22:36.134731	2021-06-13 13:25:08.43928
-38	6	0	attempted	2021-06-13 13:47:35.802937	2021-06-13 13:48:00.937235
-39	6	0	attempted	2021-06-13 13:57:26.086336	2021-06-13 13:57:50.580937
-40	6	0	attempted	2021-06-13 15:48:04.24801	2021-06-13 16:03:52.798213
-41	6	0	attempted	2021-06-13 15:59:49.483895	2021-06-13 16:06:26.417255
-42	6	0	attempted	2021-06-13 16:25:01.251016	2021-06-13 16:26:18.978573
-43	6	0	attempted	2021-06-13 16:31:47.189577	2021-06-13 16:32:55.673863
-37	5	0	attempted	2021-06-13 13:15:08.316631	2021-06-13 17:10:30.531762
-44	6	0	attempted	2021-06-13 17:09:11.913806	2021-06-13 17:38:59.866811
-45	6	0	attempted	2021-06-14 09:05:03.746225	2021-06-14 09:18:21.018599
-46	6	0	attempted	2021-06-14 09:20:58.765303	2021-06-14 09:25:07.538764
-47	6	0	attempted	2021-06-14 09:26:22.180447	2021-06-14 09:27:38.623733
-48	6	0	attempted	2021-06-14 09:28:37.842023	2021-06-14 09:30:20.392682
-49	6	0	in_progress	2021-06-14 09:31:04.350318	\N
+35	6	0	in_progress	2021-05-27 21:22:36.134731	\N
 \.
 
 
 --
+-- TOC entry 3114 (class 0 OID 33048)
+-- Dependencies: 212
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.users (id, email, password, name, title, institution, level_of_training, gender, country, date_of_birth, status, image) FROM stdin;
-16	ammaryousaf@gmail.com	9f08e0e14eb93c9cd05fdcae991d5f35	Malik Ahs	Mr	Naruto Academysss	Narutosss	male	Pakistan	1993-11-20	1	https://res.cloudinary.com/home-tutor/image/upload/v1621523835/humaine/tulvlevcib0nsom5imod.png
-0	humainenlp@gmail.com	641fcbb54be26270abb2b91c7e795317	Humaine	Mr	Humaine.co	\N	male	UK	1993-03-18	1	\N
-18	ammaryousaf123@gmail.com	c90c8d775a8f601d38c42192c8f70020	Ammar Yousaf	\N	\N	\N	\N	\N	\N	0	\N
-21	ammarYousaf66@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N
-23	aasim@gmail	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	1	\N
-26	ammaryousaf6@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N
+COPY public.users (id, email, password, name, title, institution, level_of_training, gender, country, date_of_birth, status, image, last_name) FROM stdin;
+16	ammaryousaf@gmail.com	9f08e0e14eb93c9cd05fdcae991d5f35	Malik Ahs	Mr	Naruto Academysss	Narutosss	male	Pakistan	1993-11-20	1	https://res.cloudinary.com/home-tutor/image/upload/v1621523835/humaine/tulvlevcib0nsom5imod.png	\N
+0	humainenlp@gmail.com	641fcbb54be26270abb2b91c7e795317	Humaine	Mr	Humaine.co	\N	male	UK	1993-03-18	1	\N	\N
+18	ammaryousaf123@gmail.com	c90c8d775a8f601d38c42192c8f70020	Ammar Yousaf	\N	\N	\N	\N	\N	\N	0	\N	\N
+21	ammarYousaf66@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N	\N
+23	aasim@gmail	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	1	\N	\N
+26	ammaryousaf6@gmail.com	7ec6bc6bce00ff8f8705299f9fdd72b9	Ammar	\N	\N	\N	\N	\N	\N	0	\N	\N
 \.
 
 
 --
+-- TOC entry 3115 (class 0 OID 33055)
+-- Dependencies: 213
 -- Data for Name: users_cases_diagnosis; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1826,43 +1876,25 @@ COPY public.users_cases_diagnosis (id, user_id, case_id, diagnosis, session_id) 
 97	16	8	3	27
 98	16	8	17	27
 99	0	6	50	31
-100	0	7	11	32
-101	0	5	40	33
-102	0	6	5	35
-103	0	6	3	35
-104	0	6	7	35
-105	0	6	3	38
-106	0	6	4	38
-107	0	6	3	39
-108	0	6	6	39
-109	0	6	5	40
-110	0	6	6	40
-111	0	6	3	40
-112	0	6	6	41
-113	0	6	5	42
-114	0	6	7	42
-115	0	6	4	43
-116	0	5	4	37
-117	0	6	5	44
-118	0	6	3	45
-119	0	6	3	46
-120	0	6	4	47
-121	0	6	5	48
 \.
 
 
 --
+-- TOC entry 3117 (class 0 OID 33060)
+-- Dependencies: 215
 -- Data for Name: users_cases_intents; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.users_cases_intents (id, user_id, case_id, intent) FROM stdin;
-3	0	7	{"ADLs":0,"AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"Followup":"SmallTalk","GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":1,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":0,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":0,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":1,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":0,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0}
-2	0	5	{"ADLs":0,"AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"Followup":"WhatProblem","GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":2,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":0,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":0,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":1,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":1,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0,"QuickPause":null,"out_of_scope":1}
-1	0	6	{"ADLs":0,"AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"Followup":"Introduction","GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":13,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":2,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":1,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":5,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":1,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0,"QuickPause":1}
+3	0	7	{"ADLs":0,"AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"Followup":"","GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":0,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":0,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":0,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":0,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":0,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0}
+1	0	6	{"ADLs":0,"AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"Followup":"Introduction","GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":4,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":1,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":0,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":1,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":1,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0}
+2	0	5	{"ADLs":0,"AbdoCramps":0,"AbdoDistention":0,"AbdoPain":0,"Accommodation":0,"Age":0,"Alcohol":0,"AllergyHx":0,"AnimalAllergy":0,"AntiSickness":0,"Appendicectomy":0,"Appetite":0,"AsbestosExposure":0,"Ascites":0,"AssociatedFactors":0,"AssociatedFactorsPast":0,"BarleyExposure":0,"BeeWaspStingAllergy":0,"BerylliumExposure":0,"BirdAllergy":0,"Bloatedness":0,"BloodyStool":0,"BowelFrequency":0,"BowelHabit":0,"BowelIncontinence":0,"BowelMotions":0,"CasualPartner":0,"CheckDrug":0,"Character":0,"ChestPain":0,"Cholecystectomy":0,"CoalExposure":0,"ColdWeatherExacerbation":0,"Colonoscopy":0,"Concern":0,"ConfirmName":0,"ConfirmProblem":0,"Constipation":0,"Contacts":0,"CottonExposure":0,"Cough":0,"DIabetes":0,"DOB":0,"DampHome":0,"DarkUrine":0,"Delivery":0,"Diarrhea":0,"Diet":0,"DiagnosticStatement":0,"Diarrhoea":0,"DoctorQuestion":0,"DrugAbuse":0,"DrugHx":0,"DustExposure":0,"Dyspepsia":0,"Dysphagia":0,"EggAllergy":0,"Empathy":0,"EnvironmentChangeHouse":0,"ExacerbatingFactors":0,"Exercise":0,"ExerciseToleranceNorm":0,"ExerciseToleranceNow":0,"Expectations":0,"FamilyHx":0,"FamilyMember":0,"FarmingExposure":0,"Fever":0,"FoodAllergy":0,"Frequency":0,"FrequencyUrine":0,"Followup":"Introduction","GORD":0,"Gastritis":0,"Goodbye":0,"Haematemesis":0,"Haemoptysis":0,"HaemoptysisMixedStreak":0,"Hayfever":0,"Heart attack":0,"HerniaOp":0,"HiatusHernia":0,"Hoarseness":0,"Hobbies":0,"Ideas":0,"IVDU":0,"IndustrialExposure":0,"IntroAndName":0,"Introduction":1,"ItchyEyesNoseThroat":0,"Jaundice":0,"LUTOpen":0,"Lethargy":0,"Lifestyle":0,"ManagementPlan":0,"MushroomExposure":0,"Name":0,"NameAndDOB ":0,"NameAndAge":0,"Nausea":0,"NeuroSOB":0,"NewWorkConditions":0,"NewLivingConditions":0,"Nocturia":0,"NutsAllergy":0,"OGD":0,"OTCDrugHx":0,"Occupation":0,"Odynophagia":0,"Onset":0,"OnsetTrigger":0,"Orthopnoea":0,"OtherProblems":0,"PND":0,"PUD":0,"PainKiller":0,"PainfulDefecation":0,"PaleStool":0,"Partner":0,"PassiveSmoke":0,"PassiveSmokeContact":0,"PastMedicalHx":0,"PastSurgicalHx":0,"PeripheralOedema":0,"PetsExposure":0,"Piles":0,"PillowsSleep":0,"PollenAllergy":0,"PreviousICU":0,"PreviousTransfusions":0,"ProblemBefore":0,"ProblemProgression":0,"ProblemStart":0,"PrutitisAni":0,"PrutitisSkin":0,"ProblemStartPast":0,"PruritisAni":0,"PruritisSkin":0,"Radiation":0,"RadiationPast":0,"Reassurance":0,"RecentTreatment":0,"RegularPartner":0,"RelievingFactors":0,"Rhinitis":0,"SOB":0,"SOBWork":0,"SafeSex":0,"SeafoodAllergy":0,"SeasonVariation":0,"Severity":0,"SexType":0,"Site":0,"SitePast":0,"SkinChange":0,"SmallTalk":0,"Smoke":0,"Sleep":0,"Sneezing":0,"SOBExert":0,"SOBExertion":0,"SOBVariation":0,"Sputum":0,"SputumAmount":0,"SputumColour":0,"StoolBulk":0,"StoolConsistency":0,"StoolDescribe":0,"StoolFloat":0,"StoolMucus":0,"StoolSmell":0,"StressIncontinence":0,"Summary":0,"SurgeryPast":0,"Sweating":0,"Tenesmus":0,"TermDelivery":0,"Timing":0,"TimingPast":0,"TransitionPoints":0,"TravelHx":0,"Urgency":0,"Vomit":0,"WeightLoss":0,"WhatProblem":0,"Wheeze":0,"WheezeWork":0,"ask_rephrase":0,"backtrack":0,"default":0,"Palpitations":0,"PillowSleep":0,"MasonryExposure":0,"ConstructionExposure":0,"CeramicsExposure":0,"Arrhythmia":0,"Anxiety":0,"Stress":0}
 \.
 
 
 --
+-- TOC entry 3119 (class 0 OID 33068)
+-- Dependencies: 217
 -- Data for Name: users_cases_notes; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1881,6 +1913,8 @@ COPY public.users_cases_notes (id, user_id, case_id, note) FROM stdin;
 
 
 --
+-- TOC entry 3121 (class 0 OID 33076)
+-- Dependencies: 219
 -- Data for Name: users_cases_steps; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1916,29 +1950,12 @@ COPY public.users_cases_steps (id, case_id, user_id, session_id, step) FROM stdi
 39	8	16	27	6
 40	8	16	27	7
 41	6	0	31	3
-42	7	0	32	2
-43	5	0	33	5
-44	6	0	35	3
-45	6	0	35	4
-46	6	0	35	7
-47	6	0	38	3
-48	6	0	38	4
-49	6	0	39	3
-50	6	0	40	4
-51	6	0	40	2
-52	6	0	41	4
-53	6	0	42	3
-54	6	0	43	3
-55	5	0	37	3
-56	6	0	44	3
-57	6	0	45	3
-58	6	0	46	3
-59	6	0	47	4
-60	6	0	48	3
 \.
 
 
 --
+-- TOC entry 3123 (class 0 OID 33081)
+-- Dependencies: 221
 -- Data for Name: users_cases_support; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -2156,60 +2173,12 @@ COPY public.users_cases_support (id, user_id, case_id, comment, is_flagged, comm
 235	0	6	Good morning	f	2021-05-27 08:32:18.884604	31	Introduction
 236	0	5	hello	f	2021-05-27 16:17:20.375656	34	
 237	0	5	Good morning	f	2021-05-27 16:17:21.570386	34	Introduction
-238	0	7	hello	f	2021-06-13 13:02:00.643004	32	
-239	0	7	Hello	f	2021-06-13 13:02:02.171491	32	Introduction
-240	0	6	how are you	f	2021-06-13 13:03:04.879696	32	
-241	0	6	Thanks for seeing me today - You know how it is... its always a rush to fit in everything in the day	f	2021-06-13 13:03:06.057394	32	SmallTalk
-242	0	5	is everything alright	f	2021-06-13 13:03:37.771391	33	
-243	0	5	Things are good, but I have this problem	f	2021-06-13 13:03:38.923378	33	SmallTalk
-244	0	6	everything alright	f	2021-06-13 13:03:58.397255	33	
-245	0	6	Thank you for your time.  I wish I didn't need to come and see you today!	f	2021-06-13 13:03:59.816003	33	SmallTalk
-246	0	7	what is wrong	f	2021-06-13 13:04:24.052206	35	
-247	0	7	I am okay doctor, just my legs bothering me	f	2021-06-13 13:04:26.153435	35	SmallTalk
-248	0	6	hello	f	2021-06-13 13:26:03.816472	36	
-249	0	6	Hello	f	2021-06-13 13:26:04.932546	36	Introduction
-250	0	6	hello	f	2021-06-13 13:47:45.08943	35	
-251	0	6	Hi	f	2021-06-13 13:47:46.190797	35	Introduction
-252	0	6	stupid piece of shit	f	2021-06-13 13:57:35.952599	38	
-253	0	6	No surgeries in the past.	f	2021-06-13 13:57:37.050083	38	PastSurgicalHx
-254	0	6	hello	f	2021-06-13 14:05:26.058345	38	
-255	0	6	Good morning	f	2021-06-13 14:05:27.162554	38	Introduction
-256	0	6	hello	f	2021-06-13 15:40:18.455195	38	
-257	0	6	Hello	f	2021-06-13 15:40:19.662229	38	Introduction
-258	0	6	how are you	f	2021-06-13 15:48:10.462288	39	
-259	0	6	Thanks for seeing me today - You know how it is... its always a rush to fit in everything in the day	f	2021-06-13 15:48:11.547329	39	SmallTalk
-260	0	6	hello	f	2021-06-13 16:06:12.884502	41	
-261	0	6	Hi	f	2021-06-13 16:06:14.731557	41	Introduction
-262	0	6	hello	f	2021-06-13 16:26:02.792197	42	
-263	0	6	Good morning	f	2021-06-13 16:26:04.009762	42	Introduction
-264	0	6	I want to read	f	2021-06-13 16:32:34.318707	43	
-265	0	6	I am not able to understand your question!	f	2021-06-13 16:32:35.512406	43	NA
-266	0	5	hello	f	2021-06-13 17:09:37.634135	37	
-267	0	5	Hello. Very nice to meet you.	f	2021-06-13 17:09:38.931623	37	Introduction
-268	0	5	Huawei	f	2021-06-13 17:09:47.858255	37	
-269	0	5	I am not able to understand your question!	f	2021-06-13 17:09:49.113737	37	NA
-270	0	5	are you sure	f	2021-06-13 17:09:57.264085	37	
-271	0	5	I am not able to understand your question!	f	2021-06-13 17:09:58.449776	37	NA
-272	0	5	why are you here	f	2021-06-13 17:10:06.529048	37	
-273	0	5	I am not able to understand your question!	f	2021-06-13 17:10:08.08686	37	NA
-274	0	5	what is your problem	f	2021-06-13 17:10:17.605316	37	
-275	0	5	I noted a pain in my stomach from about a week ago, and it is becoming difficult to cope with.	f	2021-06-13 17:10:19.280838	37	WhatProblem
-276	0	6	hello	f	2021-06-13 17:38:40.036023	37	
-277	0	6	Hello	f	2021-06-13 17:38:41.24596	37	Introduction
-278	0	6	Huawei	f	2021-06-13 17:38:49.244313	37	
-279	0	6	I am not able to understand your question!	f	2021-06-13 17:38:50.487565	37	NA
-280	0	6	pillow	f	2021-06-14 09:18:09.407684	45	
-281	0	6	Judith Palfrey	f	2021-06-14 09:18:10.533073	45	Name
-282	0	6	hello how are you	f	2021-06-14 09:24:57.45467	46	
-283	0	6	Thank you for your time.  I wish I didn't need to come and see you today!	f	2021-06-14 09:24:58.564102	46	SmallTalk
-284	0	6	hello	f	2021-06-14 09:27:27.210923	47	
-285	0	6	Hi	f	2021-06-14 09:27:28.300409	47	Introduction
-286	0	6	hello	f	2021-06-14 09:30:10.878027	48	
-287	0	6	Good morning	f	2021-06-14 09:30:12.119464	48	Introduction
 \.
 
 
 --
+-- TOC entry 3138 (class 0 OID 0)
+-- Dependencies: 202
 -- Name: cases_diagnosis_result_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2217,6 +2186,8 @@ SELECT pg_catalog.setval('public.cases_diagnosis_result_id_seq', 1, false);
 
 
 --
+-- TOC entry 3139 (class 0 OID 0)
+-- Dependencies: 203
 -- Name: cases_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2224,6 +2195,8 @@ SELECT pg_catalog.setval('public.cases_id_seq', 8, true);
 
 
 --
+-- TOC entry 3140 (class 0 OID 0)
+-- Dependencies: 205
 -- Name: cases_steps_result_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2231,6 +2204,8 @@ SELECT pg_catalog.setval('public.cases_steps_result_id_seq', 1, false);
 
 
 --
+-- TOC entry 3141 (class 0 OID 0)
+-- Dependencies: 207
 -- Name: diagnosis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2238,6 +2213,8 @@ SELECT pg_catalog.setval('public.diagnosis_id_seq', 1173, true);
 
 
 --
+-- TOC entry 3142 (class 0 OID 0)
+-- Dependencies: 209
 -- Name: steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2245,20 +2222,26 @@ SELECT pg_catalog.setval('public.steps_id_seq', 20, true);
 
 
 --
+-- TOC entry 3143 (class 0 OID 0)
+-- Dependencies: 211
 -- Name: user_cases_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.user_cases_id_seq', 49, true);
+SELECT pg_catalog.setval('public.user_cases_id_seq', 35, true);
 
 
 --
+-- TOC entry 3144 (class 0 OID 0)
+-- Dependencies: 214
 -- Name: users_cases_diagnosis_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_cases_diagnosis_id_seq', 121, true);
+SELECT pg_catalog.setval('public.users_cases_diagnosis_id_seq', 99, true);
 
 
 --
+-- TOC entry 3145 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: users_cases_intents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2266,6 +2249,8 @@ SELECT pg_catalog.setval('public.users_cases_intents_id_seq', 3, true);
 
 
 --
+-- TOC entry 3146 (class 0 OID 0)
+-- Dependencies: 218
 -- Name: users_cases_notes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2273,20 +2258,26 @@ SELECT pg_catalog.setval('public.users_cases_notes_id_seq', 10, true);
 
 
 --
+-- TOC entry 3147 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: users_cases_steps_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_cases_steps_id_seq', 60, true);
+SELECT pg_catalog.setval('public.users_cases_steps_id_seq', 41, true);
 
 
 --
+-- TOC entry 3148 (class 0 OID 0)
+-- Dependencies: 222
 -- Name: users_cases_support_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_cases_support_id_seq', 287, true);
+SELECT pg_catalog.setval('public.users_cases_support_id_seq', 237, true);
 
 
 --
+-- TOC entry 3149 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -2294,6 +2285,7 @@ SELECT pg_catalog.setval('public.users_id_seq', 26, true);
 
 
 --
+-- TOC entry 2937 (class 2606 OID 33100)
 -- Name: cases_diagnosis_result cases_diagnosis_result_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2302,6 +2294,7 @@ ALTER TABLE ONLY public.cases_diagnosis_result
 
 
 --
+-- TOC entry 2935 (class 2606 OID 33102)
 -- Name: cases cases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2310,6 +2303,7 @@ ALTER TABLE ONLY public.cases
 
 
 --
+-- TOC entry 2939 (class 2606 OID 33104)
 -- Name: cases_steps_result cases_steps_result_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2318,6 +2312,7 @@ ALTER TABLE ONLY public.cases_steps_result
 
 
 --
+-- TOC entry 2941 (class 2606 OID 33106)
 -- Name: diagnosis diagnosis_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2326,6 +2321,7 @@ ALTER TABLE ONLY public.diagnosis
 
 
 --
+-- TOC entry 2943 (class 2606 OID 33108)
 -- Name: diagnosis diagnosis_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2334,6 +2330,7 @@ ALTER TABLE ONLY public.diagnosis
 
 
 --
+-- TOC entry 2945 (class 2606 OID 33110)
 -- Name: steps steps_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2342,6 +2339,7 @@ ALTER TABLE ONLY public.steps
 
 
 --
+-- TOC entry 2947 (class 2606 OID 33112)
 -- Name: user_cases user_cases_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2350,6 +2348,7 @@ ALTER TABLE ONLY public.user_cases
 
 
 --
+-- TOC entry 2953 (class 2606 OID 33114)
 -- Name: users_cases_diagnosis users_cases_diagnosis_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2358,6 +2357,7 @@ ALTER TABLE ONLY public.users_cases_diagnosis
 
 
 --
+-- TOC entry 2955 (class 2606 OID 33116)
 -- Name: users_cases_intents users_cases_intents_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2366,6 +2366,7 @@ ALTER TABLE ONLY public.users_cases_intents
 
 
 --
+-- TOC entry 2957 (class 2606 OID 33118)
 -- Name: users_cases_notes users_cases_notes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2374,6 +2375,7 @@ ALTER TABLE ONLY public.users_cases_notes
 
 
 --
+-- TOC entry 2959 (class 2606 OID 33120)
 -- Name: users_cases_steps users_cases_steps_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2382,6 +2384,7 @@ ALTER TABLE ONLY public.users_cases_steps
 
 
 --
+-- TOC entry 2961 (class 2606 OID 33122)
 -- Name: users_cases_support users_cases_support_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2390,6 +2393,7 @@ ALTER TABLE ONLY public.users_cases_support
 
 
 --
+-- TOC entry 2949 (class 2606 OID 33124)
 -- Name: users users_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2398,6 +2402,7 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- TOC entry 2951 (class 2606 OID 33126)
 -- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2406,6 +2411,7 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- TOC entry 2966 (class 2606 OID 33127)
 -- Name: users_cases_intents case_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2414,6 +2420,7 @@ ALTER TABLE ONLY public.users_cases_intents
 
 
 --
+-- TOC entry 2962 (class 2606 OID 33132)
 -- Name: user_cases fk_case; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2422,6 +2429,7 @@ ALTER TABLE ONLY public.user_cases
 
 
 --
+-- TOC entry 2970 (class 2606 OID 33137)
 -- Name: users_cases_support fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2430,6 +2438,7 @@ ALTER TABLE ONLY public.users_cases_support
 
 
 --
+-- TOC entry 2968 (class 2606 OID 33142)
 -- Name: users_cases_notes fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2438,6 +2447,7 @@ ALTER TABLE ONLY public.users_cases_notes
 
 
 --
+-- TOC entry 2964 (class 2606 OID 33147)
 -- Name: users_cases_diagnosis fk_cases; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2446,6 +2456,7 @@ ALTER TABLE ONLY public.users_cases_diagnosis
 
 
 --
+-- TOC entry 2963 (class 2606 OID 33152)
 -- Name: user_cases fk_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2454,6 +2465,7 @@ ALTER TABLE ONLY public.user_cases
 
 
 --
+-- TOC entry 2971 (class 2606 OID 33157)
 -- Name: users_cases_support fk_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2462,6 +2474,7 @@ ALTER TABLE ONLY public.users_cases_support
 
 
 --
+-- TOC entry 2969 (class 2606 OID 33162)
 -- Name: users_cases_notes fk_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2470,6 +2483,7 @@ ALTER TABLE ONLY public.users_cases_notes
 
 
 --
+-- TOC entry 2965 (class 2606 OID 33167)
 -- Name: users_cases_diagnosis fk_users; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -2478,12 +2492,15 @@ ALTER TABLE ONLY public.users_cases_diagnosis
 
 
 --
+-- TOC entry 2967 (class 2606 OID 33172)
 -- Name: users_cases_intents user_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.users_cases_intents
     ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES public.users(id);
 
+
+-- Completed on 2021-07-12 15:45:35
 
 --
 -- PostgreSQL database dump complete

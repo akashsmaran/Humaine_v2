@@ -21,6 +21,7 @@ const Register = ({
   const [formData, setFormData] = useState({
     name: "",
     title: "",
+    lastName: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -34,7 +35,7 @@ const Register = ({
   const options = useMemo(() => countryList().getData(), []);
   const {
     name,
-    title,
+    lastName,
     email,
     password,
     confirmPassword,
@@ -87,7 +88,7 @@ const Register = ({
                             name="name"
                             className="form-control style-common"
                             id="nameInput"
-                            placeholder="Full Name"
+                            placeholder="First Name"
                             value={name}
                             onChange={(e) => onChange(e)}
                             required
@@ -95,6 +96,20 @@ const Register = ({
                         </div>
                       </div>
                       <div className="col-md-6 col-xs-12">
+                        <div className="form-group ">
+                          <input
+                            type="text"
+                            name="lastName"
+                            className="form-control style-common"
+                            id="lastNameInput"
+                            placeholder="Last Name"
+                            value={lastName}
+                            onChange={(e) => onChange(e)}
+                            required
+                          />
+                        </div>
+                      </div>
+                      {/* <div className="col-md-6 col-xs-12">
                         <div className="form-group">
                           <select
                             className="form-control style-common"
@@ -110,7 +125,7 @@ const Register = ({
                             <option value="Dr">Dr</option>
                           </select>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="row row-space">
                       <div className="col-md-12 col-xs-12">

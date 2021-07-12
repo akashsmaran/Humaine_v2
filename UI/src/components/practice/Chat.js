@@ -40,7 +40,7 @@ const Chat = ({
       let messageObj = [messages[messages.length - 1]];
       if (messageObj && messageObj[0].intent) {
         messageObj[0].key = Math.random();
-        // setSayings(messageObj);
+        setSayings(messageObj);
       }
     }
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
@@ -58,7 +58,7 @@ const Chat = ({
       case "6":
         return "Google UK English Female";
       default:
-        return "Google UK English Male";
+        return "Google UK English Female";
     }
   };
   const selector = useCallback(

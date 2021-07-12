@@ -20,7 +20,7 @@ const getUser = async (req, res) => {
   let userInfo = jwtDecode(token);
 
   const getUserById = {
-    text: "SELECT id,email,status, image, name, title, institution, level_of_training, gender, country, date_of_birth FROM users WHERE id = $1",
+    text: "SELECT id,email,status, image, name, last_name, institution, level_of_training, gender, country, date_of_birth FROM users WHERE id = $1",
     values: [userInfo.userID],
   };
   try {
@@ -52,7 +52,7 @@ const getUser = async (req, res) => {
 const updateUser = async (req, res, next) => {
   const {
     name,
-    title,
+    lastName,
     institution,
     levelOftraining,
     gender,
@@ -62,7 +62,7 @@ const updateUser = async (req, res, next) => {
   let token = req.headers.authorization;
   let userInfo = jwtDecode(token);
   const updateUserInfo = {
-    text: "Update users SET name = $2, institution = $3, level_of_training = $4, gender = $5, country = $6, date_of_birth = $7 WHERE id = $1",
+    text: "Update users SET name = $2, institution = $3, level_of_training = $4, gender = $5, country = $6, date_of_birth = $7,last_name = $8 WHERE id = $1",
     values: [
       userInfo.userID,
       name,
@@ -71,6 +71,7 @@ const updateUser = async (req, res, next) => {
       gender,
       country,
       dateOfBirth,
+      lastName,
     ],
   };
   try {

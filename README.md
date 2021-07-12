@@ -1,3 +1,13 @@
+Development Notes:
+
+Last Name feature:
+
+Use akash sql file and restore it in your pgadmin and then dump it and then put it in rds
+
+Change Intents:
+
+files in api/public
+
 For backing up the database in EC2
 
 ```
@@ -21,7 +31,7 @@ For prepoulating the database in docker
 ```
 docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup_latest.sql
 
-docker exec -it postgres psql -U postgres -v -d humaine 
+docker exec -it postgres psql -U postgres -v -d humaine
 ```
 
 For running in development

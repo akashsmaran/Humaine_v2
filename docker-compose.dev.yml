@@ -76,6 +76,8 @@ services:
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
       - "5050:80"
+    depends_on:
+      - postgres
 
 volumes:
   humaine:

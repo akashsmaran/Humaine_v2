@@ -31,7 +31,7 @@ const signUp = async (req, res, next) => {
     email,
     password,
     name,
-    title,
+    lastName,
     institution,
     levelOfTraining,
     gender,
@@ -51,12 +51,12 @@ const signUp = async (req, res, next) => {
     }
   });
   const text =
-    "INSERT INTO users(email, password, name, title, institution, level_of_training, gender, country, date_of_birth ) VALUES($1, $2, $3, $4, $5, $6, $7 ,$8 ,$9 ) RETURNING *";
+    "INSERT INTO users(email, password, name, last_name, institution, level_of_training, gender, country, date_of_birth ) VALUES($1, $2, $3, $4, $5, $6, $7 ,$8 ,$9 ) RETURNING *";
   const values = [
     email.trim(),
     encryptPassword,
     name,
-    title,
+    lastName,
     institution,
     levelOfTraining,
     gender,
