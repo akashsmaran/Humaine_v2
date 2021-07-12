@@ -1,163 +1,148 @@
 {
-  "ADLs": [
-    "I am fully independent.",
-    "I have no problems with any issues of self care, and am completely independent.",
-    "I can do everything for myself at home - I am fully independent.",
-    "I am fully independent."
-  ],
+  "ADLs": ["Yes, I look after myself"],
   "AbdoCramps": ["No"],
   "AbdoDistention": ["No"],
   "AbdoPain": ["No"],
   "Accommodation": [
-    "I live in a small apartment on the ground floor.",
-    "My wife and I are in a small apartment on the ground floor.",
-    "Yes",
-    "I have a small ground floor apartment."
+    "I live in a small apartment on the ground floor with my wife"
   ],
-  "Age": ["I am 52 years old.", "Right now, I am 52 years of age."],
-  "Alcohol": [
-    "I am a teetotaler.",
-    "No, I have always steered clear of alcohol and other addictions."
-  ],
+  "Age": ["I am 52 now", "I am 52"],
+  "Alcohol": ["I am a teetotaler."],
   "AllergyHx": ["No"],
   "AnalSex": ["..."],
+  "AnimalAllergy": ["No"],
   "AntiSickness": ["No, not yet"],
   "Appendicectomy": ["No"],
   "Appetite": [
-    "I have a good appetite, but I get pain when I eat.  So I am eating less."
+    "I have a good appetite, but I get pain when I eat, so I am avoiding food if I can right now"
   ],
+  "Arrhythmia": ["No"],
+  "AsbestosExposure": ["No"],
   "Ascites": ["No"],
   "AssociatedFactors": [
-    "I feel a little sickly sometimes when the pain starts",
-    "The pain makes me feel sick."
+    "The pain makes me feel sick sometimes, although I have not vomited"
   ],
+  "BIRTH HX (OPEN QS)": ["BIRTH HX (OPEN QS)"],
+  "BarleyExposure": ["No"],
   "BarrierContraception": ["No"],
+  "BeeWaspStingAllergy": ["No"],
+  "BerylliumExposure": ["No"],
+  "BirdAllergy": ["No"],
   "Bloatedness": ["No"],
   "BloodyStool": ["No"],
   "BowelFrequency": ["Once a day"],
   "BowelHabit": ["I open my bowels once a day."],
   "BowelIncontinence": ["No"],
   "BowelMotions": ["I think so"],
+  "CARDIO QUESTIONS": ["CARDIO QUESTIONS"],
+  "CONSTITUTIONAL SYMPTOMS": ["CONSTITUTIONAL SYMPTOMS"],
   "CasualPartner": ["No", "No"],
+  "CeramicsExposure": ["No"],
   "Character": [
     "It is a dull, throbbing pain",
     "I feel it as a deep and dull pain."
   ],
+  "ChestPain": ["No"],
   "Cholecystectomy": ["No"],
+  "CoalExposure": ["No"],
+  "ColdWeatherExacerbation": ["No"],
   "Colonoscopy": ["No"],
   "Concern": [
-    "I am worried about what this sudden pain might be and if you can help me.",
-    "I am concerned by how suddenly this pain started for me.",
-    "I am worried about what this pain may be."
+    "I am worried about what this pain may be.",
+    "I am concerned at how quickly this pain can sometimes come on"
   ],
-  "ConfirmName": ["I am Brian Montgomery."],
-  "ConfirmProblem": ["I think so, yeah"],
+  "ConfirmName": ["Yes, I am Brian Montgomery."],
+  "ConfirmProblem": ["I think so"],
   "Constipation": ["No"],
+  "ConstructionExposure": ["No"],
   "Contacts": ["Nobody"],
+  "CottonExposure": ["No"],
+  "Cough": ["No"],
   "DOB": [
     "I was born on the 18th of October. 1967.",
     "My date of birth is 18. 10. 1967."
   ],
+  "DampHome": ["No"],
   "DarkUrine": ["No"],
   "Delivery": ["I think so"],
-  "DiagnosticStatement": ["Okay"],
+  "DiagnosticStatement": ["Okay, I see"],
   "Diarrhoea": ["No"],
-  "Diet": [
-    "I try and eat healthily and be active. ",
-    "I would say I have a normal diet and walk for at least a few hours every day.",
-    "I have a decent diet and am fairly active."
-  ],
-  "DoctorQuestion": ["No, I just weant to know what is causing my symptoms."],
-  "DrugAbuse": [
-    "I am a teetotaler.",
-    "No, I have always steered clear of alcohol and other addictions."
-  ],
+  "Diet": ["I try to eat healthy foods and be active. "],
+  "DoctorQuestion": ["No, I just wanted to know what is causing my pain"],
+  "DrugAbuse": ["No, I have always steered clear of all addictions."],
   "DrugHx": [
     "I take 5 miligrams of Ramipril and 40mg of Atorvastatin every night.",
     "I take Ramipril and a Statin daily."
   ],
+  "DustExposure": ["No"],
   "Dyspepsia": ["No"],
   "Dysphagia": ["No"],
-  "Empathy": [
-    "Thank you for your kind words",
-    "Your consideration means a lot",
-    "I feel better having shared my problems with you"
-  ],
+  "EggAllergy": ["No"],
+  "Empathy": ["Thanks for understanding", "..."],
+  "EnvironmentChangeHouse": ["No"],
   "ExacerbatingFactors": [
     "It seems that eating more food makes it worse and staying hungry reduces it, so I am eating less"
   ],
   "Exercise": [
-    "I try and eat healthily and be active. ",
-    "I walk for at least a few hours every day. But I could lose a bit more weight probably.",
-    "I am fairly active."
+    "I am fairly active, even though I don't do much proper exercise"
   ],
-  "Expectations": ["I am hoping you can treat me"],
+  "ExerciseToleranceNorm": ["I don't get breathless with walking"],
+  "Expectations": ["I am hoping you can tell me what is wrong"],
   "FamilyHx": ["I don't have any diseases in the family."],
-  "FamilyMember": [
-    "I live with my wife. We have no children.",
-    "My wife and I live at home, and we have no children.",
-    "My wife lives with me."
-  ],
-  "Fever": [
-    "I have felt a bit hot at times but not taken my temperature.",
-    "I have been getting a little hot and cold"
-  ],
+  "FamilyMember***": ["I live with my wife. We have no children."],
+  "FarmingExposure": ["No"],
+  "Fever": ["No"],
+  "FoodAllergy": ["No"],
   "Frequency": [
-    "Essentially, I get 2 or 3 minutes of severe, dull pain over a period of about a half-hour"
+    "It seems to come on the most after I eat food but I feel it maybe 10 times in the day in total"
   ],
+  "GI QUESTIONS": ["GI QUESTIONS"],
   "GORD": ["No"],
   "Gastritis": ["No"],
-  "Goodbye": [
-    "Thank you for speaking with me today.",
-    "Many thanks for your help.",
-    "It has been great to talk to you today."
-  ],
+  "Goodbye": ["Many thanks for your help."],
   "Haematemesis": ["No"],
+  "Haemoptysis": ["No"],
+  "HaemoptysisColour": ["..."],
+  "Hayfever": ["No"],
   "HerniaOp": ["No"],
   "HiatusHernia": ["No"],
+  "Hoarseness": ["No"],
   "Hobbies": ["My wife and I enjoy long walks in the countryside"],
-  "IVDU": ["No.", "No, I have never taken any drugs like that."],
+  "ICE (OPEN QS)": ["ICE (OPEN QS)"],
+  "IVDU": ["No, I have never taken any drugs like that."],
   "Ideas": ["I don't know to be honest"],
+  "IndustrialExposure": ["No"],
+  "Intent": ["Response"],
   "IntroAndName": ["My name is Brian Montgomery.", "I am Brian Montgomery."],
-  "Introduction": [
-    "Hello",
-    "Hi",
-    "Hello. Very nice to meet you.",
-    "Good day to you.",
-    "Pleased to meet you."
-  ],
+  "Introduction": ["Hello", "Hi", "Pleased to meet you"],
+  "ItchyEyesNoseThroat": ["No"],
   "Jaundice": ["No"],
   "Lethargy": ["No, not really."],
-  "Lifestyle": [
-    "I enjoy a banced lifestyle.",
-    "I am not too stressed out or anything - life is good!"
-  ],
+  "Lifestyle": ["I enjoy a banced lifestyle.  I am not stressed or anything!"],
   "ManagementPlan": ["Okay, alright"],
+  "MasonryExposure": ["No"],
+  "MushroomExposure": ["No"],
   "Name": ["My name is Brian Montgomery.", "I am Brian Montgomery."],
   "NameAndAge": ["I am Brian Montgomery and I am 52 years old."],
   "NameAndDOB": ["I am Brian Montgomery and I was born on October 18th, 1967."],
-  "Nausea": [
-    "I feel a little sickly sometimes when the pain starts",
-    "The pain makes me feel sick.",
-    "I get nauseous suddenly when the pain comes on"
-  ],
+  "Nausea": ["The pain makes me feel sick sometimes, but I have not vomited"],
+  "NewLivingConditions": ["No"],
+  "NutsAllergy": ["No"],
   "OGD": ["No"],
   "OTCDrugHx": ["No"],
-  "Occupation": [
-    "I am a plumber, but coming close to retirement.",
-    "I am presently a self-employed plumber.",
-    "I am a plumber."
-  ],
+  "Occupation": ["I am a plumber, but coming close to retirement."],
   "Odynophagia": ["No"],
   "Onset": [
-    "It seems to come on when I eat food",
-    "It happens around 15 minutes after I have a heavy meal."
+    "It seems to come on the most after I eat food, especially if I have a heavy meal",
+    "It happens around 10 minutes after a meal"
   ],
-  "OnsetTrigger": [
-    "I get the pain after a heavy meal, especially if it is fried."
-  ],
+  "OnsetTrigger": ["I usually get the pain 5 to 10 minutes after a meal"],
   "OralSex": ["..."],
+  "Orthopnoea": ["No"],
   "OtherProblems": ["No, just this stomach ache"],
+  "PAIN/OTHER SYMPTOMS": ["PAIN/OTHER SYMPTOMS"],
+  "PND": ["No"],
+  "PRESENTATION (OPEN QS)": ["PRESENTATION (OPEN QS)"],
   "PUD": ["No"],
   "PainKiller": [
     "No, painkillers have not helped.",
@@ -165,51 +150,56 @@
   ],
   "PainfulDefecation": ["No"],
   "PaleStool": ["No"],
-  "PastMedicalHx": [
-    "I suffer from high blood pressure and high blood cholesterol. Otherwise, I had asthma as a child but that got better.",
-    "As I said, I have high blood pressure and cholesterol."
-  ],
-  "PastSurgicalHx": [
-    "Thankfully, I have never had any surgery done on me.",
-    "I have not had any operations in my life."
-  ],
+  "Palpitation": ["No"],
+  "PassiveSmoke": ["No"],
+  "PassiveSmokeContact": ["No"],
+  "PastMedicalHx": ["I have high blood pressure and high cholesterol"],
+  "PastSurgicalHx": ["I have never had any operations"],
   "Penetration": ["..."],
+  "PeripheralOedema": ["No"],
+  "PetsExposure": ["No"],
   "Piles": ["No"],
-  "PrematureDelivery": ["I think I was born at the normal time"],
+  "PillowsSleep": ["One"],
+  "PollenAllergy": ["No"],
+  "PrematureDelivery***": ["I think I was born at the normal time"],
   "PreviousICU": ["No"],
   "PreviousTransfusions": ["No"],
   "ProblemBefore": [
     "No, this only started around a week ago",
-    "I've had stomach pain before, but never like this.",
-    "This pain is completely new for me."
+    "I've had stomach aches before, but never pain like this."
   ],
   "ProblemProgression": [
-    "The pain has been getting worse and not better",
-    "Since the pain started, it has been getting worse and not better",
-    "The pain has increased slowly but has not decreased"
+    "The pain has been getting worse",
+    "The pain has increased slowly since it started"
   ],
   "ProblemStart": [
-    "I have had this pain for a week now",
-    "One week ago",
-    "I first noted the pain one week ago",
-    "The pain has been with me for a week."
+    "I have had this for a week now",
+    "I first noted the pain one week ago"
   ],
   "PrutitisAni": ["No"],
   "PrutitisSkin": ["No"],
-  "Radiation": [
-    "Yes, it sometimes travels to the back",
-    "I have noted that it has gone to my back maybe 2 or 3 times only since it started.",
-    "It has travelled to the back only a few times during the entire episode."
-  ],
+  "RESP QUESTIONS": ["RESP QUESTIONS"],
+  "RISK FACTORS (OPEN QS)": ["RISK FACTORS (OPEN QS)"],
+  "Radiation": ["No it is concentrated in the tummy"],
   "Reassurance": ["Thank you", "Yes, thanks"],
   "RecentTreatment": [
-    "I haven't sought any medical help for this before - it's only been with me a week."
+    "I haven't sought any medical help yet - it's only been with me a week."
   ],
   "RegularPartner": ["My wife"],
   "RelievingFactors": [
     "It seems that eating more food makes it worse and staying hungry reduces it, so I am eating less"
   ],
+  "Rhinitis": ["No"],
+  "SEXUAL HX (OPEN QS)": ["SEXUAL HX (OPEN QS)"],
+  "SOB": ["No"],
+  "SOBExertion": ["No"],
+  "SOBVariation": ["No"],
+  "SOBWork": ["No"],
+  "SOCIAL HX (OPEN QS)": ["SOCIAL HX (OPEN QS)"],
+  "STATEMENTS": ["STATEMENTS"],
   "SafeSex": ["Er... yes, I think so"],
+  "SeafoodAllergy": ["No"],
+  "SeasonVariation": ["No"],
   "Severity": [
     "It is actually quite painful - I can't do anything else when the pain begins",
     "On a scale of 1 to 10, I would say it is around 7"
@@ -221,35 +211,37 @@
     "It is just under the ribs on the right hand side"
   ],
   "SkinChange": ["No"],
-  "SmallTalk": [
-    "I am okay except this issue that has been bothering me.",
-    "Things are good, but I have this problem"
-  ],
-  "Smoke": [
-    "I used to smoke socially, but gave that up many years ago.",
-    "I used to smoke maybe 2 or 3 cigarettes a week when I was in my twenties, but quit when I hit an age of 30."
-  ],
+  "Sleep": ["I sleep well."],
+  "SmallTalk": ["Not so good doctor"],
+  "Smoke": ["I used to smoke socially, but gave that up many years ago."],
+  "Sneezing": ["No"],
+  "Sputum": ["No"],
+  "SputumAmount": ["..."],
+  "SputumColour": ["..."],
   "StoolBulk": ["No"],
-  "StoolConsistency": ["Normal really"],
+  "StoolConsistency": ["It is normal"],
   "StoolDescribe": ["It is normal"],
   "StoolFloat": ["They are normal"],
   "StoolMucus": ["No"],
   "StoolSmell": ["They are normal"],
   "Summary": ["Yes", "Yes, I think so"],
   "Sweating": ["No, not really"],
+  "TRAVEL HX (OPEN QS)": ["TRAVEL HX (OPEN QS)"],
   "Tenesmus": ["No"],
   "TermDelivery": ["I think so"],
   "Timing": [
-    "The pain lasts only for a short while, maybe 1 or 2 minutes, but I have many bouts of this"
+    "The pain lasts maybe 1 or 2 minutes, but I get it many times in the day, especially after eating"
   ],
   "TransitionPoints": ["Okay, sure.", "Yes, go on."],
   "TravelHx": ["No"],
   "VaginalSex": ["..."],
-  "Vomit": ["No I have not vomited even though I feel sick"],
+  "Vomit": ["No I have not vomited"],
   "Weight Loss": ["No"],
   "WhatProblem": [
-    "I am coming to the hospital today because I have been experiencing bouts of terrible stomach pain.",
-    "I noted a pain in my stomach from about a week ago, and it is becoming difficult to cope with.",
-    "As I have said, I am getting terrible episodes of stomach pain that are worrying me. I want to know what this may be."
-  ]
+    "Well, I have been getting these terrible episodes of stomach pain.",
+    "I have had a pain in my stomach from about a week ago",
+    "As I have said, I am getting episodes of stomach pain that are worrying me"
+  ],
+  "Wheeze": ["No"],
+  "WheezeWork": ["No"]
 }
