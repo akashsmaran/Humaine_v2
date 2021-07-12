@@ -306,11 +306,17 @@ const Register = ({
                     <div className="checkbox text-left term-condition-section ">
                       <label>
                         By signing up, you agree to our{" "}
-                        <a href="">
+                        <a
+                          href="https://www.privacypolicies.com/live/905b73b5-643d-4240-8080-1ec0889d35d6"
+                          target="_blank"
+                        >
                           <span className="term-text">Terms & Conditions</span>
                         </a>
                         <span> and </span>
-                        <a href="">
+                        <a
+                          href="https://www.privacypolicies.com/live/905b73b5-643d-4240-8080-1ec0889d35d6"
+                          target="_blank"
+                        >
                           <span className="term-text">Privacy Policy</span>
                         </a>
                       </label>
