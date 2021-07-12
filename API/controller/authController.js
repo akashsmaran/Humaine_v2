@@ -77,10 +77,7 @@ const signUp = async (req, res, next) => {
       .then((obj) => {
         res.email = obj.email;
         res.subject = "Account activation";
-        res.body =
-          '<p>Click <a href="https://humaine.ai/api/users/activate/' +
-          obj.userId +
-          '">here</a> to activate your account</p>';
+        res.body = `<p>Click <a href="https://humaine.ai/api/users/activate/${obj.userId}" here</a> to activate your account</p>`;
         next();
       });
     res.status(200).json({
