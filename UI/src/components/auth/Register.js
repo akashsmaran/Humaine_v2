@@ -109,23 +109,6 @@ const Register = ({
                           />
                         </div>
                       </div>
-                      {/* <div className="col-md-6 col-xs-12">
-                        <div className="form-group">
-                          <select
-                            className="form-control style-common"
-                            name="title"
-                            value={title}
-                            onChange={(e) => onChange(e)}
-                            required
-                            id="titleInput"
-                          >
-                            <option value="">Title</option>
-                            <option value="Mr">Mr</option>
-                            <option value="Mrs">Mrs</option>
-                            <option value="Dr">Dr</option>
-                          </select>
-                        </div>
-                      </div> */}
                     </div>
                     <div className="row row-space">
                       <div className="col-md-12 col-xs-12">
@@ -381,6 +364,7 @@ Register.propTypes = {
   register: PropTypes.func.isRequired,
   handleClose: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool,
+
   showRegister: PropTypes.bool,
 };
 
