@@ -21,7 +21,7 @@ const VerificationEmail = ({
                 </h2>
                 <p className=" text-center mt-1">
                   Please click on the link that has just been sent to your email
-                  to complete the registration process.
+                  to complete the registration process
                 </p>
                 <span className="close-btn" onClick={() => handleClose()}>
                   X
