@@ -13,6 +13,7 @@ import {
   CLEAR_PROFILE,
   RESET_PASSWORD_SUCCESS,
   RESET_PASSWORD_FAIL,
+  REMOVE_VERIFICATION_MODAL,
 } from "./types";
 
 import setAuthToken from "../utils/setAuthToken";
@@ -95,6 +96,12 @@ export const register = (formData) => async (dispatch) => {
       type: REGISTER_FAIL,
     });
   }
+};
+
+export const removeVerification = () => (dispatch) => {
+  dispatch({
+    type: REMOVE_VERIFICATION_MODAL,
+  });
 };
 
 // Forget Password

@@ -4,19 +4,35 @@ import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import { clearAlert } from "../../actions/alert";
 import { Link } from "react-router-dom";
-import { login } from "../../actions/auth";
+import { login, removeVerification } from "../../actions/auth";
 import Register from "./Register";
 import ForgetPassword from "./ForgetPassword";
 import Alert from "./../layout/Alert";
+import VerificationEmail from "../modals/VerificationEmail";
 
-const Login = ({ login, clearAlert, isAuthenticated }) => {
+const Login = ({
+  login,
+  clearAlert,
+  removeVerification,
+  isAuthenticated,
+  showVerification,
+}) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
+  // Change the actions so that when registration is successful, it will set a variable which
+  // open verfication modal
+
   const [showRegister, setShowRegister] = useState(false);
   const [showForgetPassword, setShowForgetPassword] = useState(false);
+
+  const handleCloseVerification = () => {
+    // add the action which removes modal
+    setShowRegister(false);
+    removeVerification();
+  };
 
   const handleClose = () => {
     setShowRegister(false);
@@ -125,6 +141,11 @@ const Login = ({ login, clearAlert, isAuthenticated }) => {
         </div>
       </div>
       <Register showRegister={showRegister} handleClose={handleClose} />
+      <VerificationEmail
+        showVerification={showVerification}
+        handleCloseRegister={handleClose}
+        handleClose={handleCloseVerification}
+      />
       <ForgetPassword
         showForgetPassword={showForgetPassword}
         handleForgetPasswordClose={handleForgetPasswordClose}
@@ -137,10 +158,16 @@ Login.propTypes = {
   login: PropTypes.func.isRequired,
   clearAlert: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool,
+  showVerification: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
+  showVerification: state.auth.showVerification,
 });
 
-export default connect(mapStateToProps, { login, clearAlert })(Login);
+export default connect(mapStateToProps, {
+  login,
+  clearAlert,
+  removeVerification,
+})(Login);
