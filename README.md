@@ -1,20 +1,16 @@
 Development Notes:
 
-Last Name feature:
-
-Use akash sql file and restore it in your pgadmin and then dump it and then put it in rds
-
 Change Intents:
 
-files in api/public
+files in api/public and in the database intents table
 
-For backing up the database in EC2
+## For backing up the database in EC2
 
 ```
 docker exec -it postgres pg_dump -U postgres humaine > humaine_backup_16062021.sql
 ```
 
-For initializing the database in RDS(password: abc12345)
+## For initializing the database in RDS(password: abc12345)
 
 ```
 psql ^
@@ -26,7 +22,7 @@ psql ^
 
 ```
 
-For prepoulating the database in docker
+## For prepoulating the database in docker
 
 ```
 docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_backup_latest.sql
@@ -34,20 +30,31 @@ docker exec -i postgres psql -U postgres -v -d humaine < ./API/config/humaine_ba
 docker exec -it postgres psql -U postgres -v -d humaine
 ```
 
-For running in development
+## For running in development
 
 ```
 docker-compose -f docker-compose.dev.yml up
 
 ```
 
-For backing up databases in the laptop
+## For backing up databases in the laptop
 
 ```
 pg_dump -U postgres humaine > C:\Users\saivi\OneDrive\Desktop\humaine_backup_<timestamp>.sql
 ```
 
-after making the action be on branch stage, I figured out that there are two methods to go ahead with
+## For changing all the values in the intents file to 0 for putting in the database
+
+```
+x={put intent.json here}
+
+Object.keys(x).forEach(function(key){ x[key] = 0 });
+
+<!-- Now type x and right click on it and choose copy object -->
+
+```
+
+# After making the action be on branch stage, I figured out that there are two methods to go ahead with
 
 ## First Method
 
