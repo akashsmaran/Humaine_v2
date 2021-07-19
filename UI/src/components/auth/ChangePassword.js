@@ -5,6 +5,8 @@ import { clearAlert, setAlert } from "../../actions/alert";
 import { Link } from "react-router-dom";
 import { resetPassword } from "../../actions/auth";
 import Alert from "./../layout/Alert";
+import Logo from "./assets/images/logo.png";
+import Image4 from "./assets/images/image_4.png";
 
 const ChangePassword = ({
   login,
@@ -42,7 +44,7 @@ const ChangePassword = ({
           <div className="login-box box-wrapper-head">
             <div className="logo logo-top">
               <Link to="/">
-                <img src="assets/images/logo.png" />
+                <img src={Logo} />
               </Link>
             </div>
             <div className="logo-text-bottom">
@@ -89,10 +91,7 @@ const ChangePassword = ({
               </div>
             </div>
             <div className="login-form-image">
-              <img
-                src="assets/images/image_4.png"
-                className="img4 login-image img-responsive"
-              />
+              <img src={Image4} className="img4 login-image img-responsive" />
             </div>
           </div>
         </div>
