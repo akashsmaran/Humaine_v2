@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useRef } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 //import { ReactMic } from "@cleandersonlobo/react-mic";
@@ -8,6 +8,7 @@ import SpeechRecognition, {
 
 import { sendMessage, toggleMute } from "../../actions/chat";
 import { useEffect } from "react";
+import debounce from "lodash.debounce";
 
 import { fromEvent, interval, Observable, rxjs } from "rxjs";
 import {
@@ -52,6 +53,10 @@ const MessageBox = ({
   const randomIndex = (max) => {
     return Math.floor(Math.random() * (max - 0 + 1)) + 0;
   };
+
+  const debouncedSave = useRef(
+    debounce((nextValue) => sendVoiceChatMessage(nextValue), 2000)
+  ).current;
 
   useEffect(() => {
     console.log("Input focus state changed", inputFocussed);
@@ -125,9 +130,6 @@ const MessageBox = ({
   useEventListener("keyup", keyUpHandler);
 
   useEffect(() => {
-    //Keyboard eveents
-    // setInterval(function(){ console.log("Listening state right now " , listening )} , 3000 )
-    //In case the system stopped listening
     if (record && listening == false) {
       //We have to stop listening
       stopRecording();
@@ -168,7 +170,7 @@ const MessageBox = ({
         return;
       }
 
-      sendVoiceChatMessage(transcript);
+      debouncedSave(transcript);
     }, 2000);
   };
 
