@@ -55,7 +55,7 @@ const MessageBox = ({
   };
 
   const debouncedSave = useRef(
-    debounce((nextValue) => sendVoiceChatMessage(nextValue), 2000)
+    debounce((nextValue) => sendVoiceChatMessage(nextValue), 1000)
   ).current;
 
   useEffect(() => {
