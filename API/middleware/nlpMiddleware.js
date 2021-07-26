@@ -87,9 +87,14 @@ const getIntent = async (req, res, next) => {
 
       req.comment = comment;
       req.intent = response.data.latest_message.intent.name;
+      console.log(`This is the comment ${comment}`);
+      console.log(
+        `This is the intent ${response.data.latest_message.intent.name}`
+      );
       next();
     })
     .catch((error) => {
+      console.log(`Error is in getintent`);
       return res.status(500).json({
         status: 0,
         message: "Something went wrong. Please try again later",

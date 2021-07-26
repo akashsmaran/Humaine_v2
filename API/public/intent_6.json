@@ -92,7 +92,7 @@
   "FamilyHx": [
     "Nothing that I know of - but I can check with my dad and get back to you."
   ],
-  "FamilyMember**": ["I am single and live alone."],
+  "FamilyMember": ["I am single and live alone."],
   "FarmingExposure": ["No"],
   "Fever": [
     "I don't know. Sometimes I get a bit chilly and shaky, but I am not sure I have had a fever.",
@@ -265,7 +265,7 @@
   "TravelHx": ["No, I am not into traveling much."],
   "VaginalSex": ["I am not sexually active."],
   "Vomit": ["No"],
-  "Weight Loss": [
+  "WeightLoss": [
     "Now that you mention it, I have noted my weight go down recently"
   ],
   "WhatProblem": [
