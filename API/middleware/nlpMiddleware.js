@@ -95,6 +95,7 @@ const getIntent = async (req, res, next) => {
     })
     .catch((error) => {
       console.log(`Error is in getintent`);
+      console.log(error);
       return res.status(500).json({
         status: 0,
         message: "Something went wrong. Please try again later",
