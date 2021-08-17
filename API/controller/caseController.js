@@ -257,6 +257,9 @@ const addCaseComment = async (req, res, next) => {
   } else {
     intent = "";
   }
+  console.log(
+    `This is from addcasecomment intent:${intent}, comment:${comment} `
+  );
   const notes = {
     text: "INSERT INTO users_cases_support(user_id, case_id, comment, is_flagged, session_id, intent) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
     values: [userId, caseId, comment, false, sessionId, intent],

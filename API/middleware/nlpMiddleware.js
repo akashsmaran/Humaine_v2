@@ -180,6 +180,7 @@ const compareIntentAndMessage = async (req, res, next) => {
 
       let Followup = "Followup";
       intentsIndexList = response.rows[0].intent;
+      console.log(intent);
       if (intent == Followup) {
         intent = intentsIndexList[Followup];
       }
