@@ -4,10 +4,10 @@ require("dotenv").config();
 // require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 // make two
 
-let host =
-  process.env.NODE_ENV.trim() === "production"
-    ? process.env.DB_HOST_RDS
-    : process.env.DB_HOST_DOCKER;
+let host = process.env.DB_HOST_RDS;
+// process.env.NODE_ENV.trim() === "production"
+//   ? process.env.DB_HOST_RDS
+//   : process.env.DB_HOST_DOCKER;
 
 const client = new Client({
   user: process.env.DB_USER,
