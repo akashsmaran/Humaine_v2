@@ -89,6 +89,11 @@ const getIntent = async (req, res, next) => {
       req.intent = response.data.latest_message.intent.name;
       console.log(`This is the comment ${comment}`);
       console.log(
+        `This is the response in getIntent ${JSON.stringify(
+          response.data.latest_message
+        )}`
+      );
+      console.log(
         `This is the intent ${response.data.latest_message.intent.name}`
       );
       next();
