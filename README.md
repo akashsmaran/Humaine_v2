@@ -1,3 +1,7 @@
+Remove docker and everything and put simplky the frontend in the backend publc and push it
+
+Hint for the bug is that it doesnt happen in the localhost, but happens in the production
+
 Development Notes:
 
 Change Intents:

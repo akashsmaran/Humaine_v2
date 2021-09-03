@@ -49,6 +49,12 @@ const updateMessage = async (req, res, next) => {
       config
     )
     .then((response) => {
+      console.log("This is the updateMessage route giving all these details");
+      console.log(`sender_id ${sender_id}`);
+      console.log(`message ${comment}`);
+      console.log(`userInfo.nlpToken ${userInfo.nlpToken}`);
+
+      console.log("updateMessage End");
       req.sender_id = sender_id;
       req.comment = comment;
       next();
