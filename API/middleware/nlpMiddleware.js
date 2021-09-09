@@ -4,6 +4,7 @@ const axios = require("axios");
 const jwtDecode = require("jwt-decode");
 const fs = require("fs");
 const { database } = require("../config/database");
+var debounce = require("lodash.debounce");
 
 const getSenderId = async (req, res, next) => {
   const { message } = req.body;
@@ -57,7 +58,10 @@ const updateMessage = async (req, res, next) => {
       console.log("updateMessage End");
       req.sender_id = sender_id;
       req.comment = comment;
-      next();
+      setTimeout(() => {
+        next();
+      }, 3000);
+      // next();
     })
     .catch((error) => {
       return res.status(500).json({
