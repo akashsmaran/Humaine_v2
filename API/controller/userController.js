@@ -104,7 +104,7 @@ const activateUser = async (req, res, next) => {
   try {
     const query = await database.query(activateUser);
     if (query.rowCount > 0) {
-      res.redirect(process.env.HOST_URL);
+      res.redirect(process.env.HOST_FRONT_URL);
     } else {
       res.status(500).json({
         status: 0,
