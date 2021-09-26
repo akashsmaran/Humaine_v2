@@ -7,6 +7,7 @@ import { resetPassword } from "../../actions/auth";
 import Alert from "./../layout/Alert";
 import Logo from "./assets/images/logo.png";
 import Image4 from "./assets/images/image_4.png";
+import { withRouter } from "react-router-dom";
 
 const ChangePassword = ({
   login,
@@ -15,6 +16,7 @@ const ChangePassword = ({
   match,
   setAlert,
   resetPassword,
+  history,
 }) => {
   const [formData, setFormData] = useState({
     password: "",
@@ -35,6 +37,10 @@ const ChangePassword = ({
     } else {
       resetPassword(formData);
     }
+  };
+
+  const handleReroute = () => {
+    history.push("/");
   };
 
   return (
@@ -85,6 +91,13 @@ const ChangePassword = ({
                     Change Password
                   </button>
                 </form>
+                <button
+                  onClick={() => handleReroute()}
+                  className="btn btn-success btn-lg active btn-signup-custom"
+                  style={{ marginTop: "20px" }}
+                >
+                  Return To Home
+                </button>
                 <div className="mt-3">
                   <Alert />
                 </div>
@@ -110,8 +123,10 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
 });
 
-export default connect(mapStateToProps, {
-  resetPassword,
-  clearAlert,
-  setAlert,
-})(ChangePassword);
+export default withRouter(
+  connect(mapStateToProps, {
+    resetPassword,
+    clearAlert,
+    setAlert,
+  })(ChangePassword)
+);
