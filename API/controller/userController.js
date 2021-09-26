@@ -146,7 +146,7 @@ const forgotPassword = async (req, res, next) => {
     res.body =
       '<p>Click <a href="' +
       process.env.HOST_FRONT_URL +
-      "/reset-password/" +
+      "reset-password/" +
       results.userId +
       '">here</a> to reset your account</p>';
     res.status_message = true;
