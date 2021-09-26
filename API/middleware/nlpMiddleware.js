@@ -60,7 +60,7 @@ const updateMessage = async (req, res, next) => {
       req.comment = comment;
       setTimeout(() => {
         next();
-      }, 3000);
+      }, 500);
       // next();
     })
     .catch((error) => {
