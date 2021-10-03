@@ -86,7 +86,7 @@ const Navbar = ({ auth: { user, isAuthenticated, loading }, logout }) => {
               <span className="ml-2">Practice</span>
             </div>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link
               to="/settings"
               className={
@@ -97,7 +97,7 @@ const Navbar = ({ auth: { user, isAuthenticated, loading }, logout }) => {
               <span className="mr-1 mt-1-adjust fa fa-cog"></span>
               <span className="ml-2">Settings</span>
             </Link>
-          </li>
+          </li> */}
 
           <li className="nav-item">
             <div

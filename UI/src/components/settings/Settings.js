@@ -249,8 +249,20 @@ const Settings = ({
                                         <table className="table mb-0">
                                           <tbody>
                                             <tr>
-                                              <th className="pl-0">Name</th>
+                                              <th className="pl-0">
+                                                First Name
+                                              </th>
                                               <td className="pr-0 text-right">
+                                                {/* FIXME: Change to first name*/}
+                                                {user && user.name}
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <th className="pl-0">
+                                                Last Name
+                                              </th>
+                                              <td className="pr-0 text-right">
+                                                {/* FIXME: Change to last name */}
                                                 {user && user.name}
                                               </td>
                                             </tr>
@@ -261,26 +273,6 @@ const Settings = ({
                                               </th>
                                               <td className="pr-0 text-right">
                                                 {user && user.email}
-                                              </td>
-                                            </tr>
-
-                                            <tr>
-                                              <th className="pl-0">Gender</th>
-                                              <td className="pr-0 text-right">
-                                                {user && user.gender}
-                                              </td>
-                                            </tr>
-
-                                            <tr>
-                                              <th className="pl-0">
-                                                Date of birth
-                                              </th>
-                                              <td className="pr-0 text-right">
-                                                {user && user.date_of_birth
-                                                  ? user.date_of_birth.split(
-                                                      "T"
-                                                    )[0]
-                                                  : " "}
                                               </td>
                                             </tr>
 
