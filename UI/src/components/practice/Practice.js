@@ -22,6 +22,8 @@ import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 import DiagnosisResult from "./DiagnosisResult";
 import CaseFeedback from "./../modals/CaseFeedbackModal";
 
+// import { loadUser } from "./actions/auth";
+
 import "./Practice.css";
 
 const findImg = (name) => {
@@ -40,6 +42,7 @@ const Practice = ({
   hideDiagnosisResult,
   hideCaseFeedBack,
   auth: { user },
+  auth,
   loading,
   match,
   chat: {
@@ -121,7 +124,10 @@ const Practice = ({
       ],
     });
   };
-  return loading === null || user == null || caseInfo == null ? (
+  console.log(auth, "Auth");
+
+  return user == null || caseInfo == null ? (
+    // return loading === null || user == null || caseInfo == null ? (
     <Spinner />
   ) : (
     <Fragment>
