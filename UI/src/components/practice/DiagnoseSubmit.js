@@ -10,12 +10,21 @@ import arrayMove from "array-move";
 import "./list.css";
 //Sortable list item
 import { ReactSortable } from "react-sortablejs";
-import Select from "react-select";
+// import Select from "react-select";
+import BaseSelect from "react-select";
+import FixRequiredSelect from "./FixRequiredSelect";
 //Data
 import axios from "axios";
 import setAuthToken from "../../utils/setAuthToken";
 // const apiUrl = process.env.API_URL || "/";
 const apiUrl = "/";
+const Select = (props) => (
+  <FixRequiredSelect
+    {...props}
+    SelectComponent={BaseSelect}
+    options={props.options}
+  />
+);
 const DiagnoseSubmit = ({
   caseID,
   showEndDialog,
@@ -174,6 +183,7 @@ const DiagnoseSubmit = ({
                             value={selectedOption}
                             onChange={handleDifferentialChange}
                             options={options}
+                            required
                           />
                         </div>
                       </div>
@@ -209,6 +219,7 @@ const DiagnoseSubmit = ({
                             value={selectedNextStep}
                             onChange={handleStepsChange}
                             options={stepsOptions}
+                            required
                           />
                         </div>
                       </div>
