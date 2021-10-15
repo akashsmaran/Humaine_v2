@@ -87,6 +87,7 @@ const Dashboard = ({
                 }
 
                 return (
+                  <Link to={"/cases/support/" + caseItem.id}>
                   <div
                     className="col-md-6 col-lg-4 col-xl-3 container-body no-padding"
                     key={caseItem.id}
@@ -105,14 +106,14 @@ const Dashboard = ({
                         <div className="main-card-head">
                           {caseItem.case_name}
                         </div>
-                        <Link to={"/cases/support/" + caseItem.id}>
+                        
                           <div className="card-heading-text">
                             <span className="tag tag-teal mb-5">
                               {caseItem.case_department}
                             </span>
                             <p>{caseItem.case_description}</p>
                           </div>
-                        </Link>
+                       
                       </div>
                       <div className="card-body-bottom">
                         {/* <div className="btm-image">
@@ -144,6 +145,7 @@ const Dashboard = ({
                       </div>
                     </div>
                   </div>
+                  </Link>
                 );
               })}
               <VideoTileModal

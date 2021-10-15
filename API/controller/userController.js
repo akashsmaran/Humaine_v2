@@ -144,11 +144,11 @@ const forgotPassword = async (req, res, next) => {
     res.email = email;
     res.subject = "Reset Password";
     res.body =
-      '<p>Click <a href="' +
+      '<p> You have requested a password reset for your account with Humaine.  Please click here <a href="' +
       process.env.HOST_FRONT_URL +
       "reset-password/" +
       results.userId +
-      '">here</a> to reset your account</p>';
+      '">here</a> to reset your account</p><br> <p> If you have received this email in error, please ignore it.For any questions, please reach out to us at info@humaine.ai</p>';
     res.status_message = true;
     next();
   });

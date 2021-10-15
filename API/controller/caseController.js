@@ -246,7 +246,8 @@ const addCaseComment = async (req, res, next) => {
   if (intent) {
     if (intent == "NA") {
       //case if No intent returns from NLP after comparison
-      comment = "I am not able to understand your question!";
+      altRespforNAintents = ["I am not able to understand your question!","Sorry, I didn't catch that.","Can you just repeat your question again?","Could you say that last question again please.","Sorry, what was that last question again?","Apologies, can you ask that last question again?","Sorry, I didn't understand that. Can you say it again? "]
+      comment = altRespforNAintents[~~(Math.random() * altRespforNAintents.length)];
     } else {
       //case if something has been returned from the NLP
       // var key = Math.floor(Math.random() * intentList.length);
@@ -520,14 +521,14 @@ const addDiagnosisList = async (req, res) => {
     .on("data", (data) => results.push(data))
     .on("end", () => {
       results.forEach((resp, index) => {
-        let diagnosis = resp["AAA"];
+        let diagnosis = resp["Abdominal aortic aneurysm"];
         const addList = {
           text: "INSERT INTO diagnosis(name) VALUES($1) RETURNING *",
           values: [diagnosis],
         };
         database.query(addList);
       });
-
+  console.log("I am here in the diagnosis list")
       return res.status(200).json({
         status: 1,
         message: "Success",
