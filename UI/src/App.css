@@ -8,7 +8,8 @@ html {
   height: 100% !important;
 }
 body {
-  background-color: #eff2f5 !important;
+  /* background-color: #eff2f5 !important; */
+  background-color: #f7f7f7 !important;
   overflow-y: hidden;
   height: 100% !important;
 }
