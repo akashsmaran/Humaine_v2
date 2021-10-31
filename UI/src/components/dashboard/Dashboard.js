@@ -87,64 +87,63 @@ const Dashboard = ({
                 }
 
                 return (
-                  <Link to={"/cases/support/" + caseItem.id}>
-                  <div
+                  <Link
+                    to={"/cases/support/" + caseItem.id}
                     className="col-md-6 col-lg-4 col-xl-3 container-body no-padding"
-                    key={caseItem.id}
                   >
-                    <div
-                      className={"card " + colorClass}
-                      style={{ height: "50vh" }}
-                    >
-                      <div className={"status-label " + tagClass}>
-                        {caseItem.case_difficulty}
-                      </div>
-                      <div className="card-header-fit">
-                        <img src={findImg(caseItem.case_name)} alt="rover" />
-                      </div>
-                      <div className="card-body">
-                        <div className="main-card-head">
-                          {caseItem.case_name}
+                    <div key={caseItem.id}>
+                      <div
+                        className={"card " + colorClass}
+                        style={{ height: "60vh" }}
+                      >
+                        <div className={"status-label " + tagClass}>
+                          {caseItem.case_difficulty}
                         </div>
-                        
+                        <div className="card-header-fit">
+                          <img src={findImg(caseItem.case_name)} alt="rover" />
+                        </div>
+                        <div className="card-body">
+                          <div className="main-card-head">
+                            {caseItem.case_name}
+                          </div>
+
                           <div className="card-heading-text">
                             <span className="tag tag-teal mb-5">
                               {caseItem.case_department}
                             </span>
                             <p>{caseItem.case_description}</p>
                           </div>
-                       
-                      </div>
-                      <div className="card-body-bottom">
-                        {/* <div className="btm-image">
+                        </div>
+                        <div className="card-body-bottom">
+                          {/* <div className="btm-image">
                           <img
                             src="/assets/images/play.png"
                             className="play-btn-resp"
                             alt="rover"
                           />
                         </div> */}
-                        <div className="score-info-wrapper">
-                          <table>
-                            <tbody>
-                              <tr className="tr-header">
-                                <th>{caseItem.user_cases.length}</th>
-                                {/* <th>{caseItem.score}</th> */}
-                              </tr>
-                              <tr className="tr-data">
-                                <td>Attempts</td>
-                                {/* <td>Best Score</td> */}
-                              </tr>
-                              <tr>
-                                {/* <td className="tr-scorecard" colSpan="2">
+                          <div className="score-info-wrapper">
+                            <table>
+                              <tbody>
+                                <tr className="tr-header">
+                                  <th>{caseItem.user_cases.length}</th>
+                                  {/* <th>{caseItem.score}</th> */}
+                                </tr>
+                                <tr className="tr-data">
+                                  <td>Attempts</td>
+                                  {/* <td>Best Score</td> */}
+                                </tr>
+                                <tr>
+                                  {/* <td className="tr-scorecard" colSpan="2">
                                   Scorecards
                                 </td> */}
-                              </tr>
-                            </tbody>
-                          </table>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
                   </Link>
                 );
               })}
