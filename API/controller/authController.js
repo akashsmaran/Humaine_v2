@@ -75,10 +75,14 @@ const signUp = async (req, res, next) => {
         };
       })
       .then((obj) => {
+        // add an id here which you will use in the next step for choosing which template id to send
+        // like res.templateId
         res.email = obj.email;
+        res.name = obj.name;
         res.subject = "Account activation";
-        res.body = 
-        `
+        res.params = { userId: obj.userId, name: obj.name };
+        res.templateId = 1; // This number is taken from the sendinblue email id for the respective template
+        res.body = `
         <p>
         A user account has been created with this email address for Humaine. Please confirm that this is you.
         </p>
@@ -94,8 +98,7 @@ const signUp = async (req, res, next) => {
         <p>
         If you have received this email in error, please ignore it. For any questions, please reach out to us at info@humaine.ai
         </p>
-        `
-        ;
+        `;
         next();
       });
     res.status(200).json({

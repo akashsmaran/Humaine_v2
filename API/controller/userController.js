@@ -143,6 +143,8 @@ const forgotPassword = async (req, res, next) => {
     }
     res.email = email;
     res.subject = "Reset Password";
+    res.params = { userId: results.userId, name: results.name };
+    res.templateId = 2;
     res.body =
       '<p> You have requested a password reset for your account with Humaine.  Please click here <a href="' +
       process.env.HOST_FRONT_URL +

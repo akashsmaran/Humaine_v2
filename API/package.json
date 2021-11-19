@@ -27,6 +27,7 @@
     "nodemailer": "^6.4.15",
     "nodemon": "^2.0.6",
     "pg": "^8.4.2",
+    "sib-api-v3-sdk": "^8.2.1",
     "streamifier": "^0.1.1"
   },
   "devDependencies": {
