@@ -98,12 +98,12 @@ const Sidebar = ({ auth: { isAuthenticated, loading }, logout }) => {
               <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
               <MenuItem icon={<GoCommentDiscussion />}>Discuss</MenuItem> */}
 
-              <MenuItem
+              {/* <MenuItem
                 active={pathname.includes("settings") ? true : false}
                 icon={<BiCog />}
               >
                 <Link to="/settings">Settings</Link>
-              </MenuItem>
+              </MenuItem> */}
             </Menu>
           </SidebarContent>
           <SidebarFooter>
