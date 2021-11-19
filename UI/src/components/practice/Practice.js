@@ -32,6 +32,12 @@ const findImg = (name) => {
       return "/assets/images/BrianM.jpeg";
     case "Judith Palfrey":
       return "/assets/images/JudithPalfrey.jpeg";
+    case "Brianna Freeman":
+      return "/assets/images/BriannaFreeman.jpeg";
+    case "Berty Le Roux":
+      return "/assets/images/BertyLeRoux.jpeg";
+    case "Amjad Khan":
+      return "/assets/images/AmjadKhan.jpeg";
     default:
       return "/assets/images/lady.png";
   }
@@ -211,11 +217,6 @@ const Practice = ({
           </div>
           <div className="col-5-cust no-padding">
             <div className="image-bg full-extend">
-              {caseInfo[0].case_name == "Berty Le Roux" ? (
-                <img src="/assets/images/lady.png" className="full-extend" />
-              ) : (
-                ""
-              )}
               {caseInfo[0].case_name == "Brian Montgomery" ? (
                 <img src="/assets/images/BrianM.jpeg" className="full-extend" />
               ) : (
@@ -224,6 +225,33 @@ const Practice = ({
               {caseInfo[0].case_name == "Judith Palfrey" ? (
                 <img
                   src="/assets/images/JudithPalfrey.jpeg"
+                  className="full-extend"
+                />
+              ) : (
+                ""
+              )}
+
+              {caseInfo[0].case_name == "Berty Le Roux" ? (
+                <img
+                  src="/assets/images/BertyLeRoux.jpeg"
+                  className="full-extend"
+                />
+              ) : (
+                ""
+              )}
+
+              {caseInfo[0].case_name == "Amjad Khan" ? (
+                <img
+                  src="/assets/images/AmjadKhan.jpeg"
+                  className="full-extend"
+                />
+              ) : (
+                ""
+              )}
+
+              {caseInfo[0].case_name == "Brianna Freeman" ? (
+                <img
+                  src="/assets/images/BriannaFreeman.jpeg"
                   className="full-extend"
                 />
               ) : (

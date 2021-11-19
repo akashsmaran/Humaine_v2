@@ -25,6 +25,12 @@ const Dashboard = ({
         return "/assets/images/BrianM.jpeg";
       case "Judith Palfrey":
         return "/assets/images/JudithPalfrey.jpeg";
+      case "Brianna Freeman":
+        return "/assets/images/BriannaFreeman.jpeg";
+      case "Berty Le Roux":
+        return "/assets/images/BertyLeRoux.jpeg";
+      case "Amjad Khan":
+        return "/assets/images/AmjadKhan.jpeg";
       default:
         return "/assets/images/lady.png";
     }
