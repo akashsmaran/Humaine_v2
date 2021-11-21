@@ -153,6 +153,11 @@ const forgotPassword = async (req, res, next) => {
       '">here</a> to reset your account</p><br> <p> If you have received this email in error, please ignore it.For any questions, please reach out to us at info@humaine.ai</p>';
     res.status_message = true;
     next();
+    res.status(200).json({
+      status: 1,
+      message:
+        "An email has been sent to your registered email id for futher instructions",
+    });
   });
 };
 

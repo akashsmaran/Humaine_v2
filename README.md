@@ -1,5 +1,7 @@
 Development Notes:
 
+Before pushing to production locally run the docker-compose file, push the rebuilt images and in the production enviroment, run docker-compose prod file
+
 Change Intents:
 
 files in api/public and in the database intents table
