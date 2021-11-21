@@ -4,6 +4,7 @@
   "AbdoDistention": ["No"],
   "AbdoPain": ["No"],
   "Accommodation": ["I live in a flat in the city."],
+  "AfterEpisode": ["I am not sure what you mean"],
   "Age": ["45", "I am 45 years old"],
   "Alcohol": [
     "I drink socially and very occasionally - like maybe at Christmas or at family events."
@@ -12,7 +13,6 @@
   "AnalSex": ["I am not sexually active."],
   "AnimalAllergy": ["No"],
   "AntiSickness": ["No"],
-  "Appendicectomy": ["No"],
   "Appetite": [
     "I am less interested in food while I have this problem. My appetite has been down."
   ],
@@ -21,28 +21,31 @@
   "Ascites": ["No"],
   "AssociatedFactors": ["Not really, just very bad breathing difficulty."],
   "BIRTH HX (OPEN QS)": ["BIRTH HX (OPEN QS)"],
+  "Balance": ["I am fine"],
   "BarleyExposure": ["No"],
   "BarrierContraception": ["I am not sexually active."],
   "BeeWaspStingAllergy": ["No"],
+  "BeforeEpisode": ["Not really"],
   "BerylliumExposure": ["No"],
-  "BirdAllergy": ["Not that I know of."],
+  "BirdAllergy": ["No", "Not that I know of."],
+  "BitingEpisode": ["No"],
   "Bloatedness": ["No"],
   "BloodyStool": ["No"],
   "BowelFrequency": ["I am opening my bowels daily, as usual"],
   "BowelHabit": ["I am opening my bowels daily, as usual"],
   "BowelIncontinence": ["No"],
   "BowelMotions": ["I am opening my bowels daily, as usual"],
-  "CARDIO QUESTIONS": ["CARDIO QUESTIONS"],
   "CONSTITUTIONAL SYMPTOMS": ["CONSTITUTIONAL SYMPTOMS"],
-  "CasualPartner": ["I am not sexually active.", "I am not sexually active."],
+  "CasualPartner": ["I am not sexually active."],
+  "CeramicsExposure": ["No"],
   "Character": [
-    "It is a really severe breathlessness.  It seems to come on suddenly and leaves me gasping",
+    "It is a really severe breathlessness.  It seems to come on suddenly.",
     "I get breathless really quickly sometimes, especially in the evenings and night."
   ],
   "ChestPain": ["No"],
-  "Cholecystectomy": ["No"],
   "CoalExposure": ["No"],
-  "ColdWeatherExacerbation": ["No."],
+  "ColdWeatherExacerbation": ["No"],
+  "Collapse": ["No"],
   "Colonoscopy": ["No"],
   "Concern": [
     "I am worried by the fact that it just won't go away. I dread coming home from work as I have to face these symptoms alone, and that can be terrifying sometimes.",
@@ -58,22 +61,33 @@
     "I get some occasional cough, but nothing regularly.",
     "I have coughed a handful of times, but not very much,"
   ],
-  "DOB": ["24th June 1975", "24 June 1975"],
+  "DOB": ["24th June 1975"],
   "DampHome": ["No"],
   "DarkUrine": ["No"],
   "Delivery": ["I had a pretty normal delivery I think"],
   "DiagnosticStatement": ["Oh I see.", "Okay that makes sense"],
   "Diarrhoea": ["No"],
   "Diet": ["I eat normally - I am not on any special diets or anything."],
+  "Discharge": ["No"],
+  "Dizziness": ["No"],
   "DoctorQuestion": [
     "Not that I can think of right now.",
     "Not at the moment, thanks."
   ],
+  "Dribbling": ["No"],
+  "Drinking": ["Yes, I am"],
   "DrugAbuse": ["I would never do that"],
   "DrugHx": ["My GP started me on a blue inhaler - that's all I take"],
+  "DrugHxCompliance": [
+    "I stopped taking the blue inhaler because it didn't work for me. But I tried it properly for a few weeks before doing so."
+  ],
+  "DuringEpisode": ["It is just the breathlessness"],
   "DustExposure": ["No"],
   "Dyspepsia": ["No"],
   "Dysphagia": ["No"],
+  "Dysuria": ["No"],
+  "Eating": ["Yes, I am"],
+  "EatingAndDrinking": ["Yes, I am"],
   "EggAllergy": ["No"],
   "Empathy": ["Thanks"],
   "EnvironmentChangeHouse": ["No"],
@@ -89,8 +103,10 @@
     "Normally, I am fine. Even now, when I don't have my symptoms, I am totally fine."
   ],
   "Expectations": ["Whatever you say", "Whatever you think is appropriate"],
+  "Fall": ["No"],
+  "FallLength": ["I am not sure what you mean"],
   "FamilyHx": [
-    "Nothing that I know of - but I can check with my dad and get back to you."
+    "Nothing that I know of - but I can check with my family and get back to you."
   ],
   "FamilyMember": ["I am single and live alone."],
   "FarmingExposure": ["No"],
@@ -102,40 +118,43 @@
   "Frequency": [
     "Although I have good days and bad days, I notice at least some breathlessness on most days"
   ],
+  "FunnyTurns": ["No"],
   "GI QUESTIONS": ["GI QUESTIONS"],
-  "GORD": ["No"],
-  "Gastritis": ["No"],
   "GenerallyUnwell": ["I guess so"],
   "Goodbye": ["Take care and thank you", "Many thanks"],
   "Haematemesis": ["No"],
+  "Haematuria": ["No"],
   "Haemoptysis": ["No", "Not at all."],
-  "HaemoptysisAmount": ["I only have a dry cough."],
-  "HaemoptysisColour": ["I only have a dry cough."],
-  "HaemoptysisMixedStreak": [
-    "I only have a dry cough.",
-    "I only have a dry cough."
-  ],
   "Hayfever": ["No"],
+  "Headache": ["No"],
+  "Hearing": ["No"],
   "HerniaOp": ["No"],
-  "HiatusHernia": ["No"],
+  "Hesitancy": ["No"],
   "Hoarseness": ["No"],
   "Hobbies": ["I enjoy watching movies and reading books"],
   "ICE (OPEN QS)": ["ICE (OPEN QS)"],
+  "INTRODUCTION & GOODBYE": ["INTRODUCTION & GOODBYE"],
   "IVDU": ["No"],
   "Ideas": [
     "I am very confused.  Initially, I agreed with my regular doctor that this could be asthma, but I am not sure what is going on anymore.",
     "I feel really unsure to be honest.  I don't think that this is asthma like my GP thought."
   ],
+  "Incontinence": ["No"],
+  "IncontinenceEpisode": ["No"],
   "IndustrialExposure": ["No"],
   "Intent": ["Response"],
   "IntroAndName": ["Hello, I am Judith Palfrey"],
   "Introduction": ["Hi"],
   "ItchyEyesNoseThroat": ["No"],
   "Jaundice": ["No"],
+  "JerkingEpisode": ["No"],
+  "LUTOpen": ["No"],
+  "LateDelivery": ["No"],
   "Lethargy": [
     "I do feel very tired. I am not sure if my mind is playing games with me."
   ],
   "Lifestyle": ["I live a good life"],
+  "Malaena": ["No"],
   "ManagementPlan": ["Alright, sure.", "Okay that sounds good."],
   "MasonryExposure": ["No"],
   "MushroomExposure": ["No"],
@@ -143,8 +162,12 @@
   "NameAndAge": ["I am Judith Palfrey and I am 45 years old"],
   "NameAndDOB": ["I am Judith Palfrey and I was born on 24th June 1975"],
   "Nausea": ["No"],
+  "NeckStiffness": ["No"],
+  "NeuroSOB": ["No"],
   "NewLivingConditions": ["No"],
   "NewWorkConditions": ["No"],
+  "Nocturia": ["No"],
+  "Numbness": ["No"],
   "NutsAllergy": ["No"],
   "OGD": ["No"],
   "OTCDrugHx": [
@@ -152,6 +175,7 @@
   ],
   "Occupation": ["I am a legal secretary"],
   "Odynophagia": ["No"],
+  "Oligouria": ["No"],
   "Onset": [
     "I get breathless on some days more than others, but it seems to be mostly in the evenings",
     "I get the most breathless around the time I am getting ready for bed.",
@@ -159,18 +183,19 @@
   ],
   "OnsetTrigger": [
     "Um I am not totally sure.  Sometimes it seems the suffiness of staying indoor at home may be causing my symptoms.",
-    "I am not sure to be honest"
+    "I am not sure, to be honest"
   ],
   "OralSex": ["I am not sexually active."],
   "Orthopnoea": ["No"],
+  "OtherPain": ["No"],
   "OtherProblems": ["No, not that I know."],
   "PAIN/OTHER SYMPTOMS": ["PAIN/OTHER SYMPTOMS"],
   "PND": ["No"],
   "PRESENTATION (OPEN QS)": ["PRESENTATION (OPEN QS)"],
-  "PUD": ["No"],
   "PainKiller": [
     "My family doctor started me on some inhalers but they do not help."
   ],
+  "PainPenis": ["No"],
   "PainfulDefecation": ["No"],
   "PaleStool": ["No"],
   "Palpitation": ["No"],
@@ -184,12 +209,19 @@
     "Yes, I keep a pair of lovebirds - I got them last year, as it was getting really lonely at home.",
     "I got my pet birds around 8 or 9 months ago. The two lovebirds are called Tweety and Twitter!"
   ],
+  "Photophobia": ["No"],
   "Piles": ["No"],
   "PillowsSleep": ["I sleep on 1 pillow"],
   "PollenAllergy": ["No"],
+  "Polyuria": ["No"],
+  "Postictal": ["No"],
+  "PrematureDelivery": ["No"],
   "PreviousICU": ["No", "Not that I know."],
   "PreviousTransfusions": ["No"],
   "ProblemBefore": ["No, never."],
+  "ProblemEarly": [
+    "Nothing too specific.  I just felt I was getting breathless and I still feel that way."
+  ],
   "ProblemProgression": [
     "I don't know to be honest. I have good days and bad days...",
     "I am not sure. It tends to come and go, so I can't be sure. "
@@ -200,7 +232,6 @@
   ],
   "PrutitisAni": ["No"],
   "PrutitisSkin": ["No"],
-  "RESP QUESTIONS": ["RESP QUESTIONS"],
   "RISK FACTORS (OPEN QS)": ["RISK FACTORS (OPEN QS)"],
   "Radiation": ["I am not sure what you mean."],
   "Reassurance": ["Yes thanks"],
@@ -210,9 +241,10 @@
   ],
   "RegularPartner": ["I am not sexually active."],
   "RelievingFactors": [
-    "The inhalers certainly don't help.  I feel that going outside and breathing the fresh air can sometimes make me feel better.",
+    "The inhalers don't help.  I feel that going outside and breathing the fresh air can sometimes make me feel better.",
     "Taking in the crisp outdoors air can at times be helpful"
   ],
+  "Retention": ["No"],
   "Rhinitis": ["No"],
   "SEXUAL HX (OPEN QS)": ["SEXUAL HX (OPEN QS)"],
   "SOB": [
@@ -233,39 +265,56 @@
   "SafeSex": ["I am not sexually active."],
   "SeafoodAllergy": ["No"],
   "SeasonVariation": ["No"],
+  "Seizure": ["No"],
   "Severity": [
     "It varies - it can be very bad, while at other times it can be very minimal...  and I don't know why"
   ],
   "Sex>2": ["I am not sexually active."],
   "SexWorker": ["No"],
+  "Sight": ["No"],
   "Site": ["I am not sure what you mean"],
   "SkinChange": ["No."],
   "Sleep": ["I sleep well thanks."],
   "SmallTalk": ["Thanks for seeing me today"],
+  "Smell": ["No"],
   "Smoke": ["No, I have never smoked"],
   "Sneezing": ["No"],
+  "Speech": ["No"],
   "Sputum": ["No, I only have a dry cough."],
   "SputumAmount": ["I only have a dry cough."],
   "SputumColour": ["I only have a dry cough."],
+  "Stairs": ["No, I use a lift to get to my flat"],
+  "StairsManage": ["Yes, if I am not breathless to start off with"],
   "StoolBulk": ["No"],
   "StoolConsistency": ["I am opening my bowels daily, as usual"],
   "StoolDescribe": ["I am opening my bowels daily, as usual"],
   "StoolFloat": ["No"],
   "StoolMucus": ["No"],
   "StoolSmell": ["No"],
+  "Stream": ["I am good"],
+  "StressIncontinence": ["No"],
   "Summary": ["Yes", "Yes, that is correct"],
   "Sweating": ["No."],
+  "Syncope": ["No"],
+  "SyncopeLength": ["I am not sure what you mean"],
   "TRAVEL HX (OPEN QS)": ["TRAVEL HX (OPEN QS)"],
+  "Taste": ["No"],
   "Tenesmus": ["No"],
   "TermDelivery": ["I had a pretty normal delivery I think"],
   "Timing": [
     "It can vary. Sometimes I am breathless for like 3 to 4 hours, and other times it can bother me for days... I don't really have a definite answer to that."
   ],
   "TransitionPoints": ["Alright."],
-  "TravelHx": ["No, I am not into traveling much."],
+  "TravelHx": ["No, I am not into travelling much."],
+  "Urgency": ["No"],
   "VaginalSex": ["I am not sexually active."],
+  "Vertigo": ["No"],
   "Vomit": ["No"],
-  "WeightLoss": [
+  "Weakness": ["No"],
+  "WeaknessArms": ["No"],
+  "WeaknessFace": ["No"],
+  "WeaknessLegs": ["No"],
+  "Weight Loss": [
     "Now that you mention it, I have noted my weight go down recently"
   ],
   "WhatProblem": [
@@ -274,5 +323,6 @@
   ],
   "Wheeze": ["No, not that I have noted.", "No."],
   "WheezeWork": ["I don't get any wheezing."],
-  "WhoIsHome": ["I live alone"]
+  "WhoIsHome": ["I live alone"],
+  "WitnessEpisode": ["No"]
 }

@@ -1,0 +1,302 @@
+{
+  "ADLs": ["Yeah, I'm normally quite fit"],
+  "AbdoCramps": ["No"],
+  "AbdoDistention": ["No"],
+  "AbdoPain": ["No"],
+  "Accommodation": ["I live in a house"],
+  "AfterEpisode": [
+    "I felt really weak and light headed.  I still feel the same way to be honest."
+  ],
+  "Age": ["55"],
+  "Alcohol": ["No, only on special occassions"],
+  "AllergyHx": ["No"],
+  "AnalSex": ["I don't want to talk about this"],
+  "AnimalAllergy": ["No"],
+  "AntiSickness": ["No"],
+  "Appetite": ["I eat good"],
+  "Arrhythmia": ["No"],
+  "AsbestosExposure": ["No"],
+  "Ascites": ["No"],
+  "AssociatedFactors": ["Well I have been getting black stools with the faint"],
+  "Balance": ["I do still feel little giddy and off balance if I stand up"],
+  "BarleyExposure": ["No"],
+  "BarrierContraception": ["I don't want to talk about this"],
+  "BeeWaspStingAllergy": ["No"],
+  "BeforeEpisode": ["No, I don't think so"],
+  "BerylliumExposure": ["No"],
+  "BirdAllergy": ["No"],
+  "BitingEpisode": ["No"],
+  "Bloatedness": ["No"],
+  "BloodyStool": ["No, I've not noticed any red blood"],
+  "BowelFrequency": ["Normally, every other day"],
+  "BowelHabit": ["Normally, every other day"],
+  "BowelIncontinence": ["No"],
+  "BowelMotions": ["Before yesterday, my bowels were regular you know"],
+  "CasualPartner": [
+    "I don't want to talk about this",
+    "I don't want to talk about this"
+  ],
+  "CeramicsExposure": ["No"],
+  "Character": [
+    "I feel just drained really, and a little worried about the black stool I had. I hope it's not cancer. "
+  ],
+  "ChestPain": ["No"],
+  "CoalExposure": ["No"],
+  "ColdWeatherExacerbation": ["No"],
+  "Collapse": [
+    "I had a true blackout this morning.  I fainted when I got our of my car at work."
+  ],
+  "Colonoscopy": ["No"],
+  "Concern": [
+    "Well, you see my dad died of bowel cancer 5 years ago and my grandad also died of stomach cancer so when I saw the black poo, I did get worried, you know, that it might be that. And I was definitely going to see the GP to refer me when I had the black motions again this morning"
+  ],
+  "ConfirmName": ["Yeah"],
+  "ConfirmProblem": ["Yeah I fainted"],
+  "Constipation": ["No"],
+  "ConstructionExposure": ["No"],
+  "Contacts": ["I am just at home with the husband"],
+  "CottonExposure": ["No"],
+  "Cough": ["No"],
+  "DOB": ["14th March 1966"],
+  "DampHome": ["No"],
+  "DarkUrine": ["No, but my stool is almost black."],
+  "Delivery": ["Yes"],
+  "DiagnosticStatement": ["Okay, I see"],
+  "Diarrhoea": ["No"],
+  "Diet": [
+    "Yeah, I have been real careful with my diet since we got bowel cancer in the family"
+  ],
+  "Discharge": ["No"],
+  "Dizziness": ["I felt quite dizzy I guess and then I had my collapse."],
+  "DoctorQuestion": ["What's going to happen now?"],
+  "Dribbling": ["No"],
+  "Drinking": [
+    "Oh yes, I have a water bottle with me and drink throghout the day"
+  ],
+  "DrugAbuse": ["Oh God, no."],
+  "DrugHx": [
+    "Well I've been taking ibuprofen for the last week or so. I'm a hockey coach for 16 year old girls and accidentally got hit in the knee with a hockey stick. So I've been taking the ibuprofen for the pain since then. Not taking any other medications."
+  ],
+  "DrugHxCompliance": [
+    "I don't take any prescription regularly - I have just been taking ibuprofen for the last week only"
+  ],
+  "DuringEpisode": [
+    "I blacked out - so I don't really remember all that much."
+  ],
+  "DustExposure": ["No"],
+  "Dyspepsia": ["No, never have"],
+  "Dysphagia": ["I am eating well"],
+  "Dysuria": ["No"],
+  "Eating": ["I am eating well"],
+  "EatingAndDrinking": ["Yes, I am eating and drinking as normal"],
+  "EggAllergy": ["No"],
+  "Empathy": ["Yes it's been difficult"],
+  "EnvironmentChangeHouse": ["No"],
+  "ExacerbatingFactors": ["I don't know"],
+  "Exercise": ["Sometimes. I did more when I was younger."],
+  "ExerciseToleranceNorm": [
+    "I am fairly active and healthy.  I can manage very well."
+  ],
+  "ExerciseToleranceNow": ["Not sure"],
+  "Expectations": ["I want you to check for cancer if you can"],
+  "Fall": [
+    "I didn't really have a fall, it was more of a blackout, and I lost consciousness"
+  ],
+  "FallLength": ["Maybe a minute or two"],
+  "FamilyHx": [
+    "My dad died of bowel cancer 5 years ago and my grandad also died of stomach cancer."
+  ],
+  "FamilyMember": ["We don't have children, and my realtives live far away"],
+  "FarmingExposure": ["No"],
+  "Fever": ["No"],
+  "FoodAllergy": ["No"],
+  "Frequency": [
+    "I have only had one episode of the black stools and faint so far"
+  ],
+  "FunnyTurns": [
+    "I felt very woozy and weak just before I collapsed this morning."
+  ],
+  "GenerallyUnwell": ["Yeah I feel terrible right now, like really drained"],
+  "Goodbye": ["Thanks"],
+  "Haematemesis": ["No"],
+  "Haematuria": ["No"],
+  "Haemoptysis": ["No"],
+  "Hayfever": ["No"],
+  "Headache": ["No"],
+  "Hearing": ["No"],
+  "HerniaOp": ["No"],
+  "Hesitancy": ["No"],
+  "Hoarseness": ["No"],
+  "Hobbies": ["I like to be with friends and family"],
+  "IVDU": ["No never"],
+  "Ideas": [
+    "Well, I have no idea what happened with the blackout. The paramedics didn't think I'd had a heart attack, which was really good news. Maybe I was just quite dehydrated. I am worried about the black stool though",
+    "I feel just drained really, and a little worried about the black stool I had. I hope it's not cancer. "
+  ],
+  "Incontinence": ["No"],
+  "IncontinenceEpisode": ["No, thank god"],
+  "IndustrialExposure": ["No"],
+  "Intent": ["Response"],
+  "IntroAndName": ["Hi, you ok. My name is Brianna Freeman"],
+  "Introduction": ["Hi there", "Hello"],
+  "ItchyEyesNoseThroat": ["No"],
+  "Jaundice": ["No, not that I can note"],
+  "JerkingEpisode": ["No"],
+  "LUTOpen": ["No"],
+  "LateDelivery": ["No"],
+  "Lethargy": ["I feel quite tired now to be honest"],
+  "Lifestyle": ["I am active and well"],
+  "Malaena": ["Yes, very black and tarry"],
+  "ManagementPlan": ["Okay, I understand"],
+  "MasonryExposure": ["No"],
+  "MushroomExposure": ["No"],
+  "Name": ["Brianna Freeman"],
+  "NameAndAge": [
+    "Brianna Freeman and my birth date is 14th March 1966, which makes me 55"
+  ],
+  "NameAndDOB": [
+    "Brianna Freeman and my birth date is 14th March 1966, which makes me 55"
+  ],
+  "Nausea": ["No"],
+  "NeckStiffness": ["No"],
+  "NeuroSOB": ["No"],
+  "NewLivingConditions": ["No"],
+  "NewWorkConditions": ["No"],
+  "Nocturia": ["No"],
+  "Numbness": ["No"],
+  "NutsAllergy": ["No"],
+  "OGD": ["No"],
+  "OTCDrugHx": ["Not really"],
+  "Occupation": ["I'm a hockey coach at my local secondary school"],
+  "Odynophagia": ["No"],
+  "Oligouria": ["No"],
+  "Onset": ["This all started suddenly last night and today"],
+  "OnsetTrigger": [
+    "I don't know why it started - I didn't do anytning different to normal"
+  ],
+  "OralSex": ["I don't want to talk about this"],
+  "Orthopnoea": ["No"],
+  "OtherPain": ["No"],
+  "OtherProblems": [
+    "Well, I noticed this horrible jet-black stool yesterday in the night and I thought, what is that? I know my friend is on iron tablets and she says that it happened to her but I'm not taking any iron tablets. So I thought I'd just see what happens and then it happened again this morning as I got to work.",
+    "Well, I was going to see my GP about black stools I've been having actually"
+  ],
+  "PND": ["No"],
+  "PRESENTATION (OPEN QS)": ["PRESENTATION (OPEN QS)"],
+  "PainKiller": [
+    "Well I've been taking ibuprofen for the last week or so. I'm a hockey coach for 16 year old girls and accidentally got hit in the knee with a hockey stick. So I've been taking the ibuprofen for the pain since then. Not taking any other medications."
+  ],
+  "PainPenis": ["I don't know whaty you mean"],
+  "PainfulDefecation": ["No"],
+  "PaleStool": ["No, just the opposite.  They are jet black."],
+  "Palpitation": ["No"],
+  "PassiveSmoke": ["No"],
+  "PassiveSmokeContact": ["No"],
+  "PastMedicalHx": ["No, I don't have any problems that I know of."],
+  "PastSurgicalHx": ["Never had surgery"],
+  "Penetration": ["I don't want to talk about this"],
+  "PeripheralOedema": ["No"],
+  "PetsExposure": ["No"],
+  "Photophobia": ["No"],
+  "Piles": ["No"],
+  "PillowsSleep": ["I use one pillow"],
+  "PollenAllergy": ["No"],
+  "Polyuria": ["No"],
+  "Postictal": ["Not sure - I don't think so"],
+  "PrematureDelivery": ["No"],
+  "PreviousICU": ["No"],
+  "PreviousTransfusions": ["No"],
+  "ProblemBefore": [
+    "Never happened before",
+    "No, this has never happened before"
+  ],
+  "ProblemEarly": [
+    "Well it all just starteed today, so I don't know how to answer that"
+  ],
+  "ProblemProgression": ["I don't know, it all started so suddenly today"],
+  "ProblemStart": ["It all started today"],
+  "PrutitisAni": ["No"],
+  "PrutitisSkin": ["No"],
+  "Radiation": ["I am not sure what you mean"],
+  "Reassurance": ["Yes it's been difficult"],
+  "RecentTreatment": ["I haven't been treated for anything yet"],
+  "RegularPartner": ["I don't want to talk about this"],
+  "RelievingFactors": ["I don't know"],
+  "Retention": ["No"],
+  "Rhinitis": ["No"],
+  "SOB": ["I don't feel breathless "],
+  "SOBExertion": ["I don't feel breathless "],
+  "SOBVariation": ["I don't feel breathless "],
+  "SOBWork": ["No"],
+  "SOCIAL HX (OPEN QS)": ["SOCIAL HX (OPEN QS)"],
+  "STATEMENTS": ["STATEMENTS"],
+  "SafeSex": ["I don't want to talk about this"],
+  "SeafoodAllergy": ["No"],
+  "SeasonVariation": ["Not sure"],
+  "Seizure": ["No"],
+  "Severity": [
+    "It's all pretty severe",
+    "Not sure exactly, but it all seems pretty bad"
+  ],
+  "Sex>2": ["I don't want to talk about this"],
+  "SexWorker": ["I don't want to talk about this"],
+  "Sight": ["No, not really"],
+  "Site": ["I don't have any pain or, you know, uncomfortableness"],
+  "SkinChange": ["No"],
+  "Sleep": ["I sleep well, except last night!"],
+  "SmallTalk": [
+    "I'm feeling quite drained, not sure what happened earlier when I fainted"
+  ],
+  "Smell": ["No"],
+  "Smoke": ["I've never touched a cigarette"],
+  "Sneezing": ["No"],
+  "Speech": ["No"],
+  "Sputum": ["No"],
+  "SputumAmount": ["I am not making any sputum"],
+  "SputumColour": ["I am not making any sputum"],
+  "Stairs": ["Yes"],
+  "StairsManage": ["I am usually good with them"],
+  "StoolBulk": ["No"],
+  "StoolConsistency": ["Its sticky and tar-like"],
+  "StoolDescribe": ["My stool is very black and tarry"],
+  "StoolFloat": ["Not sure"],
+  "StoolMucus": ["No"],
+  "StoolSmell": ["Yes, it smell really really awful today"],
+  "Stream": ["I am good"],
+  "StressIncontinence": ["No"],
+  "Summary": ["Sounds about right"],
+  "Sweating": ["No"],
+  "Syncope": [
+    "I had a true blackout this morning.  I fainted when I got our of my car at work."
+  ],
+  "SyncopeLength": ["I think a minute or two"],
+  "Taste": ["No"],
+  "Tenesmus": ["No"],
+  "TermDelivery": ["Yes"],
+  "Timing": ["I don't know, I think it all happened in seconds"],
+  "TransitionPoints": ["Okay"],
+  "TravelHx": ["No"],
+  "Urgency": ["No"],
+  "VaginalSex": ["I don't want to talk about this"],
+  "Vertigo": ["No"],
+  "Vomit": ["No"],
+  "Weakness": [
+    "I did feel weak and suddenly very tired, and then I had my collapse."
+  ],
+  "WeaknessArms": [
+    "I felt weak in my legs as I blacked out earlier, but I do feel some weakness in my arms."
+  ],
+  "WeaknessFace": ["No"],
+  "WeaknessLegs": ["I felt particularly weak in the legs as they gave way"],
+  "Weight Loss": ["No"],
+  "WhatProblem": [
+    "Well, I fainted when I got out the car this morning at work. I don't really know what happened. I just remember getting out, then I felt really light-headed and the next thing I remember I was on the floor.  One of my colleagues called the ambulance - the paramedics brought me here.",
+    "I'm feeling quite drained, not sure what happened earlier when I fainted"
+  ],
+  "Wheeze": ["No"],
+  "WheezeWork": ["No"],
+  "WhoIsHome": ["I live with my husband"],
+  "WitnessEpisode": [
+    "Yeah, my colleague saw it. He said hello but apparently I didn't say anything and next thing I was falling to the ground"
+  ]
+}

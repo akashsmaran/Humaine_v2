@@ -9,7 +9,8 @@ router.get('/',authMiddleware.validateToken,caseController.getCases);
 router.get('/my-cases',authMiddleware.validateToken,caseController.getMyCases);
 router.get('/:id',authMiddleware.validateToken,caseController.getCase);
 
-router.post('/',authMiddleware.validateToken,caseController.addCase);
+// router.post('/',authMiddleware.validateToken,caseController.addCase);
+router.post('/',caseController.addCase);
 
 router.get('/support/:id',authMiddleware.validateToken,caseController.getCaseComments);
 router.post('/support/add',authMiddleware.validateToken,caseController.addCaseComment,nlpMiddleware.updateMessage, nlpMiddleware.getIntent, nlpMiddleware.compareIntentAndMessage,caseController.addCaseComment);

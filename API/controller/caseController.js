@@ -148,8 +148,9 @@ const getCase = async (req, res) => {
 
 const addCase = async (req, res, next) => {
   let token = req.headers.authorization;
-  let userInfo = jwtDecode(token);
-  const { caseName, caseDescription, caseDifficulty } = req.body;
+  // let userInfo = jwtDecode(token);
+  const { caseName, caseDescription, caseDifficulty, caseDepartment } =
+    req.body;
   if (!caseName || !caseDescription || !caseDifficulty) {
     return res.status(500).json({
       status: 0,
@@ -157,8 +158,15 @@ const addCase = async (req, res, next) => {
     });
   }
   const notes = {
-    text: "INSERT INTO cases(case_name, case_description, case_difficulty, case_status) VALUES($1, $2, $3, $4, $5) RETURNING *",
-    values: [caseName, caseDescription, caseDifficulty, "active"],
+    text: "INSERT INTO cases(case_name, case_description, case_difficulty, case_status, case_department, image) VALUES($1, $2, $3, $4, $5) RETURNING *",
+    values: [
+      caseName,
+      caseDescription,
+      caseDifficulty,
+      "active",
+      caseDepartment,
+      "default.jpg"
+    ],
   };
   try {
     const query = await database.query(notes);
@@ -246,8 +254,17 @@ const addCaseComment = async (req, res, next) => {
   if (intent) {
     if (intent == "NA") {
       //case if No intent returns from NLP after comparison
-      altRespforNAintents = ["I am not able to understand your question!","Sorry, I didn't catch that.","Can you just repeat your question again?","Could you say that last question again please.","Sorry, what was that last question again?","Apologies, can you ask that last question again?","Sorry, I didn't understand that. Can you say it again? "]
-      comment = altRespforNAintents[~~(Math.random() * altRespforNAintents.length)];
+      altRespforNAintents = [
+        "I am not able to understand your question!",
+        "Sorry, I didn't catch that.",
+        "Can you just repeat your question again?",
+        "Could you say that last question again please.",
+        "Sorry, what was that last question again?",
+        "Apologies, can you ask that last question again?",
+        "Sorry, I didn't understand that. Can you say it again? ",
+      ];
+      comment =
+        altRespforNAintents[~~(Math.random() * altRespforNAintents.length)];
     } else {
       //case if something has been returned from the NLP
       // var key = Math.floor(Math.random() * intentList.length);
@@ -528,7 +545,7 @@ const addDiagnosisList = async (req, res) => {
         };
         database.query(addList);
       });
-  console.log("I am here in the diagnosis list")
+      console.log("I am here in the diagnosis list");
       return res.status(200).json({
         status: 1,
         message: "Success",
